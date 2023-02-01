@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  root,
+  body {
+    @apply m-0 p-0 box-border overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .navbar-text {
+    @apply font-mont text-white-300 font-bold tracking-widest;
+  }
+
+  .dropdown-link {
+    @apply cursor-pointer py-2.5 pl-4 font-mont font-semibold text-black-200 tracking-widest transition duration-200 hover:text-aqua hover:bg-white-200;
+  }
+}

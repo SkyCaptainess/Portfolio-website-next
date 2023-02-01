@@ -1,7 +1,7 @@
 {
   "root": true,
-  "extends": ["next/babel", "next/core-web-vitals", "eslint:recommended"],
-  "plugins": ["testing-library"],
+  "extends": ["next/core-web-vitals", "eslint:recommended"],
+  "plugins": ["testing-library", "jest"],
   "overrides": [
     // Only uses Testing Library lint rules in test files
     {
@@ -9,11 +9,25 @@
         "**/__tests__/**/*.[jt]s?(x)",
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
-      "extends": ["plugin:testing-library/react"]
+      "extends": [
+        "plugin:testing-library/react",
+        "plugin:jest/recommended",
+        "plugin:jest/style"
+      ]
     }
   ],
   "rules": {
     "semi": ["error", "always"],
     "quotes": ["warn", "single"]
+  },
+  "globals": {
+    "React": true,
+    "context": true,
+    "expect": true,
+    "jsdom": true,
+    "JSX": true
+  },
+  "env": {
+    "jest/globals": true
   }
 }

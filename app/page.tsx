@@ -1,7 +1,8 @@
 import React from 'react';
+import MainNavigation from '@/components/navbar/MainNavigation';
 
 const Page = () => {
-  return <h1 className="font-mont">Hello, Next.js!</h1>;
+  return <MainNavigation />;
 };
 
 export default Page;
