@@ -7,7 +7,7 @@ export const listElements = [
 ];
 
 export const externalLinks = {
-  linkedIn: 'https://www.linkedin.com/in/nicholas-yjy/',
-  github: 'https://github.com/nicholas5538',
-  insta: 'https://www.instagram.com/friviolousnicholas',
+  LinkedIn: 'https://www.linkedin.com/in/nicholas-yjy/',
+  GitHub: 'https://github.com/nicholas5538',
+  Instagram: 'https://www.instagram.com/friviolousnicholas',
 };

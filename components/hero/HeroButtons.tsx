@@ -13,19 +13,21 @@ const HeroButtons = () => {
     <IconBrandInstagram key={useId()} size={40} color="#343434" />,
   ];
 
-  const anchorElements = Object.values(externalLinks).map((link, index) => {
-    return (
-      <a
-        key={index}
-        href={link}
-        rel="noreferrer"
-        target="_blank"
-        className="transition-transform ease-linear duration-200 hover:scale-110"
-      >
-        {icons[index]}
-      </a>
-    );
-  });
+  const anchorElements = Object.entries(externalLinks).map(
+    ([name, link], index) => {
+      return (
+        <div
+          key={index}
+          className="tooltip tooltip-info tooltip-top"
+          data-tip={name}
+        >
+          <a href={link} rel="noreferrer" target="_blank">
+            {icons[index]}
+          </a>
+        </div>
+      );
+    }
+  );
 
   return (
     <div className="flex flex-row justify-start items-center gap-x-6">
