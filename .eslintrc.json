@@ -12,7 +12,8 @@
       "extends": [
         "plugin:testing-library/react",
         "plugin:jest/recommended",
-        "plugin:jest/style"
+        "plugin:jest/style",
+        "plugin:yml/standard"
       ]
     }
   ],
