@@ -5,16 +5,40 @@
 @layer base {
   root,
   body {
-    @apply m-0 p-0 box-border overflow-x-hidden;
+    @apply m-0 p-0 box-border overflow-x-hidden bg-white-300;
+  }
+
+  h1 {
+    @apply font-mont text-black-200 text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply font-mont text-black-200 text-lg font-medium;
+  }
+
+  a {
+    @apply text-aqua no-underline hover:underline hover:underline-offset-4;
   }
 }
 
 @layer components {
   .navbar-text {
-    @apply font-mont text-white-300 font-bold tracking-widest;
+    @apply font-mont text-white-300 font-bold tracking-widest lg:text-xl 2xl:text-[1.75rem];
   }
 
   .dropdown-link {
     @apply cursor-pointer py-2.5 pl-4 font-mont font-semibold text-black-200 tracking-widest transition duration-200 hover:text-aqua hover:bg-white-200;
+  }
+
+  .heroSection {
+    @apply grid grid-cols-1 mx-auto w-11/12 max-w-7xl md:justify-evenly md:items-center md:gap-x-8 md:grid-cols-3 md:grid-rows-3 xl:grid-cols-4;
+  }
+
+  .profilePic {
+    @apply object-center object-scale-down mx-auto mb-8 shadow-dropdown w-48 h-72 md:object-cover md:mb-0 md:col-span-1 md:row-start-1 md:row-end-4 md:order-last md:w-full md:h-5/6 xl:self-start xl:col-span-2 xl:w-9/12;
+  }
+
+  .waving {
+    @apply inline-block text-4xl animate-wave origin-wave xl:text-5xl;
   }
 }

@@ -6,7 +6,7 @@ const NavbarLinks = () => {
     return (
       <li
         key={index}
-        className="navbar-text cursor-pointer hover:underline hover:decoration-white-300 hover:decoration-2 hover:underline-offset-8 lg:text-xl"
+        className="navbar-text cursor-pointer hover:underline hover:decoration-white-300 hover:decoration-2 hover:underline-offset-8"
       >
         {element}
       </li>
@@ -14,7 +14,7 @@ const NavbarLinks = () => {
   });
 
   return (
-    <ul className="hidden flex-row justify-between items-center gap-x-6 lg:flex lg:order-2">
+    <ul className="hidden flex-row justify-between items-center gap-x-6 lg:flex lg:order-2 2xl:gap-x-10">
       {liElements}
     </ul>
   );

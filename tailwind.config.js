@@ -36,14 +36,28 @@ module.exports = {
       sm: '500px',
       md: '768px',
       lg: '992px',
-      xl: '1280px',
+      xl: '1200px',
       '2xl': '1536px',
       '3xl': '2000px',
     },
     extend: {
+      animation: {
+        wave: 'wave 2.1s 0.6s infinite',
+      },
       boxShadow: {
         dropdown:
           'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px',
+      },
+      keyframes: {
+        wave: {
+          '0%, 60%, 100%': { transform: 'rotate(0deg)' },
+          '10%, 30%, 50%': { transform: 'rotate(16deg)' },
+          '20%': { transform: 'rotate(-6deg)' },
+          '40%': { transform: 'rotate(-4deg)' },
+        },
+      },
+      transformOrigin: {
+        wave: '70% 70%',
       },
     },
   },
