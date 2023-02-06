@@ -37,11 +37,11 @@ const DropdownUl = ({
       {isMenuClicked && (
         <motion.div
           ref={dropdownRef}
-          className="absolute top-20 left-0 z-50 w-full md:max-w-sm"
+          className="absolute top-20 left-0 z-50 w-full max-w-sm"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           exit={{ x: '-100vw' }}
-          transition={{ duration: 0.3 }}
+          transition={{ type: 'spring', duration: 0.3, bounce: 0.3 }}
           data-testid="dropdown-ul"
         >
           <ul className="bg-white-300 rounded-xl shadow-dropdown">
