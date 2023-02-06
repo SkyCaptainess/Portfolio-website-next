@@ -18,7 +18,7 @@ const HeroButtons = () => {
       return (
         <div
           key={index}
-          className="tooltip tooltip-info tooltip-top"
+          className="tooltip tooltip-info tooltip-bottom md:tooltip-top"
           data-tip={name}
         >
           <a href={link} rel="noreferrer" target="_blank">

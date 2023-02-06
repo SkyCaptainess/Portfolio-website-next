@@ -5,7 +5,7 @@
 @layer base {
   root,
   body {
-    @apply m-0 p-0 box-border overflow-x-hidden bg-white-300;
+    @apply m-0 p-0 box-border overflow-x-hidden overflow-y-auto bg-white-300;
   }
 
   h1 {
@@ -22,6 +22,14 @@
 }
 
 @layer components {
+  .navbar-gradient {
+    @apply absolute -z-20 -top-64 -left-20 -rotate-6 bg-gradient-to-b from-blue-gradient-1 to-blue-gradient-2 w-[4000px] h-[20rem] md:-left-40 md:h-[31.25rem] xl:-top-80 xl:h-[37.5rem] 2xl:h-[43.75rem] 3xl:h-[50rem];
+  }
+
+  .dark-blue-gradient {
+    @apply absolute -z-10 -top-56 -left-16 -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[125%] xl:h-[130%] 2xl:-left-20 2xl:h-[140%];
+  }
+
   .navbar-text {
     @apply font-mont text-white-300 font-bold tracking-widest lg:text-xl 2xl:text-[1.75rem];
   }
@@ -31,7 +39,7 @@
   }
 
   .heroSection {
-    @apply grid grid-cols-1 mx-auto w-11/12 max-w-7xl md:justify-evenly md:items-center md:gap-x-8 md:grid-cols-3 md:grid-rows-3 xl:grid-cols-4;
+    @apply static z-0 grid grid-cols-1 mx-auto mb-28 w-11/12 max-w-7xl md:justify-evenly md:items-start md:gap-x-8 md:grid-cols-3 md:grid-rows-3 xl:grid-cols-4;
   }
 
   .profilePic {
@@ -40,5 +48,17 @@
 
   .waving {
     @apply inline-block text-4xl animate-wave origin-wave xl:text-5xl;
+  }
+
+  .aboutmeContainer {
+    @apply relative text-white-300 mx-auto py-8 pr-20 w-11/12 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4;
+  }
+
+  .aboutmeText {
+    @apply text-base font-normal mb-5 md:mb-0 md:col-span-2 md:text-lg xl:text-2xl;
+  }
+
+  .aboutmeAnimation {
+    @apply absolute -top-16 -right-12 w-44 h-44 md:static md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-6 md:place-self-center md:w-72 md:h-72 lg:col-start-3 lg:w-[22rem] lg:h-[22rem] xl:w-[28rem] xl:h-[28rem];
   }
 }

@@ -23,7 +23,7 @@ module.exports = {
         300: '#F8F8F8',
       },
       aqua: '#008DAA',
-      'light-blue': 'A9F0FF',
+      'light-blue': '#A9F0FF',
       'dark-blue': '#0C2E4E',
       blue: '#00D4FF',
       'blue-gradient-1': '#000046',
@@ -55,6 +55,9 @@ module.exports = {
           '20%': { transform: 'rotate(-6deg)' },
           '40%': { transform: 'rotate(-4deg)' },
         },
+      },
+      screens: {
+        'ipad-mini': '650px',
       },
       transformOrigin: {
         wave: '70% 70%',

@@ -1,6 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import Hero from './Hero';
 
+beforeAll(() => {
+  const mockIntersectionObserver = jest.fn();
+  mockIntersectionObserver.mockReturnValue({
+    observe: () => null,
+    unobserve: () => null,
+    disconnect: () => null,
+  });
+  window.IntersectionObserver = mockIntersectionObserver;
+});
+
 it('should render hero section components', () => {
   render(<Hero />);
 
