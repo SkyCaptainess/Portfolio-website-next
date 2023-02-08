@@ -26,14 +26,14 @@ const containerAnimation: Tanimation = {
       type: 'spring',
       duration: 1,
       bounce: 0.4,
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
 
 const AboutMe = () => {
   return (
-    <section className="relative z-0 bg-dark-blue">
+    <section className="relative z-0 bg-dark-blue mb-36 md:mb-44 xl:mb-56 2xl:mb-68">
       <Animation animation={containerAnimation} className="aboutmeContainer">
         <m.div
           variants={childAnimation}

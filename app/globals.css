@@ -65,4 +65,20 @@
   .aboutmeAnimation {
     @apply absolute -top-16 -right-12 w-44 h-44 md:static md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-6 md:place-self-center md:w-72 md:h-72 lg:col-start-3 lg:w-[22rem] lg:h-[22rem] xl:w-[28rem] xl:h-[28rem];
   }
+
+  .skillsContainer {
+    @apply relative flex flex-col justify-center items-start gap-y-6 mx-auto w-11/12 max-w-7xl;
+  }
+
+  .skillsHeading {
+    @apply text-black-200 text-xl font-bold md:mb-2 md:text-3xl xl:text-4xl;
+  }
+
+  .skillsSubHeading {
+    @apply mb-2 font-semibold md:text-2xl xl:text-3xl xl:mb-4;
+  }
+
+  .skillsAnimation {
+    @apply hidden w-56 h-56 md:block md:absolute md:right-28 md:bottom-20 lg:right-5 lg:bottom-40 lg:w-[22rem] lg:h-[22rem] xl:w-[28rem] xl:h-[28rem];
+  }
 }
