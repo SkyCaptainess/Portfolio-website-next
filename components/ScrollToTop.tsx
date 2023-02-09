@@ -2,11 +2,18 @@
 
 import React, { useEffect, useState } from 'react';
 import { IconArrowBigUpLineFilled } from '@tabler/icons-react';
-import { LazyMotion, m, domAnimation, AnimatePresence } from 'framer-motion';
+import {
+  AnimatePresence,
+  domAnimation,
+  LazyMotion,
+  m,
+  useReducedMotion,
+} from 'framer-motion';
 import { Tanimation } from '@/constants/global';
 
 const ScrollToTop = () => {
   const [visibleButton, setVisibleButton] = useState<boolean>(false);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const setBtnState = () => {
@@ -24,7 +31,7 @@ const ScrollToTop = () => {
   const goToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
     });
   };
 

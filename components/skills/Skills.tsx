@@ -10,35 +10,37 @@ import {
 import SkillCategory from './SkillCategory';
 import SkillsLight from '../../public/animations/skills-light.json';
 import Animation from '../Animation';
-import { m } from 'framer-motion';
+import { m, useReducedMotion } from 'framer-motion';
 import { Tanimation } from '@/constants/global';
 
 const Lottie = lazy(() => import('lottie-react'));
 
-const childContainerAnimation: Tanimation = {
-  hidden: { opacity: 0, y: -20 },
-  show: { opacity: 1, y: 0 },
-};
-
-const lottieAnimation: Tanimation = {
-  hidden: { opacity: 0, x: 100 },
-  show: { opacity: 1, x: 0 },
-};
-
-const containerAnimation: Tanimation = {
-  ...childContainerAnimation,
-  show: {
-    ...childContainerAnimation.show,
-    transition: {
-      type: 'spring',
-      duration: 1,
-      bounce: 0.4,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 const Skills = () => {
+  const prefersReducedMotion = useReducedMotion();
+
+  const childContainerAnimation: Tanimation = {
+    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  const lottieAnimation: Tanimation = {
+    hidden: { opacity: 0, x: prefersReducedMotion ? 0 : 100 },
+    show: { opacity: 1, x: 0 },
+  };
+
+  const containerAnimation: Tanimation = {
+    ...childContainerAnimation,
+    show: {
+      ...childContainerAnimation.show,
+      transition: {
+        type: 'spring',
+        duration: 1,
+        bounce: 0.4,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <section>
       <Animation animation={containerAnimation} className="skillsContainer">

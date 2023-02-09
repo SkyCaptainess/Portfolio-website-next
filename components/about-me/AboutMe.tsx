@@ -2,36 +2,38 @@
 
 import React, { lazy } from 'react';
 import AboutMeLight from '../../public/animations/aboutme-light.json';
-import { m } from 'framer-motion';
+import { m, useReducedMotion } from 'framer-motion';
 import { Tanimation } from '@/constants/global';
 import Animation from '../Animation';
 
 const Lottie = lazy(() => import('lottie-react'));
 
-const childAnimation: Tanimation = {
-  hidden: { opacity: 0, x: -100 },
-  show: { opacity: 1, x: 0 },
-};
-
-const lottieAnimation: Tanimation = {
-  hidden: { opacity: 0, x: 100 },
-  show: { opacity: 1, x: 0 },
-};
-
-const containerAnimation: Tanimation = {
-  ...childAnimation,
-  show: {
-    ...childAnimation.show,
-    transition: {
-      type: 'spring',
-      duration: 1,
-      bounce: 0.4,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 const AboutMe = () => {
+  const prefersReducedMotion = useReducedMotion();
+
+  const childAnimation: Tanimation = {
+    hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },
+    show: { opacity: 1, x: 0 },
+  };
+
+  const lottieAnimation: Tanimation = {
+    hidden: { opacity: 0, x: prefersReducedMotion ? 0 : 100 },
+    show: { opacity: 1, x: 0 },
+  };
+
+  const containerAnimation: Tanimation = {
+    ...childAnimation,
+    show: {
+      ...childAnimation.show,
+      transition: {
+        type: 'spring',
+        duration: 1,
+        bounce: 0.4,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <section className="relative z-0 bg-dark-blue mb-36 md:mb-44 xl:mb-56 2xl:mb-68">
       <Animation animation={containerAnimation} className="aboutmeContainer">

@@ -5,27 +5,29 @@ import Image from 'next/image';
 import profilePic from '../../public/profile-light.webp';
 import HeroButtons from './HeroButtons';
 import Animation from '../Animation';
-import { m } from 'framer-motion';
+import { m, useReducedMotion } from 'framer-motion';
 import { Tanimation } from '@/constants/global';
 
-const childAnimation: Tanimation = {
-  hidden: { opacity: 0, y: -50 },
-  show: { opacity: 1, y: 0 },
-};
-
-const containerAnimation: Tanimation = {
-  ...childAnimation,
-  show: {
-    ...childAnimation.show,
-    transition: {
-      type: 'spring',
-      duration: 1,
-      bounce: 0.4,
-      staggerChildren: 0.1,
-    },
-  },
-};
 const Hero = () => {
+  const prefersReducedMotion = useReducedMotion();
+  const childAnimation: Tanimation = {
+    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -50 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  const containerAnimation: Tanimation = {
+    ...childAnimation,
+    show: {
+      ...childAnimation.show,
+      transition: {
+        type: 'spring',
+        duration: 1,
+        bounce: 0.4,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <Animation animation={containerAnimation} className="heroSection">
       <Image src={profilePic} alt="Profile Picture" className="profilePic" />
