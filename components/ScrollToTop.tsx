@@ -17,7 +17,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const setBtnState = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 400) {
         setVisibleButton(true);
       } else {
         setVisibleButton(false);

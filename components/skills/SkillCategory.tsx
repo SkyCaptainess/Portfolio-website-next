@@ -49,7 +49,6 @@ const SkillCategory = ({ heading, icons }: TIcons) => {
             </m.div>
           );
         })}
-        ;
       </m.div>
     </>
   );
