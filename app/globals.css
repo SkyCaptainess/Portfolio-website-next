@@ -51,7 +51,7 @@
   }
 
   .profilePic {
-    @apply object-center object-scale-down mx-auto mb-8 shadow-dropdown w-48 h-72 md:object-cover md:mb-0 md:col-span-1 md:row-start-1 md:row-end-4 md:order-last md:w-full md:h-5/6 xl:self-start xl:col-span-2 xl:w-9/12;
+    @apply object-center object-scale-down mx-auto mb-8 shadow-dropdown w-48 h-72 md:object-cover md:mb-0 md:mr-0 md:col-span-1 md:row-start-1 md:row-end-4 md:order-last md:w-full md:h-5/6 lg:self-center xl:col-span-2 xl:w-9/12 2xl:z-10;
   }
 
   .waving {
