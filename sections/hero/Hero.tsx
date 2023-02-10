@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import profilePic from '../../public/profile-light.webp';
-import HeroButtons from './HeroButtons';
+import profilePic from '../../public/images/profile-light.webp';
+import HeroButtons from '../../components/HeroButtons';
 import Animation from '../../components/Animation';
 import { m, useReducedMotion } from 'framer-motion';
 import { Tanimation } from '@/constants/global';
