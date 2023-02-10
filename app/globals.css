@@ -99,7 +99,7 @@
   }
 
   .projectIcons {
-    @apply flex flex-row gap-x-2 md:justify-center lg:gap-x-4 2xl:gap-x-6;
+    @apply flex flex-row flex-wrap gap-x-2 md:justify-center lg:gap-x-4 2xl:gap-x-6;
   }
 
   .projectImage {
