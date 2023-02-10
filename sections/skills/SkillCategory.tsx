@@ -1,29 +1,14 @@
 import React from 'react';
-import { TIcons } from './common';
-import { goodDesignIcons, averageDesignIcons } from './common';
-import { m, useReducedMotion } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { averageDesignIcons, goodDesignIcons, TIcons } from './common';
+import { Tvariants } from '@/constants/global';
+import { m } from 'framer-motion';
 
-const SkillCategory = ({ heading, icons }: TIcons) => {
-  const prefersReducedMotion = useReducedMotion();
-  const childContainerAnimation: Tanimation = {
-    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
-    show: { opacity: 1, y: 0 },
-  };
-
-  const containerAnimation: Tanimation = {
-    ...childContainerAnimation,
-    show: {
-      ...childContainerAnimation.show,
-      transition: {
-        type: 'spring',
-        duration: 1,
-        bounce: 0.4,
-        staggerChildren: 0.075,
-      },
-    },
-  };
-
+const SkillCategory = ({
+  heading,
+  icons,
+  containerAnimation,
+  childAnimation,
+}: TIcons & Tvariants) => {
   return (
     <>
       <h3 className="skillsSubHeading font-medium opacity-80">{heading}</h3>
@@ -34,7 +19,7 @@ const SkillCategory = ({ heading, icons }: TIcons) => {
         {icons.map(({ Icon, tooltipText: tooltipText }, index) => {
           return (
             <m.div
-              variants={childContainerAnimation}
+              variants={childAnimation}
               key={index}
               className={`tooltip tooltip-info ${
                 icons === goodDesignIcons || icons === averageDesignIcons

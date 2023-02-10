@@ -31,7 +31,11 @@
   }
 
   .dark-blue-gradient {
-    @apply absolute -z-10 -top-56 -left-16 -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[125%] xl:h-[130%] 2xl:-left-20 2xl:h-[140%];
+    @apply absolute -z-10 -top-56 -left-16 -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[135%] xl:h-[135%] 2xl:-left-20 2xl:h-[145%];
+  }
+
+  .dark-blue-section {
+    @apply relative z-0 bg-dark-blue;
   }
 
   .navbar-text {
@@ -55,7 +59,11 @@
   }
 
   .aboutmeContainer {
-    @apply relative text-white-300 mx-auto py-8 pr-20 w-11/12 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4;
+    @apply relative text-white-300 mx-auto pt-8 pr-20 w-11/12 mb-32 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 xl:mb-60 2xl:mb-[280px];
+  }
+
+  .aboutmeHeading {
+    @apply text-blue text-xl font-bold mb-5 md:mb-0 md:text-3xl xl:text-4xl;
   }
 
   .aboutmeText {
@@ -67,11 +75,11 @@
   }
 
   .skillsContainer {
-    @apply relative flex flex-col justify-center items-start gap-y-6 mx-auto w-11/12 max-w-7xl;
+    @apply relative flex flex-col justify-center items-start gap-y-6 mx-auto mb-12 w-11/12 max-w-7xl 2xl:mb-24;
   }
 
   .skillsHeading {
-    @apply text-black-200 text-xl font-bold md:mb-2 md:text-3xl xl:text-4xl;
+    @apply text-black-200 text-xl font-bold md:mb-6 md:text-3xl xl:text-4xl;
   }
 
   .skillsSubHeading {

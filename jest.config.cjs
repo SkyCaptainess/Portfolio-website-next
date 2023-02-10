@@ -12,10 +12,11 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
-    '^@/components/(.*)$': '<rootDir>/components/$1',
-    '^@/pages/(.*)$': '<rootDir>/pages/$1',
     '^@/constants/(.*)$': '<rootDir>/constants/$1',
+    '^@/components/(.*)$': '<rootDir>/components/$1',
     '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
+    '^@/pages/(.*)$': '<rootDir>/pages/$1',
+    '^@/sections/(.*)$': '<rootDir>/pages/$1',
   },
   coveragePathIgnorePatterns: ['constants'],
   moduleDirectories: ['node_modules', '<rootDir>/../'],

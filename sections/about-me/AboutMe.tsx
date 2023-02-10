@@ -4,7 +4,7 @@ import React, { lazy } from 'react';
 import AboutMeLight from '../../public/animations/aboutme-light.json';
 import { m, useReducedMotion } from 'framer-motion';
 import { Tanimation } from '@/constants/global';
-import Animation from '../Animation';
+import Animation from '../../components/Animation';
 
 const Lottie = lazy(() => import('lottie-react'));
 
@@ -35,16 +35,14 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="relative z-0 bg-dark-blue mb-36 md:mb-44 xl:mb-56 2xl:mb-68">
+    <section className="dark-blue-section">
       <Animation animation={containerAnimation} className="aboutmeContainer">
         <m.div
           variants={childAnimation}
           className="md:col-span-2 md:justify-self-start"
         >
-          <h2 className="text-blue text-xl font-bold mb-5 md:mb-0 md:text-3xl xl:text-4xl">
-            👨 About Me
-          </h2>
-          <h2 className="text-white-300 font-bold mb-5 md:mb-0 md:text-3xl xl:text-4xl">
+          <h2 className="aboutmeHeading">👨 About Me</h2>
+          <h2 className="text-lg text-white-300 font-bold mb-5 md:mb-0 md:text-3xl xl:text-4xl">
             Never too late to learn
           </h2>
         </m.div>

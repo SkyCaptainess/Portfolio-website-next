@@ -1,3 +1,5 @@
+import { Variants } from 'framer-motion';
+
 export const listElements = [
   'About Me',
   'Skills',
@@ -10,6 +12,11 @@ export const externalLinks = {
   LinkedIn: 'https://www.linkedin.com/in/nicholas-yjy/',
   GitHub: 'https://github.com/nicholas5538',
   Instagram: 'https://www.instagram.com/frivolousnicholas',
+};
+
+export type Tvariants = {
+  containerAnimation?: Variants;
+  childAnimation?: Variants;
 };
 
 export type Tanimation = {
