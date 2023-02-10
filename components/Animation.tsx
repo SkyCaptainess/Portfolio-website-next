@@ -14,7 +14,7 @@ const Animation = ({ animation, className, children }: staggerProps) => {
         variants={animation}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.45 }}
+        viewport={{ once: true, amount: 0.65 }}
         className={className}
       >
         {children}
