@@ -28,9 +28,7 @@ const SkillCategory = ({
               }`}
               data-tip={tooltipText}
             >
-              <button type="button">
-                <Icon key={index} size={40} color="#343434" />
-              </button>
+              <Icon key={index} size={40} color="#343434" />
             </m.div>
           );
         })}

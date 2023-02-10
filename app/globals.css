@@ -31,7 +31,7 @@
   }
 
   .dark-blue-gradient {
-    @apply absolute -z-10 -top-56 -left-16 -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[135%] xl:h-[135%] 2xl:-left-20 2xl:h-[145%];
+    @apply absolute -z-10 -top-56 -left-[4.5rem] -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[135%] xl:h-[135%] 2xl:h-[145%] 3xl:h-[160%];
   }
 
   .dark-blue-section {
@@ -59,7 +59,7 @@
   }
 
   .aboutmeContainer {
-    @apply relative text-white-300 mx-auto pt-8 pr-20 w-11/12 mb-32 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 xl:mb-60 2xl:mb-[280px];
+    @apply relative text-white-300 mx-auto pt-8 pr-20 w-11/12 mb-32 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 2xl:mb-[15.5rem] 3xl:mb-[17rem];
   }
 
   .aboutmeHeading {
@@ -67,7 +67,7 @@
   }
 
   .aboutmeText {
-    @apply text-base font-normal mb-5 md:mb-0 md:col-span-2 md:text-lg xl:text-2xl;
+    @apply text-base font-normal mb-5 md:mb-0 md:col-span-2 md:text-lg xl:text-xl;
   }
 
   .aboutmeAnimation {

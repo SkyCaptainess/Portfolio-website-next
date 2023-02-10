@@ -31,7 +31,7 @@ const JobPointers = ({ childAnimation }: Tvariants) => {
             {experience.company}
           </a>
         </h4>
-        <ul className="opacity-80 text-sm text-white-300 list-disc list-inside md:text-lg xl:text-2xl">
+        <ul className="opacity-80 text-sm text-white-300 list-disc list-inside md:text-lg xl:text-xl">
           {experience.pointers.map((pointer, index) => (
             <li
               key={index}
