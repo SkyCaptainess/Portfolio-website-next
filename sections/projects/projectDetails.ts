@@ -51,7 +51,7 @@ export const stockProjectCard: Tproject = {
     { Icon: IconBrandCss3, tooltipText: 'CSS' },
     { Icon: IconBrandJavascript, tooltipText: 'JavaScript' },
     { Icon: IconBrandBootstrap, tooltipText: 'Bootstrap' },
-    { Icon: IconDatabase, tooltipText: 'PostgreSql' },
+    { Icon: IconDatabase, tooltipText: 'PostgreSQL' },
   ],
   links: [
     {
