@@ -89,4 +89,20 @@
   .skillsAnimation {
     @apply hidden w-56 h-56 md:block md:absolute md:right-28 md:bottom-20 lg:right-5 lg:bottom-40 lg:w-[22rem] lg:h-[22rem] xl:w-[28rem] xl:h-[28rem];
   }
+
+  .projectCard {
+    @apply grid grid-rows-1 py-4 px-5 shadow-project rounded-lg md:items-center md:grid-rows-5 md:grid-cols-12 md:justify-items-center md:shadow-none md:rounded-none;
+  }
+
+  .projectIconsHeading {
+    @apply font-semibold mb-2 md:text-center md:text-lg lg:text-xl xl:text-2xl;
+  }
+
+  .projectIcons {
+    @apply flex flex-row gap-x-2 md:justify-center lg:gap-x-4 2xl:gap-x-6;
+  }
+
+  .projectImage {
+    @apply opacity-10 absolute -z-10 top-0 left-0 object-center object-cover w-full h-full max-w-[600px] max-h-[600px] md:opacity-50 md:border-2 md:border-black-200 md:w-1/2 md:h-1/2 md:top-1/4 lg:top-[12.5%] lg:w-1/2 lg:h-3/4;
+  }
 }

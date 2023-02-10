@@ -5,6 +5,7 @@ import Hero from '@/sections/hero/Hero';
 import AboutMe from '@/sections/about-me/AboutMe';
 import Skills from '@/sections/skills/Skills';
 import Experience from '@/sections/experience/Experience';
+import Projects from '@/sections/projects/Projects';
 
 const Page = () => {
   return (
@@ -15,6 +16,7 @@ const Page = () => {
       <ScrollToTop />
       <Skills />
       <Experience />
+      <Projects />
     </div>
   );
 };
