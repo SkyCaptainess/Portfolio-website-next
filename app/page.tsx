@@ -8,20 +8,23 @@ import Experience from '@/sections/experience/Experience';
 import Projects from '@/sections/projects/Projects';
 import Contact from '@/sections/contact/Contact';
 import Footer from '@/sections/footer/Footer';
+import Splash from '@/sections/splash/splash';
 
 const Page = () => {
   return (
-    <div className="relative z-0">
-      <MainNavigation />
-      <Hero />
-      <AboutMe />
-      <ScrollToTop />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <Splash>
+      <div className="relative z-0">
+        <MainNavigation />
+        <Hero />
+        <AboutMe />
+        <ScrollToTop />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </Splash>
   );
 };
 
