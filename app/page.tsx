@@ -6,6 +6,7 @@ import AboutMe from '@/sections/about-me/AboutMe';
 import Skills from '@/sections/skills/Skills';
 import Experience from '@/sections/experience/Experience';
 import Projects from '@/sections/projects/Projects';
+import Contact from '@/sections/contact/Contact';
 
 const Page = () => {
   return (
@@ -17,6 +18,7 @@ const Page = () => {
       <Skills />
       <Experience />
       <Projects />
+      <Contact />
     </div>
   );
 };

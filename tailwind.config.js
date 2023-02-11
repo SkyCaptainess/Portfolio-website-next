@@ -24,6 +24,7 @@ module.exports = {
         300: '#F8F8F8',
       },
       aqua: '#008DAA',
+      'dark-aqua': '#00697f',
       'light-blue': '#A9F0FF',
       'dark-blue': '#0C2E4E',
       blue: '#00D4FF',

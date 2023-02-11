@@ -34,7 +34,7 @@ const HeroButtons = () => {
       {anchorElements}
       <button
         type="button"
-        className="bg-aqua px-4 py-2 rounded-2xl transition-colors ease-linear duration-200 hover:bg-dark-blue"
+        className="bg-aqua px-4 py-2 rounded-2xl transition-colors ease-linear duration-200 hover:bg-dark-aqua"
       >
         <a
           href="#"

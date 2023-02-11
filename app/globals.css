@@ -59,7 +59,7 @@
   }
 
   .aboutmeContainer {
-    @apply relative text-white-300 mx-auto pt-8 pr-20 w-11/12 mb-32 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 2xl:mb-[15.5rem] 3xl:mb-[17rem];
+    @apply relative text-white-300 mx-auto mb-32 pt-8 pr-20 w-11/12 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 2xl:mb-[15.5rem] 3xl:mb-[17rem];
   }
 
   .aboutmeHeading {
@@ -67,7 +67,7 @@
   }
 
   .aboutmeText {
-    @apply text-base font-normal mb-5 md:mb-0 md:col-span-2 md:text-lg xl:text-xl;
+    @apply text-base font-normal mb-5 md:mb-0 md:text-lg xl:text-xl;
   }
 
   .aboutmeAnimation {

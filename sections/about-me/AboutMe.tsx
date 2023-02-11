@@ -46,23 +46,23 @@ const AboutMe = () => {
             Never too late to learn
           </h2>
         </m.div>
-        <m.h4 variants={childAnimation} className="aboutmeText">
+        <m.h4 variants={childAnimation} className="aboutmeText md:col-span-2">
           I always thought my dream was to be a licensed aircraft engineer, it
           seemed like an appropriate dream given my education path, but I always
           felt mundane.
         </m.h4>
-        <m.h4 variants={childAnimation} className="aboutmeText">
+        <m.h4 variants={childAnimation} className="aboutmeText md:col-span-2">
           It all changed when I had my first and only programming module in
           university, the fascination it produced when I wrote my 1st Hello
           World program on Python.
         </m.h4>
-        <m.h4 variants={childAnimation} className="aboutmeText">
+        <m.h4 variants={childAnimation} className="aboutmeText md:col-span-2">
           Since then, I have taken a liking in web development which comprises
           of problem-solving skills and creativity.
         </m.h4>
         <m.h4
           variants={childAnimation}
-          className="aboutmeText font-semibold m-0"
+          className="aboutmeText font-semibold m-0 md:col-span-2"
         >
           Graduated B.Eng. with Honours in Aircraft Systems Engineering, from{' '}
           <a className="cursor-pointer text-light-blue no-underline hover:underline hover:underline-offset-4">
