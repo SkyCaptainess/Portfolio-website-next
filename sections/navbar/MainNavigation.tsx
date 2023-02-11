@@ -14,7 +14,7 @@ const MainNavigation = () => {
 
   const childAnimation: Tanimation = {
     hidden: {
-      y: prefersReducedMotion ? 0 : -100,
+      y: prefersReducedMotion ? 0 : -50,
     },
     show: {
       y: 0,

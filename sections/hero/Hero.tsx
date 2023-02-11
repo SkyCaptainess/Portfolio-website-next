@@ -4,8 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import profilePic from '../../public/images/profile-light.webp';
 import HeroButtons from '../../components/HeroButtons';
-import Animation from '../../components/Animation';
-import { m, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Tanimation } from '@/constants/global';
 
 const Hero = () => {
@@ -32,9 +31,15 @@ const Hero = () => {
   };
 
   return (
-    <Animation animation={containerAnimation} className="heroSection">
+    <motion.div
+      variants={containerAnimation}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.65 }}
+      className="heroSection"
+    >
       <Image src={profilePic} alt="Profile Picture" className="profilePic" />
-      <m.h1
+      <motion.h1
         variants={childAnimation}
         className="mb-4 md:mb-0 md:text-4xl md:col-span-2 md:row-start-1 md:row-end-2 xl:text-5xl"
       >
@@ -42,15 +47,15 @@ const Hero = () => {
         &nbsp;&nbsp;Hi there! I&apos;m{' '}
         <span className="text-aqua font-bold md:text-black-200">Nicholas</span>,
         I love to design and code beautifully simple things
-      </m.h1>
-      <m.h3
+      </motion.h1>
+      <motion.h3
         variants={childAnimation}
         className="mb-4 md:mb-0 md:text-2xl md:col-span-2 md:row-start-2 md:row-end-2 xl:text-3xl"
       >
         Nothing excites me more than learning something new and starting a new
         adventure.
-      </m.h3>
-      <m.div
+      </motion.h3>
+      <motion.div
         variants={childAnimation}
         className="md:col-span-2 md:row-start-3 md:row-end-4 xl:gap-y-10"
       >
@@ -61,8 +66,8 @@ const Hero = () => {
           </a>
         </h3>
         <HeroButtons />
-      </m.div>
-    </Animation>
+      </motion.div>
+    </motion.div>
   );
 };
 

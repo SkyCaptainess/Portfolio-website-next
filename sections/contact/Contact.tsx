@@ -25,6 +25,7 @@ const Contact = () => {
       <Animation
         animation={containerAnimation}
         className="contactContainer mb-20 ipad-mini:mb-28 md:mb-32 lg:mb-48 xl:mb-56 3xl:mb-72"
+        viewAmount={0.65}
       >
         <h2 className="text-blue text-xl font-bold md:text-3xl xl:text-4xl">
           🤙 What&apos;s next?

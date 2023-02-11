@@ -40,6 +40,7 @@ const Experience = () => {
       <Animation
         animation={containerAnimation}
         className="aboutmeContainer md:mb-56 md:pt-0 md:grid-rows-5 md:gap-y-0 md:gap-x-10 md:justify-center md:items-center lg:mb-[18rem] xl:mb-64 2xl:mb-[19em] 3xl:mb-[22rem]"
+        viewAmount={0.65}
       >
         <m.h2
           variants={childAnimation}

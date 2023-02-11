@@ -47,7 +47,7 @@
   }
 
   .heroSection {
-    @apply static z-0 grid grid-cols-1 mx-auto mb-28 w-11/12 max-w-7xl md:justify-evenly md:items-center md:gap-x-8 md:grid-cols-3 md:grid-rows-3 xl:grid-cols-4;
+    @apply static z-0 grid grid-cols-1 mx-auto mb-28 w-11/12 max-w-7xl md:justify-evenly md:items-center md:gap-x-8 md:grid-cols-3 md:grid-rows-3 lg:mb-60 xl:grid-cols-4;
   }
 
   .profilePic {

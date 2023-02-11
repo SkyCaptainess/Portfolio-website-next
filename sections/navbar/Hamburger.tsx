@@ -1,6 +1,5 @@
 import React from 'react';
-import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { motion } from 'framer-motion';
 
 type HamburgerProps = {
   isMenuClicked: boolean;
@@ -13,18 +12,6 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   };
 
   const transitionType = { type: 'spring', duration: 0.4, bounce: 0.5 };
-  const childAnimation: Tanimation = {
-    hidden: { opacity: 0, y: -50 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: 'spring',
-        duration: 0.4,
-        bounce: 0.4,
-      },
-    },
-  };
   const variant = isMenuClicked ? 'click' : 'unclick';
   const variantType = {
     top: {
@@ -58,33 +45,30 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   };
 
   return (
-    <LazyMotion features={domAnimation}>
-      <m.div
-        variants={childAnimation}
-        className="cursor-pointer h-full"
-        onClick={clickHandler}
-        data-testid="hamburger-btn"
-      >
-        <m.div
-          animate={variant}
-          variants={variantType.top}
-          transition={transitionType}
-          className="w-8 h-[2px] bg-white-100"
-        />
-        <m.div
-          animate={variant}
-          variants={variantType.center}
-          transition={transitionType}
-          className="my-2 w-8 h-[2px] bg-white-100"
-        />
-        <m.div
-          animate={variant}
-          variants={variantType.bottom}
-          transition={transitionType}
-          className="w-8 h-[2px] bg-white-100"
-        />
-      </m.div>
-    </LazyMotion>
+    <div
+      className="cursor-pointer h-full"
+      onClick={clickHandler}
+      data-testid="hamburger-btn"
+    >
+      <motion.div
+        animate={variant}
+        variants={variantType.top}
+        transition={transitionType}
+        className="w-8 h-[2px] bg-white-100"
+      />
+      <motion.div
+        animate={variant}
+        variants={variantType.center}
+        transition={transitionType}
+        className="my-2 w-8 h-[2px] bg-white-100"
+      />
+      <motion.div
+        animate={variant}
+        variants={variantType.bottom}
+        transition={transitionType}
+        className="w-8 h-[2px] bg-white-100"
+      />
+    </div>
   );
 };
 

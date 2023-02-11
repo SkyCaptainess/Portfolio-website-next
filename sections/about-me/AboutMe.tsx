@@ -36,7 +36,11 @@ const AboutMe = () => {
 
   return (
     <section className="dark-blue-section">
-      <Animation animation={containerAnimation} className="aboutmeContainer">
+      <Animation
+        animation={containerAnimation}
+        className="aboutmeContainer"
+        viewAmount={0.7}
+      >
         <m.div
           variants={childAnimation}
           className="md:col-span-2 md:justify-self-start"

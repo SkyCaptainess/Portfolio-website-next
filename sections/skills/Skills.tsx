@@ -45,7 +45,11 @@ const Skills = () => {
 
   return (
     <section>
-      <Animation animation={containerAnimation} className="skillsContainer">
+      <Animation
+        animation={containerAnimation}
+        className="skillsContainer"
+        viewAmount={0.65}
+      >
         <m.h2 variants={childAnimation} className="skillsHeading">
           💪 Skills
         </m.h2>
