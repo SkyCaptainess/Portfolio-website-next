@@ -3,8 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import Experience from './Experience';
 
 beforeAll(() => {
-  const mockIntersectionObserver = jest.fn();
-  mockIntersectionObserver.mockReturnValue({
+  const mockIntersectionObserver = jest.fn().mockReturnValue({
     observe: () => null,
     unobserve: () => null,
     disconnect: () => null,

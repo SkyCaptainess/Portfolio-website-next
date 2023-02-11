@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react';
 import Hero from './Hero';
 
 beforeAll(() => {
-  const mockIntersectionObserver = jest.fn();
-  mockIntersectionObserver.mockReturnValue({
+  const mockIntersectionObserver = jest.fn().mockReturnValue({
     observe: () => null,
     unobserve: () => null,
     disconnect: () => null,
   });
+
   window.IntersectionObserver = mockIntersectionObserver;
 });
 
