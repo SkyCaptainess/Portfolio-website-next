@@ -24,7 +24,7 @@ const Contact = () => {
     <section className="dark-blue-section">
       <Animation
         animation={containerAnimation}
-        className="relative flex flex-col gap-y-4 lg:gap-y-8 justify-center items-center mx-auto p-0 text-center w-11/12 max-w-[450px] h-full xl:max-w-[600px] mb-60 "
+        className="contactContainer mb-20 ipad-mini:mb-28 md:mb-32 lg:mb-48 xl:mb-56 3xl:mb-72"
       >
         <h2 className="text-blue text-xl font-bold md:text-3xl xl:text-4xl">
           🤙 What&apos;s next?

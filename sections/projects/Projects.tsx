@@ -30,7 +30,7 @@ const Projects = () => {
 
   return (
     <section>
-      <div className="mx-auto mb-16 w-11/12 max-w-7xl sm:mb-28 2xl:mb-44">
+      <div className="mx-auto mb-20 w-11/12 max-w-7xl sm:mb-28 2xl:mb-44">
         <Animation animation={animation} className="mb-8">
           <h2 className="skillsHeading">🧑‍💻 Projects</h2>
           <h3 className="skillsSubHeading">

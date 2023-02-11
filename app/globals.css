@@ -105,4 +105,16 @@
   .projectImage {
     @apply opacity-10 absolute -z-10 top-0 left-0 object-center object-cover w-full h-full max-w-[600px] max-h-[600px] md:opacity-50 md:border-2 md:border-black-200 md:w-1/2 md:h-1/2 md:top-1/4 lg:top-[12.5%] lg:w-1/2 lg:h-3/4;
   }
+
+  .contactContainer {
+    @apply relative flex flex-col gap-y-4 lg:gap-y-8 justify-center items-center mx-auto p-0 text-center w-11/12 max-w-[450px] h-full xl:max-w-[600px];
+  }
+
+  .footerContainer {
+    @apply flex flex-col flex-nowrap justify-between items-start gap-y-2 mx-auto py-4 w-11/12 max-w-7xl h-full md:flex-row md:gap-y-0 md:items-center lg:py-8;
+  }
+
+  .footerText {
+    @apply text-base font-medium md:order-2 md:text-lg xl:text-xl;
+  }
 }
