@@ -1,28 +1,17 @@
-import React, { useId } from 'react';
+import React from 'react';
 import { externalLinks } from '../constants/global';
-import {
-  IconBrandLinkedin,
-  IconBrandGithub,
-  IconBrandInstagram,
-} from '@tabler/icons-react';
 
 const HeroButtons = () => {
-  const icons = [
-    <IconBrandLinkedin key={useId()} size={40} color="#343434" />,
-    <IconBrandGithub key={useId()} size={40} color="#343434" />,
-    <IconBrandInstagram key={useId()} size={40} color="#343434" />,
-  ];
-
   const anchorElements = Object.entries(externalLinks).map(
-    ([name, link], index) => {
+    ([name, { Icon, url }], index) => {
       return (
         <div
           key={index}
           className="tooltip tooltip-info tooltip-bottom ml-2 md:tooltip-top md:ml-0"
           data-tip={name}
         >
-          <a href={link} rel="noreferrer" target="_blank">
-            {icons[index]}
+          <a href={url} rel="noreferrer" target="_blank">
+            <Icon size={40} color={'#343434'} className="cursor-pointer" />
           </a>
         </div>
       );

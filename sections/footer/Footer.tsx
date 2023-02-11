@@ -1,12 +1,16 @@
 import React from 'react';
-import {
-  IconBrandLinkedin,
-  IconBrandGithub,
-  IconBrandInstagram,
-} from '@tabler/icons-react';
+import { externalLinks } from '@/constants/global';
 
 const Footer = () => {
-  const icons = [IconBrandLinkedin, IconBrandGithub, IconBrandInstagram];
+  const footerIcons = Object.values(externalLinks).map(
+    ({ Icon, url }, index) => {
+      return (
+        <a key={index} href={url} rel="noreferrer" target="_blank">
+          <Icon size={30} color={'#343434'} className="cursor-pointer" />
+        </a>
+      );
+    }
+  );
 
   return (
     <footer>
@@ -17,14 +21,7 @@ const Footer = () => {
         <h4 className="footerText text-black-200">Thanks for visiting!</h4>
 
         <div className="flex flex-row flex-nowrap gap-x-4 md:order-last">
-          {icons.map((Icon, index) => (
-            <Icon
-              key={index}
-              size={30}
-              color={'#343434'}
-              className="cursor-pointer hover:animate-bounce"
-            />
-          ))}
+          {footerIcons}
         </div>
       </div>
     </footer>

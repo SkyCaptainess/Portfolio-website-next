@@ -1,4 +1,9 @@
 import { Variants } from 'framer-motion';
+import {
+  IconBrandLinkedin,
+  IconBrandGithub,
+  IconBrandInstagram,
+} from '@tabler/icons-react';
 
 export const listElements = [
   'About Me',
@@ -8,10 +13,23 @@ export const listElements = [
   'Contact',
 ];
 
-export const externalLinks = {
-  LinkedIn: 'https://www.linkedin.com/in/nicholas-yjy/',
-  GitHub: 'https://github.com/nicholas5538',
-  Instagram: 'https://www.instagram.com/frivolousnicholas',
+type Tlinks = {
+  [key: string]: {
+    Icon: typeof IconBrandGithub;
+    url: string;
+  };
+};
+
+export const externalLinks: Tlinks = {
+  Linkedin: {
+    Icon: IconBrandLinkedin,
+    url: 'https://www.linkedin.com/in/nicholas-yjy/',
+  },
+  GitHub: { Icon: IconBrandGithub, url: 'https://github.com/nicholas5538' },
+  Instragram: {
+    Icon: IconBrandInstagram,
+    url: 'https://www.instagram.com/frivolousnicholas',
+  },
 };
 
 export type Tvariants = {
