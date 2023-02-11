@@ -31,7 +31,7 @@
   }
 
   .dark-blue-gradient {
-    @apply absolute -z-10 -top-56 -left-16 -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[135%] xl:h-[135%] 2xl:-left-20 2xl:h-[145%];
+    @apply absolute -z-10 -top-56 -left-[4.5rem] -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[135%] xl:h-[135%] 2xl:h-[145%] 3xl:h-[160%];
   }
 
   .dark-blue-section {
@@ -51,7 +51,7 @@
   }
 
   .profilePic {
-    @apply object-center object-scale-down mx-auto mb-8 shadow-dropdown w-48 h-72 md:object-cover md:mb-0 md:col-span-1 md:row-start-1 md:row-end-4 md:order-last md:w-full md:h-5/6 xl:self-start xl:col-span-2 xl:w-9/12;
+    @apply object-center object-scale-down mx-auto mb-8 shadow-dropdown w-48 h-72 md:object-cover md:mb-0 md:mr-0 md:col-span-1 md:row-start-1 md:row-end-4 md:order-last md:w-full md:h-5/6 lg:self-center xl:col-span-2 xl:w-9/12 2xl:z-10;
   }
 
   .waving {
@@ -59,7 +59,7 @@
   }
 
   .aboutmeContainer {
-    @apply relative text-white-300 mx-auto pt-8 pr-20 w-11/12 mb-32 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 xl:mb-60 2xl:mb-[280px];
+    @apply relative text-white-300 mx-auto pt-8 pr-20 w-11/12 mb-32 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 2xl:mb-[15.5rem] 3xl:mb-[17rem];
   }
 
   .aboutmeHeading {
@@ -67,7 +67,7 @@
   }
 
   .aboutmeText {
-    @apply text-base font-normal mb-5 md:mb-0 md:col-span-2 md:text-lg xl:text-2xl;
+    @apply text-base font-normal mb-5 md:mb-0 md:col-span-2 md:text-lg xl:text-xl;
   }
 
   .aboutmeAnimation {
@@ -88,5 +88,21 @@
 
   .skillsAnimation {
     @apply hidden w-56 h-56 md:block md:absolute md:right-28 md:bottom-20 lg:right-5 lg:bottom-40 lg:w-[22rem] lg:h-[22rem] xl:w-[28rem] xl:h-[28rem];
+  }
+
+  .projectCard {
+    @apply grid grid-rows-1 py-4 px-5 shadow-project rounded-lg md:items-center md:grid-rows-5 md:grid-cols-12 md:justify-items-center md:shadow-none md:rounded-none;
+  }
+
+  .projectIconsHeading {
+    @apply font-semibold mb-2 md:text-center md:text-lg lg:text-xl xl:text-2xl;
+  }
+
+  .projectIcons {
+    @apply flex flex-row flex-wrap gap-x-2 md:justify-center lg:gap-x-4 2xl:gap-x-6;
+  }
+
+  .projectImage {
+    @apply opacity-10 absolute -z-10 top-0 left-0 object-center object-cover w-full h-full max-w-[600px] max-h-[600px] md:opacity-50 md:border-2 md:border-black-200 md:w-1/2 md:h-1/2 md:top-1/4 lg:top-[12.5%] lg:w-1/2 lg:h-3/4;
   }
 }

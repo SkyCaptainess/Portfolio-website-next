@@ -12,6 +12,8 @@ import {
   IconBrandMysql,
   IconLetterC,
   IconBrandCypress,
+  IconBrandVite,
+  IconDatabase,
   IconBrandAdobe,
   IconBrandFigma,
 } from '@tabler/icons-react';
@@ -40,8 +42,10 @@ export const goodDesignIcons = [
 export const averageCodingIcons = [
   { Icon: IconBrandNextjs, tooltipText: 'Nextjs' },
   { Icon: IconBrandMysql, tooltipText: 'MySQL' },
+  { Icon: IconDatabase, tooltipText: 'PostgreSQL' },
   { Icon: IconLetterC, tooltipText: 'C' },
   { Icon: IconBrandCypress, tooltipText: 'Cypress' },
+  { Icon: IconBrandVite, tooltipText: 'Vite & Vitest' },
 ];
 
 export const averageDesignIcons = [

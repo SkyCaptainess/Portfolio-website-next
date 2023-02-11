@@ -1,5 +1,5 @@
 import React, { useId } from 'react';
-import { externalLinks } from '../../constants/global';
+import { externalLinks } from '../constants/global';
 import {
   IconBrandLinkedin,
   IconBrandGithub,

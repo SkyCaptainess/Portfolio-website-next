@@ -3,7 +3,7 @@ import MainNavigation from '../MainNavigation';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-test('Navbar is rendered with applicable elements', () => {
+it('Navbar is rendered with applicable elements', () => {
   render(<MainNavigation />);
   expect(
     screen.getByRole('heading', { name: /nicholas/i })
@@ -11,7 +11,7 @@ test('Navbar is rendered with applicable elements', () => {
   expect(screen.getAllByRole('listitem')[0]).toBeInTheDocument();
 });
 
-test('Dark mode switch toggling', async () => {
+it('Dark mode switch toggling', async () => {
   const user = userEvent.setup();
   render(<MainNavigation />);
   const darkModeSwitch = screen.getByTestId('darkModeSwitch');
