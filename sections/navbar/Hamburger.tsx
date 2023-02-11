@@ -1,5 +1,6 @@
 import React from 'react';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { Tanimation } from '@/constants/global';
 
 type HamburgerProps = {
   isMenuClicked: boolean;
@@ -11,6 +12,19 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
     setMenuClicked((prevState) => !prevState);
   };
 
+  const transitionType = { type: 'spring', duration: 0.4, bounce: 0.5 };
+  const childAnimation: Tanimation = {
+    hidden: { opacity: 0, y: -50 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        duration: 0.4,
+        bounce: 0.4,
+      },
+    },
+  };
   const variant = isMenuClicked ? 'click' : 'unclick';
   const variantType = {
     top: {
@@ -42,15 +56,15 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
       },
     },
   };
-  const transitionType = { type: 'spring', duration: 0.4, bounce: 0.5 };
 
   return (
-    <div
-      className="cursor-pointer h-full"
-      onClick={clickHandler}
-      data-testid="hamburger-btn"
-    >
-      <LazyMotion features={domAnimation}>
+    <LazyMotion features={domAnimation}>
+      <m.div
+        variants={childAnimation}
+        className="cursor-pointer h-full"
+        onClick={clickHandler}
+        data-testid="hamburger-btn"
+      >
         <m.div
           animate={variant}
           variants={variantType.top}
@@ -69,8 +83,8 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
           transition={transitionType}
           className="w-8 h-[2px] bg-white-100"
         />
-      </LazyMotion>
-    </div>
+      </m.div>
+    </LazyMotion>
   );
 };
 

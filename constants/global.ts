@@ -20,15 +20,16 @@ export type Tvariants = {
 };
 
 export type Tanimation = {
-  hidden: { opacity: 0; x?: number; y?: number };
+  hidden: { opacity?: 0; x?: number; y?: number };
   show: {
-    opacity: 1;
+    opacity?: 1;
     x?: number;
     y?: number;
     transition?: {
       bounce?: number;
+      delay?: number;
       delayChildren?: number;
-      duration: number;
+      duration?: number;
       type?: 'inertia' | 'spring' | 'tween';
       staggerChildren?: number;
     };

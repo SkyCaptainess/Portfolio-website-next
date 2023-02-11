@@ -1,15 +1,17 @@
 import React from 'react';
-import { listElements } from '@/constants/global';
+import { listElements, Tvariants } from '@/constants/global';
+import { motion } from 'framer-motion';
 
-const NavbarLinks = () => {
+const NavbarLinks = ({ childAnimation }: Tvariants) => {
   const liElements = listElements.map((element, index) => {
     return (
-      <li
+      <motion.li
+        variants={childAnimation}
         key={index}
         className="navbar-text cursor-pointer hover:underline hover:decoration-white-300 hover:decoration-2 hover:underline-offset-8"
       >
         {element}
-      </li>
+      </motion.li>
     );
   });
 

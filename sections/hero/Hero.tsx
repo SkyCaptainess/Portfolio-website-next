@@ -11,8 +11,12 @@ import { Tanimation } from '@/constants/global';
 const Hero = () => {
   const prefersReducedMotion = useReducedMotion();
   const childAnimation: Tanimation = {
-    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -50 },
-    show: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: 'spring', duration: 0.4, bounce: 0.4 },
+    },
   };
 
   const containerAnimation: Tanimation = {
@@ -20,10 +24,9 @@ const Hero = () => {
     show: {
       ...childAnimation.show,
       transition: {
-        type: 'spring',
-        duration: 1,
-        bounce: 0.4,
-        staggerChildren: 0.1,
+        duration: 0.4,
+        delayChildren: 0.7,
+        staggerChildren: 0.2,
       },
     },
   };
