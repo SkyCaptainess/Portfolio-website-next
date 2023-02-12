@@ -1,15 +1,16 @@
 'use client';
 
 import React, { lazy } from 'react';
+import { useMotionContext } from '@/hooks/useMotionContext';
 import AboutMeLight from '../../public/animations/aboutme-light.json';
-import { m, useReducedMotion } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { m } from 'framer-motion';
+import { Tanimation } from '@/constants/typeInterface';
 import Animation from '../../components/Animation';
 
 const Lottie = lazy(() => import('lottie-react'));
 
 const AboutMe = () => {
-  const prefersReducedMotion = useReducedMotion();
+  const { prefersReducedMotion } = useMotionContext() ?? false;
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },
@@ -29,7 +30,7 @@ const AboutMe = () => {
         type: 'spring',
         duration: 1,
         bounce: 0.4,
-        staggerChildren: 0.1,
+        staggerChildren: prefersReducedMotion ? 0 : 0.1,
       },
     },
   };
@@ -75,7 +76,10 @@ const AboutMe = () => {
           .
         </m.h4>
         <m.aside variants={lottieAnimation} className="aboutmeAnimation">
-          <Lottie animationData={AboutMeLight} />
+          <Lottie
+            animationData={AboutMeLight}
+            loop={prefersReducedMotion ? 1 : true}
+          />
         </m.aside>
       </Animation>
       <div className="dark-blue-gradient"></div>

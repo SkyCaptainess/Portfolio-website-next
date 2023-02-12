@@ -4,11 +4,12 @@ import React from 'react';
 import Image from 'next/image';
 import profilePic from '../../public/images/profile-light.webp';
 import HeroButtons from '../../components/HeroButtons';
-import { motion, useReducedMotion } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { useMotionContext } from '@/hooks/useMotionContext';
+import { motion } from 'framer-motion';
+import { Tanimation } from '@/constants/typeInterface';
 
 const Hero = () => {
-  const prefersReducedMotion = useReducedMotion();
+  const { prefersReducedMotion } = useMotionContext() ?? false;
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
     show: {
@@ -43,7 +44,13 @@ const Hero = () => {
         variants={childAnimation}
         className="mb-4 md:mb-0 md:text-4xl md:col-span-2 md:row-start-1 md:row-end-2 xl:text-5xl"
       >
-        <span className="waving">👋</span>
+        <span
+          className={`waving ${
+            prefersReducedMotion ? 'animate-none' : 'animate-wave origin-wave'
+          }`}
+        >
+          👋
+        </span>
         &nbsp;&nbsp;Hi there! I&apos;m{' '}
         <span className="text-aqua font-bold md:text-black-200">Nicholas</span>,
         I love to design and code beautifully simple things

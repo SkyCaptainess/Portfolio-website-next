@@ -1,5 +1,6 @@
 import React from 'react';
-import { listElements, Tvariants } from '@/constants/global';
+import { listElements } from '@/constants/global';
+import { Tvariants } from '@/constants/typeInterface';
 import { motion } from 'framer-motion';
 
 const NavbarLinks = ({ childAnimation }: Tvariants) => {

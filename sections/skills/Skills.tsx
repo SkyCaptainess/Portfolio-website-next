@@ -1,6 +1,7 @@
 'use client';
 
 import React, { lazy } from 'react';
+import { useMotionContext } from '@/hooks/useMotionContext';
 import {
   goodCodingIcons,
   goodDesignIcons,
@@ -10,13 +11,13 @@ import {
 import SkillCategory from './SkillCategory';
 import SkillsLight from '../../public/animations/skills-light.json';
 import Animation from '../../components/Animation';
-import { m, useReducedMotion } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { m } from 'framer-motion';
+import { Tanimation } from '@/constants/typeInterface';
 
 const Lottie = lazy(() => import('lottie-react'));
 
 const Skills = () => {
-  const prefersReducedMotion = useReducedMotion();
+  const { prefersReducedMotion } = useMotionContext() ?? false;
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
@@ -31,7 +32,7 @@ const Skills = () => {
         type: 'spring',
         duration: 1,
         bounce: 0.4,
-        staggerChildren: 0.1,
+        staggerChildren: prefersReducedMotion ? 0 : 0.1,
       },
     },
   };
@@ -80,7 +81,10 @@ const Skills = () => {
           />
         </m.div>
         <m.aside variants={lottieAnimation} className="skillsAnimation">
-          <Lottie animationData={SkillsLight} />
+          <Lottie
+            animationData={SkillsLight}
+            loop={prefersReducedMotion ? 1 : true}
+          />
         </m.aside>
       </Animation>
     </section>

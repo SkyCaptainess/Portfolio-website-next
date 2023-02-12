@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Tproject } from '@/sections/projects/projectDetails';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { Tanimation } from '@/constants/typeInterface';
 
 const ProjectCard = ({
   id,

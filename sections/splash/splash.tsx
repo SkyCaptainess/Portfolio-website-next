@@ -4,7 +4,7 @@ import React, { lazy, useEffect, useState } from 'react';
 import { childrenNode } from '@/constants/typeInterface';
 import LoadingAnimation from '../../public/animations/loading.json';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { Tanimation } from '@/constants/typeInterface';
 
 const Lottie = lazy(() => import('lottie-react'));
 

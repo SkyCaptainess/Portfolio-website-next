@@ -1,6 +1,6 @@
 import React from 'react';
 import { averageDesignIcons, goodDesignIcons, TIcons } from './common';
-import { Tvariants } from '@/constants/global';
+import { Tvariants } from '@/constants/typeInterface';
 import { m } from 'framer-motion';
 
 const SkillCategory = ({

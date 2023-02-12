@@ -1,19 +1,14 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { useMotionContext } from '@/hooks/useMotionContext';
 import { IconArrowBigUpLineFilled } from '@tabler/icons-react';
-import {
-  AnimatePresence,
-  domAnimation,
-  LazyMotion,
-  m,
-  useReducedMotion,
-} from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion';
+import { Tanimation } from '@/constants/typeInterface';
 
 const ScrollToTop = () => {
   const [visibleButton, setVisibleButton] = useState<boolean>(false);
-  const prefersReducedMotion = useReducedMotion();
+  const { prefersReducedMotion } = useMotionContext();
 
   useEffect(() => {
     const setBtnState = () => {

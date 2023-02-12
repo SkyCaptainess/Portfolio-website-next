@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useMotionContext } from '@/hooks/useMotionContext';
 import ProjectCard from '@/components/ProjectCard';
 import {
   stockProjectCard,
@@ -9,11 +10,10 @@ import {
   unicurdProjectCard,
 } from './projectDetails';
 import Animation from '@/components/Animation';
-import { useReducedMotion } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { Tanimation } from '@/constants/typeInterface';
 
 const Projects = () => {
-  const prefersReducedMotion = useReducedMotion();
+  const { prefersReducedMotion } = useMotionContext() ?? false;
 
   const animation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -50 },

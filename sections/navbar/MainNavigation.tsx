@@ -1,16 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useMotionContext } from '@/hooks/useMotionContext';
 import DropdownMenu from './DropdownMenu';
 import NavbarLinks from './NavbarLinks';
 import { IconMoodSmileBeam } from '@tabler/icons-react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import { motion, useReducedMotion } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { motion } from 'framer-motion';
+import { Tanimation } from '@/constants/typeInterface';
 
 const MainNavigation = () => {
   const [isDarkMode, setDarkMode] = useState<boolean>(false);
-  const prefersReducedMotion = useReducedMotion();
+  const { prefersReducedMotion } = useMotionContext() ?? false;
 
   const childAnimation: Tanimation = {
     hidden: {
@@ -34,7 +35,7 @@ const MainNavigation = () => {
       opacity: 1,
       transition: {
         delayChildren: 0,
-        staggerChildren: 0.05,
+        staggerChildren: prefersReducedMotion ? 0 : 0.05,
       },
     },
   };

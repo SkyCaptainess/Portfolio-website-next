@@ -1,6 +1,6 @@
 import { experiences } from './experienceDesc';
 import { m } from 'framer-motion';
-import { Tvariants } from '@/constants/global';
+import { Tvariants } from '@/constants/typeInterface';
 
 const JobPointers = ({ childAnimation }: Tvariants) => {
   const createExperienceElement = experiences.map((experience, index) => {

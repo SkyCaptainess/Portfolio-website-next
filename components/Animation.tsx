@@ -1,4 +1,4 @@
-import { Tanimation } from '@/constants/global';
+import { Tanimation } from '@/constants/typeInterface';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 
 type staggerProps = {

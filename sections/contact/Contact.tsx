@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
+import { useMotionContext } from '@/hooks/useMotionContext';
 import Animation from '@/components/Animation';
-import { useReducedMotion } from 'framer-motion';
-import { Tanimation } from '@/constants/global';
+import { Tanimation } from '@/constants/typeInterface';
 
 const Contact = () => {
-  const prefersReducedMotion = useReducedMotion();
+  const { prefersReducedMotion } = useMotionContext() ?? false;
   const containerAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
     show: {

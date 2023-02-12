@@ -55,7 +55,7 @@
   }
 
   .waving {
-    @apply inline-block text-4xl animate-wave origin-wave xl:text-5xl;
+    @apply inline-block text-4xl xl:text-5xl;
   }
 
   .aboutmeContainer {

@@ -9,22 +9,25 @@ import Projects from '@/sections/projects/Projects';
 import Contact from '@/sections/contact/Contact';
 import Footer from '@/sections/footer/Footer';
 import Splash from '@/sections/splash/splash';
+import MotionProvider from '@/hooks/useMotionContext';
 
 const Page = () => {
   return (
-    <Splash>
-      <div className="relative z-0">
-        <MainNavigation />
-        <Hero />
-        <AboutMe />
-        <ScrollToTop />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-        <Footer />
-      </div>
-    </Splash>
+    <MotionProvider>
+      <Splash>
+        <div className="relative z-0">
+          <MainNavigation />
+          <Hero />
+          <AboutMe />
+          <ScrollToTop />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Contact />
+          <Footer />
+        </div>
+      </Splash>
+    </MotionProvider>
   );
 };
 
