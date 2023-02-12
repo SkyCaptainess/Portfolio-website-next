@@ -1,21 +1,21 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-      directory: "/"
-      schedule:
-        interval: 'monthly'
-        day: 'monday'
-        time: '10:00'
-        timezone: 'Asia/Singapore'
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: 'weekly'
-      day: 'monday'
+      interval: monthly
+      day: monday
       time: '10:00'
-      timezone: 'Asia/Singapore'
-    open-pull-requests-limit: 10
+      timezone: Asia/Singapore
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '10:00'
+      timezone: Asia/Singapore
     pull-request-branch-name:
       separator: '-'
+    open-pull-requests-limit: 10
     labels:
-      - 'npm dependencies'
+      - npm dependencies
