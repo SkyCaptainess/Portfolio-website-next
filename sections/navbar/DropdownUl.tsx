@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
+import { useMotionContext } from '@/hooks/useMotionContext';
+import { useRefsContext } from '@/hooks/useRefsContext';
 import { AnimatePresence, motion } from 'framer-motion';
 import { setMenuType } from '@/constants/typeInterface';
+import { scrollToRef } from '@/constants/global';
 import { useOutsideAlerter } from '@/hooks/useOutsideAlerter';
 import { listElements } from '@/constants/global';
 
@@ -13,12 +16,17 @@ const DropdownUl = ({
   setMenuClicked,
 }: menuType & setMenuType) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { prefersReducedMotion } = useMotionContext() ?? false;
+  const refsArray = Object.values(useRefsContext() ?? false);
   useOutsideAlerter(dropdownRef, () => setMenuClicked(false));
 
   const liElements = listElements.map((element, index) => {
     return (
       <li
         key={index}
+        onClick={() =>
+          scrollToRef(refsArray[index], prefersReducedMotion ?? false)
+        }
         className={`dropdown-link ${
           index === 0
             ? 'rounded-t-xl'

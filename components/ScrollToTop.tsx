@@ -5,6 +5,7 @@ import { useMotionContext } from '@/hooks/useMotionContext';
 import { IconArrowBigUpLineFilled } from '@tabler/icons-react';
 import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
+import { scrollTo } from 'seamless-scroll-polyfill';
 
 const ScrollToTop = () => {
   const [visibleButton, setVisibleButton] = useState<boolean>(false);
@@ -24,7 +25,7 @@ const ScrollToTop = () => {
   }, []);
 
   const goToTop = () => {
-    window.scrollTo({
+    scrollTo(window, {
       top: 0,
       behavior: prefersReducedMotion ? 'auto' : 'smooth',
     });

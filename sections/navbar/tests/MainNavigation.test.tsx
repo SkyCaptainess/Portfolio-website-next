@@ -1,12 +1,12 @@
 import React from 'react';
 import MainNavigation from '../MainNavigation';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-it('Navbar is rendered with applicable elements', () => {
+it('Navbar is rendered with applicable elements', async () => {
   render(<MainNavigation />);
   expect(
-    screen.getByRole('heading', { name: /nicholas/i })
+    await screen.findByRole('heading', { name: /nicholas/i })
   ).toBeInTheDocument();
   expect(screen.getAllByRole('listitem')[0]).toBeInTheDocument();
 });
@@ -14,11 +14,18 @@ it('Navbar is rendered with applicable elements', () => {
 it('Dark mode switch toggling', async () => {
   const user = userEvent.setup();
   render(<MainNavigation />);
+
   const darkModeSwitch = screen.getByTestId('darkModeSwitch');
-  expect(darkModeSwitch).toBeInTheDocument();
+  await waitFor(() => {
+    expect(darkModeSwitch).toBeInTheDocument();
+  });
   expect(darkModeSwitch).toHaveAttribute('color', '#F8F8F8');
-  await user.click(darkModeSwitch);
-  expect(darkModeSwitch).toHaveAttribute('color', '#EB7F13');
-  await user.click(darkModeSwitch);
-  expect(darkModeSwitch).toHaveAttribute('color', '#F8F8F8');
+  await waitFor(() => {
+    user.click(darkModeSwitch);
+    expect(darkModeSwitch).toHaveAttribute('color', '#EB7F13');
+  });
+  await waitFor(() => {
+    user.click(darkModeSwitch);
+    expect(darkModeSwitch).toHaveAttribute('color', '#F8F8F8');
+  });
 });

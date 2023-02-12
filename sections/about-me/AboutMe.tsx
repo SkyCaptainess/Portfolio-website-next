@@ -2,6 +2,7 @@
 
 import React, { lazy } from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
+import { useRefsContext } from '@/hooks/useRefsContext';
 import AboutMeLight from '../../public/animations/aboutme-light.json';
 import { m } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
@@ -11,6 +12,7 @@ const Lottie = lazy(() => import('lottie-react'));
 
 const AboutMe = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { aboutMeRef } = useRefsContext() ?? {};
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },
@@ -46,7 +48,9 @@ const AboutMe = () => {
           variants={childAnimation}
           className="md:col-span-2 md:justify-self-start"
         >
-          <h2 className="aboutmeHeading">👨 About Me</h2>
+          <h2 className="aboutmeHeading" ref={aboutMeRef}>
+            👨 About Me
+          </h2>
           <h2 className="text-lg text-white-300 font-bold mb-5 md:mb-0 md:text-3xl xl:text-4xl">
             Never too late to learn
           </h2>

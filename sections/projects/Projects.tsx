@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
+import { useRefsContext } from '@/hooks/useRefsContext';
 import ProjectCard from '@/components/ProjectCard';
 import {
   stockProjectCard,
@@ -14,6 +15,7 @@ import { Tanimation } from '@/constants/typeInterface';
 
 const Projects = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { projectsRef } = useRefsContext() ?? {};
 
   const animation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -50 },
@@ -32,7 +34,9 @@ const Projects = () => {
     <section>
       <div className="mx-auto mb-20 w-11/12 max-w-7xl sm:mb-28 2xl:mb-44">
         <Animation animation={animation} className="mb-8" viewAmount={0.7}>
-          <h2 className="skillsHeading">🧑‍💻 Projects</h2>
+          <h2 ref={projectsRef} className="skillsHeading">
+            🧑‍💻 Projects
+          </h2>
           <h3 className="skillsSubHeading">
             Coding projects that I enjoyed working on.
           </h3>

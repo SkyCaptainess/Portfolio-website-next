@@ -1,9 +1,11 @@
+import { RefObject } from 'react';
 import {
   IconBrandLinkedin,
   IconBrandGithub,
   IconBrandInstagram,
 } from '@tabler/icons-react';
 import { Tlinks } from './typeInterface';
+import { scrollIntoView } from 'seamless-scroll-polyfill';
 
 export const listElements = [
   'About Me',
@@ -23,4 +25,16 @@ export const externalLinks: Tlinks = {
     Icon: IconBrandInstagram,
     url: 'https://www.instagram.com/frivolousnicholas',
   },
+};
+
+export const scrollToRef = (
+  ref: RefObject<HTMLHeadingElement>,
+  prefersReducedMotion: boolean
+) => {
+  if (ref && ref.current) {
+    scrollIntoView(ref.current, {
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      block: 'start',
+    });
+  }
 };

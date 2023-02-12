@@ -8,24 +8,27 @@ import Experience from '@/sections/experience/Experience';
 import Projects from '@/sections/projects/Projects';
 import Contact from '@/sections/contact/Contact';
 import Footer from '@/sections/footer/Footer';
-import Splash from '@/sections/splash/splash';
+import Splash from '@/sections/splash/Splash';
 import MotionProvider from '@/hooks/useMotionContext';
+import RefsProvider from '@/hooks/useRefsContext';
 
 const Page = () => {
   return (
     <MotionProvider>
       <Splash>
-        <div className="relative z-0">
-          <MainNavigation />
-          <Hero />
-          <AboutMe />
-          <ScrollToTop />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Contact />
-          <Footer />
-        </div>
+        <RefsProvider>
+          <div className="relative z-0">
+            <MainNavigation />
+            <Hero />
+            <AboutMe />
+            <ScrollToTop />
+            <Skills />
+            <Experience />
+            <Projects />
+            <Contact />
+            <Footer />
+          </div>
+        </RefsProvider>
       </Splash>
     </MotionProvider>
   );

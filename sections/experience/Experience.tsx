@@ -2,6 +2,7 @@
 
 import React, { lazy } from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
+import { useRefsContext } from '@/hooks/useRefsContext';
 import JobPointers from './JobPointers';
 import ExperienceLight from '../../public/animations/experience-light.json';
 import { m } from 'framer-motion';
@@ -12,6 +13,7 @@ const Lottie = lazy(() => import('lottie-react'));
 
 const Experience = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { experienceRef } = useRefsContext() ?? {};
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, x: prefersReducedMotion ? 0 : -100 },
@@ -44,6 +46,7 @@ const Experience = () => {
         viewAmount={0.65}
       >
         <m.h2
+          ref={experienceRef}
           variants={childAnimation}
           className="aboutmeHeading md:col-span-2 md:-mt-3 md:row-start-1 md:row-end-1"
         >

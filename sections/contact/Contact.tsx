@@ -2,11 +2,14 @@
 
 import React from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
+import { useRefsContext } from '@/hooks/useRefsContext';
 import Animation from '@/components/Animation';
 import { Tanimation } from '@/constants/typeInterface';
 
 const Contact = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { contactRef } = useRefsContext() ?? {};
+
   const containerAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
     show: {
@@ -27,7 +30,10 @@ const Contact = () => {
         className="contactContainer mb-20 ipad-mini:mb-28 md:mb-32 lg:mb-48 xl:mb-56 3xl:mb-72"
         viewAmount={0.65}
       >
-        <h2 className="text-blue text-xl font-bold md:text-3xl xl:text-4xl">
+        <h2
+          ref={contactRef}
+          className="text-blue text-xl font-bold md:text-3xl xl:text-4xl"
+        >
           🤙 What&apos;s next?
         </h2>
         <h2 className="text-lg text-white-300 font-bold md:text-3xl xl:text-4xl">

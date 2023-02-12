@@ -2408,6 +2408,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@testing-library/dom@npm:8.20.0":
+  version: 8.20.0
+  resolution: "@testing-library/dom@npm:8.20.0"
+  dependencies:
+    "@babel/code-frame": ^7.10.4
+    "@babel/runtime": ^7.12.5
+    "@types/aria-query": ^5.0.1
+    aria-query: ^5.0.0
+    chalk: ^4.1.0
+    dom-accessibility-api: ^0.5.9
+    lz-string: ^1.4.4
+    pretty-format: ^27.0.2
+  checksum: 1e599129a2fe91959ce80900a0a4897232b89e2a8e22c1f5950c36d39c97629ea86b4986b60b173b5525a05de33fde1e35836ea597b03de78cc51b122835c6f0
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:^8.5.0":
   version: 8.19.1
   resolution: "@testing-library/dom@npm:8.19.1"
@@ -4142,6 +4158,7 @@ __metadata:
     "@next/font": 13.1.6
     "@svgr/webpack": 6.5.1
     "@tabler/icons-react": 2.1.2
+    "@testing-library/dom": 8.20.0
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 13.4.0
     "@testing-library/user-event": 14.4.3
@@ -4168,6 +4185,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-toggle-dark-mode: 1.1.1
+    seamless-scroll-polyfill: 2.3.0
     tailwindcss: 3.2.4
     typescript: 4.9.5
   languageName: unknown
@@ -8051,6 +8069,13 @@ __metadata:
   dependencies:
     loose-envify: ^1.1.0
   checksum: d79192eeaa12abef860c195ea45d37cbf2bbf5f66e3c4dcd16f54a7da53b17788a70d109ee3d3dde1a0fd50e6a8fc171f4300356c5aee4fc0171de526bf35f8a
+  languageName: node
+  linkType: hard
+
+"seamless-scroll-polyfill@npm:2.3.0":
+  version: 2.3.0
+  resolution: "seamless-scroll-polyfill@npm:2.3.0"
+  checksum: 9cba52e2e1a5876a6ade7f9d7803a99a98a7b0656505450056c17a870bd7eeb7fbfa6e5695308a8ec17fbaa737afc16fdb2971ca9f1de1ec301631a55d499e3d
   languageName: node
   linkType: hard
 

@@ -2,6 +2,7 @@
 
 import React, { lazy } from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
+import { useRefsContext } from '@/hooks/useRefsContext';
 import {
   goodCodingIcons,
   goodDesignIcons,
@@ -18,6 +19,7 @@ const Lottie = lazy(() => import('lottie-react'));
 
 const Skills = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
+  const { skillsRef } = useRefsContext() ?? {};
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
@@ -51,7 +53,11 @@ const Skills = () => {
         className="skillsContainer"
         viewAmount={0.65}
       >
-        <m.h2 variants={childAnimation} className="skillsHeading">
+        <m.h2
+          ref={skillsRef}
+          variants={childAnimation}
+          className="skillsHeading"
+        >
           💪 Skills
         </m.h2>
         <m.div variants={containerAnimation}>
