@@ -16,6 +16,3 @@ updates:
       timezone: Asia/Singapore
     pull-request-branch-name:
       separator: '-'
-    open-pull-requests-limit: 10
-    labels:
-      - npm dependencies
