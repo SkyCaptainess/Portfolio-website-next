@@ -7,18 +7,19 @@ const Lottie = lazy(() => import('lottie-react'));
 
 const Custom404 = () => {
   return (
-    <div className="grid place-items-center w-screen h-screen bg-black-300">
-      <div className="card bg-base-100 w-11/12 max-w-sm ">
+    <div className="grid h-screen w-screen place-items-center bg-black-300">
+      <div className="card w-11/12 max-w-sm bg-base-100 ">
         <div className="card-body p-0">
-          <h2 className="card-title pl-8 pt-8 tracking-wider text-xl md:text-2xl">
+          <h2 className="card-title pl-8 pt-8 text-xl tracking-wider md:text-2xl">
             Uh oh, looks like you&apos;re lost.
           </h2>
           <Lottie animationData={errorAnimation} />
-          <div className="card-actions pl-8 pb-8 justify-start">
-            <button className="bg-aqua px-4 py-2 rounded-2xl transition-colors ease-linear duration-200 hover:bg-dark-aqua">
+          <div className="card-actions justify-start pl-8 pb-8">
+            <button className="rounded-2xl bg-aqua px-4 py-2 transition-colors duration-200 ease-linear hover:bg-dark-aqua">
               <Link
+                aria-label="home"
                 href="/"
-                className="text-lg text-white-300 tracking-widest no-underline hover:no-underline"
+                className="text-lg tracking-widest text-white-300 no-underline hover:no-underline"
               >
                 Send me back!
               </Link>

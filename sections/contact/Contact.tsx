@@ -27,32 +27,30 @@ const Contact = () => {
     <section className="dark-blue-section">
       <Animation
         animation={containerAnimation}
-        className="contactContainer mb-20 ipad-mini:mb-28 md:mb-32 lg:mb-48 xl:mb-56 3xl:mb-72"
+        className="relative mx-auto mb-20 flex h-full w-11/12 max-w-[450px] flex-col items-center justify-center gap-y-4 p-0 text-center ipad-mini:mb-28 md:mb-32 lg:mb-48 lg:gap-y-8 xl:mb-56 xl:max-w-[600px] 3xl:mb-72"
         viewAmount={0.65}
       >
         <h2
           ref={contactRef}
-          className="text-blue text-xl font-bold md:text-3xl xl:text-4xl"
+          className="text-xl font-bold md:text-3xl xl:text-4xl"
         >
-          🤙 What&apos;s next?
+          🤙 <span className="span-heading">What&apos;s next?</span>
         </h2>
-        <h2 className="text-lg text-white-300 font-bold md:text-3xl xl:text-4xl">
+        <h2 className="text-lg font-bold text-white-400 dark:text-white-300 md:text-3xl xl:text-4xl">
           Get in touch
         </h2>
-        <h4 className="text-white-300 text-base font-normal md:text-lg xl:text-xl">
+        <h4 className="text-base font-normal text-white-400 dark:text-white-100 md:text-lg xl:text-xl">
           I&apos;m always on the lookout for new opportunities. Whether you have
           a question or just want to say hi, I&apos;ll try my best to get back
           to you!
         </h4>
-        <button
-          type="button"
-          className="bg-aqua px-4 py-2 rounded-2xl transition-colors ease-linear duration-200 hover:bg-dark-aqua w-1/2 max-w-[160px]"
-        >
+        <button type="button" className="redirect-button w-1/2 max-w-[160px]">
           <a
+            aria-label="email"
             href="mailto:nicholas5538@gmail.com"
-            className="text-base text-white-300 tracking-widest no-underline hover:no-underline w-full h-full md:text-lg xl:text-xl"
+            className="h-full w-full text-base tracking-widest text-white-400 no-underline hover:no-underline dark:text-black-300 md:text-lg xl:text-xl"
           >
-            Say Hello
+            Say Hello!
           </a>
         </button>
       </Animation>

@@ -17,7 +17,7 @@ import {
 } from '@tabler/icons-react';
 import { StaticImageData } from 'next/image';
 import stockImage from '../../public/images/stocks-portfolio.webp';
-import ioTImage from '../../public/images/ioT.webp';
+import handSanitizerImage from '../../public/images/handsanitizer.webp';
 import unicardImage from '../../public/images/unicurd.webp';
 import pepsiImage from '../../public/images/pepsi-corporate.webp';
 
@@ -74,7 +74,7 @@ export const stockProjectCard: Tproject = {
 
 export const ioTProjectCard: Tproject = {
   id: 1,
-  image: ioTImage,
+  image: handSanitizerImage,
   projectTitle: 'IoT Hand Sanitizer',
   projectDesc:
     'A hand sanitizier product implementated with data analytic tools and basic machine learning techniques to predict data such as the amount of dispense count required to empty the sanitizer.',

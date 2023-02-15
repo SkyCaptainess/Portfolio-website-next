@@ -1,17 +1,24 @@
 import React from 'react';
 import { externalLinks } from '../constants/global';
+import { useThemeContext } from '@/hooks/useThemeContext';
 
 const HeroButtons = () => {
+  const { darkMode } = useThemeContext() ?? false;
+
   const anchorElements = Object.entries(externalLinks).map(
     ([name, { Icon, url }], index) => {
       return (
         <div
           key={index}
-          className="tooltip tooltip-info tooltip-bottom ml-2 md:tooltip-top md:ml-0"
+          className="tooltip tooltip-bottom tooltip-info ml-2 dark:tooltip-warning md:tooltip-top md:ml-0"
           data-tip={name}
         >
-          <a href={url} rel="noreferrer" target="_blank">
-            <Icon size={40} color={'#343434'} className="cursor-pointer" />
+          <a aria-label={name} href={url} rel="noreferrer" target="_blank">
+            <Icon
+              size={40}
+              color={`${darkMode ? '#DEE2E6' : '#343434'}`}
+              className="cursor-pointer"
+            />
           </a>
         </div>
       );
@@ -19,17 +26,14 @@ const HeroButtons = () => {
   );
 
   return (
-    <div className="flex flex-row justify-start items-center gap-x-6">
+    <div className="flex flex-row items-center justify-start gap-x-6">
       {anchorElements}
-      <button
-        type="button"
-        className="bg-aqua px-4 py-2 rounded-2xl transition-colors ease-linear duration-200 hover:bg-dark-aqua"
-      >
+      <button type="button" className="redirect-button">
         <a
           href="#"
           rel="noreferrer"
           target="_blank"
-          className="text-lg text-white-300 tracking-widest no-underline hover:no-underline w-full h-full md:text-2xl"
+          className="h-full w-full text-lg tracking-widest text-white-400 no-underline hover:no-underline dark:text-black-300 md:text-2xl"
         >
           Resume
         </a>

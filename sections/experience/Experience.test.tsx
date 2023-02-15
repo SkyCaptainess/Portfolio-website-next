@@ -16,7 +16,7 @@ it('should render components in the Experience section', async () => {
   render(<Experience />);
 
   const experienceHeading = await screen.findByRole('heading', {
-    name: '💼 Experience',
+    name: '🧑‍💻 Experience',
   });
   const dateHeading = await screen.findByRole('heading', {
     name: 'Oct 2022 - Present',

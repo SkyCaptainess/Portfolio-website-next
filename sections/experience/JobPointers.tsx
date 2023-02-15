@@ -14,24 +14,25 @@ const JobPointers = ({ childAnimation }: Tvariants) => {
             : 'md:row-start-4 md:row-end-6'
         }`}
       >
-        <h3 className="text-white-300 font-semibold pl-4 border-l-2 border-l-blue mb-2 md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="mb-2 border-l-2 border-l-blue pl-4 font-semibold text-white-400 dark:border-l-orange-red dark:text-white-300 md:text-xl lg:text-2xl xl:text-3xl">
           {experience.date}
         </h3>
-        <h4 className="text-white-300 font-semibold md:text-lg lg:text-xl xl:text-2xl">
+        <h4 className="font-semibold text-white-400 dark:text-white-300 md:text-lg lg:text-xl xl:text-2xl">
           {experience.title}
         </h4>
-        <h4 className="text-white-300 font-semibold mb-2 md:text-lg lg:text-xl xl:text-2xl">
+        <h4 className="mb-2 font-semibold text-white-400 dark:text-white-300 md:text-lg lg:text-xl xl:text-2xl">
           @&nbsp;
           <a
-            className="text-blue"
+            aria-label={experience.company}
             href={experience.companyURL}
             rel="noreferrer"
             target="_blank"
+            className="text-blue"
           >
             {experience.company}
           </a>
         </h4>
-        <ul className="opacity-80 text-sm text-white-300 list-disc list-inside md:text-lg xl:text-xl">
+        <ul className="list-inside list-disc text-sm text-white-300 opacity-80 dark:text-white-100 md:text-lg xl:text-xl">
           {experience.pointers.map((pointer, index) => (
             <li
               key={index}

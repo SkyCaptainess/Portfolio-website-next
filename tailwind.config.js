@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -17,11 +18,15 @@ module.exports = {
         100: '#3F3F46',
         200: '#343434',
         300: '#212529',
+        400: '#343A40',
+        500: '#495057',
       },
       white: {
         100: '#CED4DA',
-        200: '#E9ECEF',
-        300: '#F8F8F8',
+        200: '#F8F9FA',
+        300: '#E9ECEF',
+        400: '#F8F8F8',
+        500: '#DEE2E6',
       },
       aqua: '#008DAA',
       'dark-aqua': '#00697f',
@@ -30,9 +35,9 @@ module.exports = {
       blue: '#00D4FF',
       'blue-gradient-1': '#000046',
       'blue-gradient-2': '#1CB5E0',
-      red: '#FF2B00',
-      orange: '#EB7F13',
-      'orange-gradient': 'linear-gradient(180deg, #F2A65A 0%, #772F1A 100%)',
+      orange: '#FFB26B',
+      'light-orange': '#FFB26B',
+      'orange-red': '#FF7B54',
     },
     screens: {
       sm: '500px',
@@ -52,10 +57,14 @@ module.exports = {
         project:
           'rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset',
       },
+      backgroundImage: {
+        'orange-gradient': 'linear-gradient(to right, #f46b45, #eea849)',
+        'dance-to-forget': 'linear-gradient(to left, #ff4e50, #f9d423)',
+      },
       keyframes: {
         wave: {
           '0%, 60%, 100%': { transform: 'rotate(0deg)' },
-          '10%, 30%, 50%': { transform: 'rotate(16deg)' },
+          '10%, 30%, 50%': { transform: 'rotate(24deg)' },
           '20%': { transform: 'rotate(-6deg)' },
           '40%': { transform: 'rotate(-4deg)' },
         },
@@ -65,6 +74,9 @@ module.exports = {
       },
       transformOrigin: {
         wave: '70% 70%',
+      },
+      transitionProperty: {
+        bgi: 'background-image',
       },
     },
   },

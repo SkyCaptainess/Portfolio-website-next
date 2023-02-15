@@ -11,26 +11,29 @@ import Footer from '@/sections/footer/Footer';
 import Splash from '@/sections/splash/Splash';
 import MotionProvider from '@/hooks/useMotionContext';
 import RefsProvider from '@/hooks/useRefsContext';
+import ThemeProvider from '@/hooks/useThemeContext';
 
 const Page = () => {
   return (
-    <MotionProvider>
+    <ThemeProvider>
       <Splash>
-        <RefsProvider>
-          <div className="relative z-0">
-            <MainNavigation />
-            <Hero />
-            <AboutMe />
-            <ScrollToTop />
-            <Skills />
-            <Experience />
-            <Projects />
-            <Contact />
-            <Footer />
-          </div>
-        </RefsProvider>
+        <MotionProvider>
+          <RefsProvider>
+            <div className="relative z-0">
+              <MainNavigation />
+              <Hero />
+              <AboutMe />
+              <ScrollToTop />
+              <Skills />
+              <Experience />
+              <Projects />
+              <Contact />
+              <Footer />
+            </div>
+          </RefsProvider>
+        </MotionProvider>
       </Splash>
-    </MotionProvider>
+    </ThemeProvider>
   );
 };
 

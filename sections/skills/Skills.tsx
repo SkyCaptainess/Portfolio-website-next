@@ -3,6 +3,7 @@
 import React, { lazy } from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
+import { useThemeContext } from '@/hooks/useThemeContext';
 import {
   goodCodingIcons,
   goodDesignIcons,
@@ -11,6 +12,7 @@ import {
 } from './common';
 import SkillCategory from './SkillCategory';
 import SkillsLight from '../../public/animations/skills-light.json';
+import SkillsDark from '../../public/animations/skills-dark.json';
 import Animation from '../../components/Animation';
 import { m } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
@@ -20,6 +22,9 @@ const Lottie = lazy(() => import('lottie-react'));
 const Skills = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const { skillsRef } = useRefsContext() ?? {};
+  const { darkMode } = useThemeContext() ?? false;
+
+  const animationData = darkMode ? SkillsDark : SkillsLight;
 
   const childAnimation: Tanimation = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
@@ -50,18 +55,23 @@ const Skills = () => {
     <section>
       <Animation
         animation={containerAnimation}
-        className="skillsContainer"
+        className="relative mx-auto mb-12 flex w-11/12 max-w-7xl flex-col items-start justify-center gap-y-6 2xl:mb-24"
         viewAmount={0.65}
       >
         <m.h2
           ref={skillsRef}
           variants={childAnimation}
-          className="skillsHeading"
+          className="white-bg-heading"
         >
-          💪 Skills
+          💪
+          <span className="span-heading from-black-200 to-black-200">
+            Skills
+          </span>
         </m.h2>
         <m.div variants={containerAnimation}>
-          <h3 className="skillsSubHeading">I am not that bad with:</h3>
+          <h3 className="white-sub-heading font-semibold dark:text-[#FFA54E]">
+            I am not that bad with:
+          </h3>
           <SkillCategory
             heading="coding"
             icons={goodCodingIcons}
@@ -74,7 +84,9 @@ const Skills = () => {
           />
         </m.div>
         <m.div variants={containerAnimation}>
-          <h3 className="skillsSubHeading">I have played around with</h3>
+          <h3 className="white-sub-heading font-semibold dark:text-[#FFA54E]">
+            I have played around with:
+          </h3>
           <SkillCategory
             heading="coding"
             icons={averageCodingIcons}
@@ -86,9 +98,12 @@ const Skills = () => {
             {...animationProps}
           />
         </m.div>
-        <m.aside variants={lottieAnimation} className="skillsAnimation">
+        <m.aside
+          variants={lottieAnimation}
+          className="hidden h-56 w-56 md:absolute md:right-28 md:bottom-20 md:block dark:md:right-10 lg:right-5 lg:bottom-40 lg:h-[22rem] lg:w-[22rem] dark:lg:h-[17rem] dark:lg:w-[17rem] xl:h-[28rem] xl:w-[28rem] dark:xl:h-[23rem] dark:xl:w-[23rem]"
+        >
           <Lottie
-            animationData={SkillsLight}
+            animationData={animationData}
             loop={prefersReducedMotion ? 1 : true}
           />
         </m.aside>

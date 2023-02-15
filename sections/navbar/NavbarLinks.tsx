@@ -18,7 +18,7 @@ const NavbarLinks = ({ childAnimation }: Tvariants) => {
         onClick={() =>
           scrollToRef(refsArray[index], prefersReducedMotion ?? false)
         }
-        className="navbar-text cursor-pointer hover:underline hover:decoration-white-300 hover:decoration-2 hover:underline-offset-8"
+        className="navbar-text cursor-pointer hover:underline hover:decoration-white-400 hover:decoration-2 hover:underline-offset-8"
       >
         {element}
       </motion.li>
@@ -26,7 +26,7 @@ const NavbarLinks = ({ childAnimation }: Tvariants) => {
   });
 
   return (
-    <ul className="hidden flex-row justify-between items-center gap-x-6 lg:flex lg:order-2 2xl:gap-x-10">
+    <ul className="hidden flex-row items-center justify-between gap-x-6 lg:order-2 lg:flex 2xl:gap-x-10">
       {liElements}
     </ul>
   );

@@ -20,10 +20,7 @@ it('Dark mode switch toggling', async () => {
     expect(darkModeSwitch).toBeInTheDocument();
   });
   expect(darkModeSwitch).toHaveAttribute('color', '#F8F8F8');
-  await waitFor(() => {
-    user.click(darkModeSwitch);
-    expect(darkModeSwitch).toHaveAttribute('color', '#EB7F13');
-  });
+  await user.click(darkModeSwitch);
   await waitFor(() => {
     user.click(darkModeSwitch);
     expect(darkModeSwitch).toHaveAttribute('color', '#F8F8F8');

@@ -7,9 +7,9 @@ type experienceDescription = {
 }[];
 
 const foodpandaPointers = [
-  'Performed composite laminate and aluminium sheet metal repairs.',
-  'Applied aircraft systems knowledge during OJTs on A380 & B787 aircraft.',
-  'Exposed and familiarized to OEM manuals such as AMM and SRM in AirNav.',
+  'Engineered modern applications with a variey of different languages, framework and testing libraries such as React, Typescript, Jest and Cypress.',
+  'Collaborated with other engineers to develop and ship new UI features on foodpanda ops portal.',
+  'Enhanced APIs periodic tests by reducing test flakiness and implementing reattempts on timeout errors.',
 ];
 
 const siaecPointers = [

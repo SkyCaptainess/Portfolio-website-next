@@ -4,7 +4,7 @@ import React, { lazy } from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import JobPointers from './JobPointers';
-import ExperienceLight from '../../public/animations/experience-light.json';
+import ExperienceLottie from '../../public/animations/experience.json';
 import { m } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
 import Animation from '../../components/Animation';
@@ -42,28 +42,25 @@ const Experience = () => {
     <section className="dark-blue-section">
       <Animation
         animation={containerAnimation}
-        className="aboutmeContainer md:mb-56 md:pt-0 md:grid-rows-5 md:gap-y-0 md:gap-x-10 md:justify-center md:items-center lg:mb-[18rem] xl:mb-64 2xl:mb-[19em] 3xl:mb-[22rem]"
+        className="dark-blue-container md:mb-56 md:grid-rows-5 md:items-center md:justify-center md:gap-y-0 md:gap-x-10 md:pt-0 lg:mb-[18rem] xl:mb-72 2xl:mb-[22rem] 3xl:mb-72"
         viewAmount={0.65}
       >
         <m.h2
           ref={experienceRef}
           variants={childAnimation}
-          className="aboutmeHeading md:col-span-2 md:-mt-3 md:row-start-1 md:row-end-1"
+          className="mb-5 text-xl font-bold text-blue md:col-span-2 md:row-start-1 md:row-end-1 md:mb-0 md:-mt-3 md:text-3xl xl:text-4xl"
         >
-          💼 Experience
+          🧑‍💻<span className="span-heading">Experience</span>
         </m.h2>
         <JobPointers childAnimation={childAnimation} />
-        <m.aside
-          variants={lottieAnimation}
-          className="aboutmeAnimation md:row-end-5"
-        >
+        <m.aside variants={lottieAnimation} className="experience-animation">
           <Lottie
-            animationData={ExperienceLight}
+            animationData={ExperienceLottie}
             loop={prefersReducedMotion ? 1 : true}
           />
         </m.aside>
       </Animation>
-      <div className="dark-blue-gradient"></div>
+      <div className="dark-blue-gradient xl:h-[130%] 2xl:-left-40 2xl:h-[140%]"></div>
     </section>
   );
 };

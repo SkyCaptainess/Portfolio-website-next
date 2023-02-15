@@ -34,10 +34,13 @@ const Projects = () => {
     <section>
       <div className="mx-auto mb-20 w-11/12 max-w-7xl sm:mb-28 2xl:mb-44">
         <Animation animation={animation} className="mb-8" viewAmount={0.7}>
-          <h2 ref={projectsRef} className="skillsHeading">
-            🧑‍💻 Projects
+          <h2 ref={projectsRef} className="white-bg-heading">
+            👇
+            <span className="span-heading from-black-400 to-black-400">
+              Projects
+            </span>
           </h2>
-          <h3 className="skillsSubHeading">
+          <h3 className="white-sub-heading font-bold">
             Coding projects that I enjoyed working on.
           </h3>
         </Animation>

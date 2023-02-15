@@ -37,27 +37,29 @@ const Hero = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.65 }}
-      className="heroSection"
+      className="static z-0 mx-auto mb-28 grid w-11/12 max-w-7xl grid-cols-1 md:grid-cols-3 md:grid-rows-3 md:items-center md:justify-evenly md:gap-x-8 lg:mb-60 xl:grid-cols-4"
     >
-      <Image src={profilePic} alt="Profile Picture" className="profilePic" />
+      <Image src={profilePic} alt="Profile Picture" className="profilePic " />
       <motion.h1
         variants={childAnimation}
-        className="mb-4 md:mb-0 md:text-4xl md:col-span-2 md:row-start-1 md:row-end-2 xl:text-5xl"
+        className="mb-4 md:col-span-2 md:row-start-1 md:row-end-2 md:mb-0 md:text-4xl xl:text-5xl"
       >
         <span
-          className={`waving ${
-            prefersReducedMotion ? 'animate-none' : 'animate-wave origin-wave'
+          className={`inline-block text-4xl xl:text-5xl ${
+            prefersReducedMotion ? 'animate-none' : 'origin-wave animate-wave'
           }`}
         >
           👋
         </span>
         &nbsp;&nbsp;Hi there! I&apos;m{' '}
-        <span className="text-aqua font-bold md:text-black-200">Nicholas</span>,
-        I love to design and code beautifully simple things
+        <span className="bg-transparent bg-gradient-to-b from-aqua to-aqua bg-clip-text font-bold text-transparent transition-bgi duration-300 ease-out dark:bg-orange-gradient dark:text-transparent md:text-black-200">
+          Nicholas
+        </span>
+        , I love to design and code beautifully simple things
       </motion.h1>
       <motion.h3
         variants={childAnimation}
-        className="mb-4 md:mb-0 md:text-2xl md:col-span-2 md:row-start-2 md:row-end-2 xl:text-3xl"
+        className="mb-4 md:col-span-2 md:row-start-2 md:row-end-2 md:mb-0 md:text-2xl xl:text-3xl"
       >
         Nothing excites me more than learning something new and starting a new
         adventure.
@@ -66,9 +68,14 @@ const Hero = () => {
         variants={childAnimation}
         className="md:col-span-2 md:row-start-3 md:row-end-4 xl:gap-y-10"
       >
-        <h3 className="mb-4 md:text-2xl md:mb-8 xl:text-3xl">
+        <h3 className="mb-4 md:mb-8 md:text-2xl xl:text-3xl">
           Currently working as a SWE Trainee @{' '}
-          <a href="https://www.foodpanda.com" rel="noreferrer" target="_blank">
+          <a
+            aria-label="foodpanda"
+            href="https://www.foodpanda.com"
+            rel="noreferrer"
+            target="_blank"
+          >
             foodpanda
           </a>
         </h3>

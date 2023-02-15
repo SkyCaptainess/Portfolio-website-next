@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
+import { useThemeContext } from '@/hooks/useThemeContext';
 import DropdownMenu from './DropdownMenu';
 import NavbarLinks from './NavbarLinks';
 import { IconMoodSmileBeam } from '@tabler/icons-react';
@@ -10,7 +11,9 @@ import { motion } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
 
 const MainNavigation = () => {
-  const [isDarkMode, setDarkMode] = useState<boolean>(false);
+  // const [isDarkMode, setDarkMode] = useState<boolean>(false);
+  const { darkMode, setDarkMode, toggleThemeHandler } =
+    useThemeContext() ?? false;
   const { prefersReducedMotion } = useMotionContext() ?? false;
 
   const childAnimation: Tanimation = {
@@ -41,23 +44,23 @@ const MainNavigation = () => {
   };
 
   return (
-    <nav className="mx-auto w-11/12 max-w-7xl mb-6 md:mb-60">
+    <nav className="mx-auto mb-6 w-11/12 max-w-7xl md:mb-60">
       <motion.div
         variants={containerAnimation}
         initial="hidden"
         animate="show"
-        className="relative flex flex-row justify-between items-center py-8"
+        className="relative flex flex-row items-center justify-between py-8"
       >
         <motion.div
           variants={childAnimation}
-          className="flex flex-row items-center gap-x-2 order-2 lg:order-1"
+          className="order-2 flex flex-row items-center gap-x-2 lg:order-1"
         >
           <h1 className="navbar-text text-xl lg:text-xl 2xl:text-[1.75rem]">
             NICHOLAS
           </h1>
           <IconMoodSmileBeam
             size={24}
-            color="#F8F8F8"
+            color={`${darkMode ? '#E9ECEF' : '#F8F8F8'}`}
             className="hidden sm:block"
           />
         </motion.div>
@@ -67,10 +70,11 @@ const MainNavigation = () => {
         </div>
         <motion.div variants={childAnimation} className="order-last">
           <DarkModeSwitch
-            checked={isDarkMode}
+            checked={darkMode}
             onChange={(checked: boolean) => setDarkMode(checked)}
+            onClick={toggleThemeHandler}
             sunColor={'#F8F8F8'}
-            moonColor={'#EB7F13'}
+            moonColor={'#FFB26B'}
             data-testid="darkModeSwitch"
           />
         </motion.div>

@@ -52,7 +52,7 @@ const DropdownUl = ({
           transition={{ type: 'spring', duration: 0.3, bounce: 0.3 }}
           data-testid="dropdown-ul"
         >
-          <ul className="bg-white-300 rounded-xl shadow-dropdown">
+          <ul className="rounded-xl bg-white-400 shadow-dropdown dark:bg-black-500 dark:shadow-none">
             {liElements}
           </ul>
         </motion.div>

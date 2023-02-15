@@ -46,7 +46,7 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
 
   return (
     <div
-      className="cursor-pointer h-full"
+      className="h-full cursor-pointer"
       onClick={clickHandler}
       data-testid="hamburger-btn"
     >
@@ -54,19 +54,19 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
         animate={variant}
         variants={variantType.top}
         transition={transitionType}
-        className="w-8 h-[2px] bg-white-100"
+        className="h-[2px] w-8 bg-white-100"
       />
       <motion.div
         animate={variant}
         variants={variantType.center}
         transition={transitionType}
-        className="my-2 w-8 h-[2px] bg-white-100"
+        className="my-2 h-[2px] w-8 bg-white-100"
       />
       <motion.div
         animate={variant}
         variants={variantType.bottom}
         transition={transitionType}
-        className="w-8 h-[2px] bg-white-100"
+        className="h-[2px] w-8 bg-white-100"
       />
     </div>
   );

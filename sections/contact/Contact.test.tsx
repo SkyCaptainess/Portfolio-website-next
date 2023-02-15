@@ -21,7 +21,7 @@ it('should render the components', async () => {
   const contactSubHeading = screen.getByRole('heading', {
     name: /get in touch/i,
   });
-  const contactButton = screen.getByRole('link', { name: /say hello/i });
+  const contactButton = screen.getByRole('link', { name: /email/i });
 
   await waitFor(() => {
     expect(contactHeading).toBeInTheDocument();

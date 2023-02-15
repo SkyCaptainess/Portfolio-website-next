@@ -16,7 +16,7 @@ it('should render the components', async () => {
   render(<Projects />);
 
   const projectsHeading = await screen.findByRole('heading', {
-    name: '🧑‍💻 Projects',
+    name: '👇 Projects',
   });
   const projectsSlogan = screen.getByRole('heading', {
     name: /Coding projects that I enjoyed working on./i,

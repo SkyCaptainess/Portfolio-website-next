@@ -9,112 +9,84 @@
 
   root,
   body {
-    @apply m-0 p-0 box-border overflow-x-hidden overflow-y-hidden bg-white-300;
+    @apply m-0 box-border overflow-x-hidden overflow-y-hidden bg-white-400 p-0 transition-colors duration-300 ease-out dark:bg-black-300;
   }
 
   h1 {
-    @apply font-mont text-black-200 text-2xl font-semibold;
+    @apply font-mont text-2xl font-semibold text-black-200 transition-colors duration-300 ease-out dark:text-white-300;
   }
 
   h3 {
-    @apply font-mont text-black-200 text-lg font-medium;
+    @apply font-mont text-lg font-medium text-black-200 transition-colors duration-300 ease-out dark:text-white-100;
   }
 
   a {
-    @apply text-aqua no-underline hover:underline hover:underline-offset-4;
+    @apply text-aqua no-underline hover:underline hover:underline-offset-4 dark:text-orange;
   }
 }
 
 @layer components {
   .navbar-gradient {
-    @apply absolute -z-20 -top-64 -left-20 -rotate-6 bg-gradient-to-b from-blue-gradient-1 to-blue-gradient-2 w-[4000px] h-[20rem] md:-left-40 md:h-[31.25rem] xl:-top-80 xl:h-[37.5rem] 2xl:h-[43.75rem] 3xl:h-[50rem];
+    @apply absolute -top-64 -left-20 -z-20 h-[20rem] w-[4000px] -rotate-6 bg-gradient-to-b from-blue-gradient-1 to-blue-gradient-2 transition-bgi duration-300 ease-out dark:from-black-300 dark:to-black-300 md:-left-40 md:h-[31.25rem] xl:-top-80 xl:h-[37.5rem] 2xl:h-[43.75rem] 3xl:h-[50rem];
   }
 
   .dark-blue-gradient {
-    @apply absolute -z-10 -top-56 -left-[4.5rem] -rotate-6 bg-dark-blue w-[4000px] h-[120%] ipad-mini:h-[125%] lg:h-[135%] xl:h-[135%] 2xl:h-[145%] 3xl:h-[160%];
+    @apply absolute -top-56 -left-[4.5rem] -z-10 h-[120%] w-[4000px] -rotate-6 bg-dark-blue transition-colors duration-300 ease-out dark:bg-black-300 ipad-mini:h-[125%] lg:h-[135%] xl:h-[135%] 2xl:h-[145%] 3xl:h-[160%];
   }
 
   .dark-blue-section {
     @apply relative z-0 bg-dark-blue;
   }
 
+  .redirect-button {
+    @apply rounded-2xl bg-aqua px-4 py-2 transition-colors duration-300 ease-out hover:bg-dark-aqua dark:bg-light-orange dark:hover:bg-orange-red;
+  }
+
   .navbar-text {
-    @apply font-mont text-white-300 font-bold tracking-widest lg:text-xl 2xl:text-[1.75rem];
+    @apply font-mont font-bold tracking-widest text-white-300 dark:text-white-400 lg:text-xl 2xl:text-[1.75rem];
   }
 
   .dropdown-link {
-    @apply cursor-pointer py-2.5 pl-4 font-mont font-semibold text-black-200 tracking-widest transition duration-200 hover:text-aqua hover:bg-white-200;
-  }
-
-  .heroSection {
-    @apply static z-0 grid grid-cols-1 mx-auto mb-28 w-11/12 max-w-7xl md:justify-evenly md:items-center md:gap-x-8 md:grid-cols-3 md:grid-rows-3 lg:mb-60 xl:grid-cols-4;
+    @apply cursor-pointer py-2.5 pl-4 font-mont font-semibold tracking-widest text-black-200 transition duration-200 hover:bg-white-300 hover:text-aqua dark:text-white-200 dark:hover:bg-black-400 dark:hover:text-orange;
   }
 
   .profilePic {
-    @apply object-center object-scale-down mx-auto mb-8 shadow-dropdown w-48 h-72 md:object-cover md:mb-0 md:mr-0 md:col-span-1 md:row-start-1 md:row-end-4 md:order-last md:w-full md:h-5/6 lg:self-center xl:col-span-2 xl:w-9/12 2xl:z-10;
+    @apply mx-auto mb-8 h-72 w-48 object-scale-down object-center shadow-dropdown dark:shadow-none md:order-last md:col-span-1 md:row-start-1 md:row-end-4 md:mb-0 md:mr-0 md:h-5/6 md:w-full md:object-cover lg:self-center xl:col-span-2 xl:w-9/12 2xl:z-10;
   }
 
-  .waving {
-    @apply inline-block text-4xl xl:text-5xl;
+  .span-heading {
+    @apply ml-3 bg-transparent bg-gradient-to-r from-blue to-blue bg-clip-text text-transparent transition-bgi duration-300 ease-out dark:bg-dance-to-forget;
   }
 
-  .aboutmeContainer {
-    @apply relative text-white-300 mx-auto mb-32 pt-8 pr-20 w-11/12 max-w-7xl h-full sm:pr-36 md:pr-0 md:grid md:grid-cols-3 md:grid-rows-5 md:place-items-start md:gap-y-4 md:mb-40 lg:mb-52 2xl:mb-[15.5rem] 3xl:mb-[17rem];
+  .dark-blue-container {
+    @apply relative mx-auto mb-32 h-full w-11/12 max-w-7xl pt-8 pr-20 text-white-300 sm:pr-36 md:grid md:grid-cols-3 md:place-items-start md:pr-0;
   }
 
-  .aboutmeHeading {
-    @apply text-blue text-xl font-bold mb-5 md:mb-0 md:text-3xl xl:text-4xl;
+  .about-me-text {
+    @apply mb-5 text-base font-normal transition-colors duration-300 ease-out dark:text-white-100 md:col-span-2 md:mb-0 md:text-lg xl:text-xl;
   }
 
-  .aboutmeText {
-    @apply text-base font-normal mb-5 md:mb-0 md:text-lg xl:text-xl;
+  .about-me-animation {
+    @apply absolute -top-16 -right-12 h-44 w-44 dark:-top-0 dark:-right-0 dark:h-[7rem] dark:w-[7rem] md:static md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-6 md:h-72 md:w-72 md:place-self-center dark:md:right-12 dark:md:-top-16 dark:md:h-[10rem] dark:md:w-[10rem] lg:col-start-3 lg:h-[22rem] lg:w-[22rem] dark:lg:h-[13rem] dark:lg:w-[13rem] xl:h-[28rem] xl:w-[28rem];
   }
 
-  .aboutmeAnimation {
-    @apply absolute -top-16 -right-12 w-44 h-44 md:static md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-6 md:place-self-center md:w-72 md:h-72 lg:col-start-3 lg:w-[22rem] lg:h-[22rem] xl:w-[28rem] xl:h-[28rem];
+  .white-bg-heading {
+    @apply text-xl font-bold md:mb-6 md:text-3xl xl:text-4xl;
   }
 
-  .skillsContainer {
-    @apply relative flex flex-col justify-center items-start gap-y-6 mx-auto mb-12 w-11/12 max-w-7xl 2xl:mb-24;
+  .white-sub-heading {
+    @apply mb-2 dark:text-white-300 md:text-2xl xl:mb-4 xl:text-3xl;
   }
 
-  .skillsHeading {
-    @apply text-black-200 text-xl font-bold md:mb-6 md:text-3xl xl:text-4xl;
+  .experience-animation {
+    @apply hidden h-44 w-44 lg:col-start-3  lg:col-end-4 lg:row-start-1 lg:row-end-5 lg:block lg:h-[14rem] lg:w-[14rem] lg:place-self-center xl:h-[18rem] xl:w-[18rem];
   }
 
-  .skillsSubHeading {
-    @apply mb-2 font-semibold md:text-2xl xl:text-3xl xl:mb-4;
+  .project-image-container {
+    @apply absolute top-0 left-0 -z-10 h-full max-h-[670px] w-full max-w-[670px] opacity-10 md:top-1/4 md:h-1/2 md:w-1/2 md:border-2 md:border-black-200 md:opacity-60 dark:md:opacity-30 lg:top-[12.5%] lg:h-3/4 lg:w-1/2;
   }
 
-  .skillsAnimation {
-    @apply hidden w-56 h-56 md:block md:absolute md:right-28 md:bottom-20 lg:right-5 lg:bottom-40 lg:w-[22rem] lg:h-[22rem] xl:w-[28rem] xl:h-[28rem];
-  }
-
-  .projectCard {
-    @apply grid grid-rows-1 py-4 px-5 shadow-project rounded-lg md:items-center md:grid-rows-5 md:grid-cols-12 md:justify-items-center md:shadow-none md:rounded-none;
-  }
-
-  .projectIconsHeading {
-    @apply font-semibold mb-2 md:text-center md:text-lg lg:text-xl xl:text-2xl;
-  }
-
-  .projectIcons {
-    @apply flex flex-row flex-wrap gap-x-2 md:justify-center lg:gap-x-4 2xl:gap-x-6;
-  }
-
-  .projectImage {
-    @apply opacity-10 absolute -z-10 top-0 left-0 object-center object-cover w-full h-full max-w-[600px] max-h-[600px] md:opacity-50 md:border-2 md:border-black-200 md:w-1/2 md:h-1/2 md:top-1/4 lg:top-[12.5%] lg:w-1/2 lg:h-3/4;
-  }
-
-  .contactContainer {
-    @apply relative flex flex-col gap-y-4 lg:gap-y-8 justify-center items-center mx-auto p-0 text-center w-11/12 max-w-[450px] h-full xl:max-w-[600px];
-  }
-
-  .footerContainer {
-    @apply flex flex-col flex-nowrap justify-between items-start gap-y-2 mx-auto py-4 w-11/12 max-w-7xl h-full md:flex-row md:gap-y-0 md:items-center lg:py-8;
-  }
-
-  .footerText {
-    @apply text-base font-medium md:order-2 md:text-lg xl:text-xl;
+  .footer-container {
+    @apply mx-auto flex h-full w-11/12 max-w-7xl flex-col flex-nowrap items-start justify-between gap-y-2 py-4 md:flex-row md:items-center md:gap-y-0 lg:py-8;
   }
 }

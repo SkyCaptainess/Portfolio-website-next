@@ -21,7 +21,7 @@ export const externalLinks: Tlinks = {
     url: 'https://www.linkedin.com/in/nicholas-yjy/',
   },
   GitHub: { Icon: IconBrandGithub, url: 'https://github.com/nicholas5538' },
-  Instragram: {
+  Instagram: {
     Icon: IconBrandInstagram,
     url: 'https://www.instagram.com/frivolousnicholas',
   },
