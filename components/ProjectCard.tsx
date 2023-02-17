@@ -52,7 +52,7 @@ const ProjectCard = ({
         viewport={{ once: true, amount: 0.7 }}
         className="relative z-0 mb-5 list-none"
       >
-        <li className="grid grid-rows-1 rounded-lg py-4 px-5 shadow-project md:grid-cols-12 md:grid-rows-5 md:items-center md:justify-items-center md:rounded-none md:shadow-none">
+        <li className="grid grid-rows-1 rounded-lg py-4 px-5 shadow-project transition-transform duration-300 ease-out hover:-translate-y-2 md:grid-cols-12 md:grid-rows-5 md:items-center md:justify-items-center md:rounded-none md:shadow-none md:transition-none md:hover:translate-y-0">
           <h3
             className={`white-sub-heading font-bold tracking-wide dark:text-[#FFA54E] md:row-start-1 md:row-end-2 md:mb-0 ${
               id % 2 === 0
