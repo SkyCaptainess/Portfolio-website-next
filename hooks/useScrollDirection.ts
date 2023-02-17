@@ -14,7 +14,7 @@ const useScrollDirection = () => {
 
       if (
         direction !== scrollDirection &&
-        (scrollY - lastScrollY > 20 || scrollY - lastScrollY < -10)
+        (scrollY - lastScrollY > 15 || scrollY - lastScrollY < -4)
       ) {
         setScrollDirection(direction);
       }

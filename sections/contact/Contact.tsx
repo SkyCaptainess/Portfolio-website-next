@@ -17,7 +17,7 @@ const Contact = () => {
       y: 0,
       transition: {
         type: 'spring',
-        duration: 1,
+        duration: 1.25,
         bounce: 0.4,
       },
     },

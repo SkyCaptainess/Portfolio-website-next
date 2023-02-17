@@ -49,8 +49,10 @@ const MainNavigation = () => {
       variants={containerAnimation}
       initial="hidden"
       animate="show"
-      className={`fixed z-50 grid h-16 w-screen place-items-center bg-white-400 shadow-xl transition-top duration-300 ease-out dark:bg-midnight-city ${
-        scrollDirection === 'down' ? '-top-[30rem]' : 'top-0'
+      className={`fixed z-50 grid h-16 w-screen place-items-center bg-white-400 shadow-xl transition-top duration-300 dark:bg-midnight-city ${
+        scrollDirection === 'down'
+          ? '-top-[30rem] ease-in lg:-top-16'
+          : 'top-0 ease-out'
       }`}
     >
       <nav className="relative mx-auto my-auto flex w-11/12 max-w-7xl flex-row items-center justify-between">
