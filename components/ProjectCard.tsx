@@ -63,7 +63,7 @@ const ProjectCard = ({
             {projectTitle}
           </h3>
           <p
-            className={`mb-2 text-sm dark:bg-none dark:text-white-100 md:row-start-2 md:row-end-4 md:bg-white-400 md:p-4 md:text-lg md:shadow-project dark:md:bg-black-500 dark:md:shadow-xl xl:text-xl ${
+            className={`mb-2 text-sm transition-colors duration-300 ease-out dark:bg-none dark:text-white-100 md:row-start-2 md:row-end-4 md:bg-white-400 md:p-4 md:text-lg md:shadow-project dark:md:bg-black-500 dark:md:shadow-xl xl:text-xl ${
               id % 2 === 0
                 ? 'md:col-start-1 md:col-end-7'
                 : 'md:col-start-6 md:col-end-13'
@@ -92,7 +92,7 @@ const ProjectCard = ({
                 : 'md:col-start-6 md:col-end-13'
             }`}
           >
-            <h4 className="mb-2 font-semibold text-black-200 dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
+            <h4 className="mb-2 font-semibold text-black-200 transition-colors duration-300 ease-out dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
               Links
             </h4>
             <div className="flex flex-row flex-wrap gap-x-2 md:justify-center lg:gap-x-4 2xl:gap-x-6">

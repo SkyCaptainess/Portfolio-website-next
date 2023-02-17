@@ -14,13 +14,13 @@ const JobPointers = ({ childAnimation }: Tvariants) => {
             : 'md:row-start-4 md:row-end-6'
         }`}
       >
-        <h3 className="mb-2 border-l-2 border-l-blue pl-4 font-semibold text-white-400 dark:border-l-orange-red dark:text-white-300 md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="mb-2 border-l-2 border-l-blue pl-4 font-semibold text-white-400 transition-colors duration-300 ease-out dark:border-l-orange-red dark:text-white-300 md:text-xl lg:text-2xl xl:text-3xl">
           {experience.date}
         </h3>
-        <h4 className="font-semibold text-white-400 dark:text-white-300 md:text-lg lg:text-xl xl:text-2xl">
+        <h4 className="font-semibold text-white-400 transition-colors duration-300 ease-out dark:text-white-300 md:text-lg lg:text-xl xl:text-2xl">
           {experience.title}
         </h4>
-        <h4 className="mb-2 font-semibold text-white-400 dark:text-white-300 md:text-lg lg:text-xl xl:text-2xl">
+        <h4 className="mb-2 font-semibold text-white-400 transition-colors duration-300 ease-out dark:text-white-300 md:text-lg lg:text-xl xl:text-2xl">
           @&nbsp;
           <a
             aria-label={experience.company}
@@ -32,7 +32,7 @@ const JobPointers = ({ childAnimation }: Tvariants) => {
             {experience.company}
           </a>
         </h4>
-        <ul className="list-inside list-disc text-sm text-white-300 opacity-80 dark:text-white-100 md:text-lg xl:text-xl">
+        <ul className="list-inside list-disc text-sm text-white-300 opacity-80 transition-colors duration-300 ease-out dark:text-white-100 md:text-lg xl:text-xl">
           {experience.pointers.map((pointer, index) => (
             <li
               key={index}

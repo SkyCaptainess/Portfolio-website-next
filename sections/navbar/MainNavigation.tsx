@@ -3,6 +3,7 @@
 import React from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useThemeContext } from '@/hooks/useThemeContext';
+import useScrollDirection from '@/hooks/useScrollDirection';
 import DropdownMenu from './DropdownMenu';
 import NavbarLinks from './NavbarLinks';
 import { IconMoodSmileBeam } from '@tabler/icons-react';
@@ -11,10 +12,10 @@ import { motion } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
 
 const MainNavigation = () => {
-  // const [isDarkMode, setDarkMode] = useState<boolean>(false);
   const { darkMode, setDarkMode, toggleThemeHandler } =
     useThemeContext() ?? false;
   const { prefersReducedMotion } = useMotionContext() ?? false;
+  const scrollDirection = useScrollDirection();
 
   const childAnimation: Tanimation = {
     hidden: {
@@ -44,13 +45,15 @@ const MainNavigation = () => {
   };
 
   return (
-    <nav className="mx-auto mb-6 w-11/12 max-w-7xl md:mb-60">
-      <motion.div
-        variants={containerAnimation}
-        initial="hidden"
-        animate="show"
-        className="relative flex flex-row items-center justify-between py-8"
-      >
+    <motion.header
+      variants={containerAnimation}
+      initial="hidden"
+      animate="show"
+      className={`fixed z-50 grid h-16 w-screen place-items-center bg-white-400 shadow-xl transition-top duration-300 ease-out dark:bg-midnight-city ${
+        scrollDirection === 'down' ? '-top-[30rem]' : 'top-0'
+      }`}
+    >
+      <nav className="relative mx-auto my-auto flex w-11/12 max-w-7xl flex-row items-center justify-between">
         <motion.div
           variants={childAnimation}
           className="order-2 flex flex-row items-center gap-x-2 lg:order-1"
@@ -60,7 +63,7 @@ const MainNavigation = () => {
           </h1>
           <IconMoodSmileBeam
             size={24}
-            color={`${darkMode ? '#E9ECEF' : '#F8F8F8'}`}
+            color={`${darkMode ? '#E9ECEF' : '#343434'}`}
             className="hidden sm:block"
           />
         </motion.div>
@@ -68,19 +71,22 @@ const MainNavigation = () => {
           <DropdownMenu />
           <NavbarLinks childAnimation={childAnimation} />
         </div>
-        <motion.div variants={childAnimation} className="order-last">
+        <motion.div
+          variants={childAnimation}
+          className="order-last"
+          data-testid="darkModeSwitch"
+        >
           <DarkModeSwitch
             checked={darkMode}
             onChange={(checked: boolean) => setDarkMode(checked)}
             onClick={toggleThemeHandler}
-            sunColor={'#F8F8F8'}
+            sunColor={'#343434'}
             moonColor={'#FFB26B'}
-            data-testid="darkModeSwitch"
+            data-testid="sun-moon"
           />
         </motion.div>
-      </motion.div>
-      <div className="navbar-gradient"></div>
-    </nav>
+      </nav>
+    </motion.header>
   );
 };
 

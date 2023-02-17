@@ -36,10 +36,10 @@ const Contact = () => {
         >
           🤙 <span className="span-heading">What&apos;s next?</span>
         </h2>
-        <h2 className="text-lg font-bold text-white-400 dark:text-white-300 md:text-3xl xl:text-4xl">
+        <h2 className="text-lg font-bold text-white-400 transition-colors duration-300 ease-out dark:text-white-300 md:text-3xl xl:text-4xl">
           Get in touch
         </h2>
-        <h4 className="text-base font-normal text-white-400 dark:text-white-100 md:text-lg xl:text-xl">
+        <h4 className="text-base font-normal text-white-400 transition-colors duration-300 ease-out dark:text-white-100 md:text-lg xl:text-xl">
           I&apos;m always on the lookout for new opportunities. Whether you have
           a question or just want to say hi, I&apos;ll try my best to get back
           to you!

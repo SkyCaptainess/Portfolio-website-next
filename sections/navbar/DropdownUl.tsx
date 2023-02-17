@@ -45,7 +45,7 @@ const DropdownUl = ({
       {isMenuClicked && (
         <motion.div
           ref={dropdownRef}
-          className="absolute top-20 left-0 z-50 w-full max-w-sm"
+          className="absolute top-12 left-0 z-50 w-full max-w-sm"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           exit={{ x: '-100vw' }}

@@ -37,7 +37,7 @@ const Hero = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.65 }}
-      className="static z-0 mx-auto mb-28 grid w-11/12 max-w-7xl grid-cols-1 md:grid-cols-3 md:grid-rows-3 md:items-center md:justify-evenly md:gap-x-8 lg:mb-60 xl:grid-cols-4"
+      className="mx-auto mb-28 grid w-11/12 max-w-7xl grid-cols-1 pt-32 md:grid-cols-3 md:grid-rows-3 md:items-center md:justify-evenly md:gap-x-8 md:pt-60 lg:mb-60 xl:grid-cols-4"
     >
       <Image src={profilePic} alt="Profile Picture" className="profilePic " />
       <motion.h1

@@ -43,7 +43,7 @@
   }
 
   .navbar-text {
-    @apply font-mont font-bold tracking-widest text-white-300 dark:text-white-400 lg:text-xl 2xl:text-[1.75rem];
+    @apply font-mont font-bold tracking-widest text-black-200 dark:text-white-400 lg:text-xl 2xl:text-[1.75rem];
   }
 
   .dropdown-link {
@@ -75,7 +75,7 @@
   }
 
   .white-sub-heading {
-    @apply mb-2 dark:text-white-300 md:text-2xl xl:mb-4 xl:text-3xl;
+    @apply mb-2 transition-colors duration-300 ease-out dark:text-white-300 md:text-2xl xl:mb-4 xl:text-3xl;
   }
 
   .experience-animation {

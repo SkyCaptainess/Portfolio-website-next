@@ -60,6 +60,7 @@ module.exports = {
       backgroundImage: {
         'orange-gradient': 'linear-gradient(to right, #f46b45, #eea849)',
         'dance-to-forget': 'linear-gradient(to left, #ff4e50, #f9d423)',
+        'midnight-city': 'linear-gradient(to bottom, #343434, #212529)',
       },
       keyframes: {
         wave: {
@@ -77,6 +78,7 @@ module.exports = {
       },
       transitionProperty: {
         bgi: 'background-image',
+        top: 'top',
       },
     },
   },

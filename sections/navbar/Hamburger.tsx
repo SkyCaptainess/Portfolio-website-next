@@ -54,19 +54,19 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
         animate={variant}
         variants={variantType.top}
         transition={transitionType}
-        className="h-[2px] w-8 bg-white-100"
+        className="h-[2px] w-8 bg-black-200 dark:bg-white-400"
       />
       <motion.div
         animate={variant}
         variants={variantType.center}
         transition={transitionType}
-        className="my-2 h-[2px] w-8 bg-white-100"
+        className="my-2 h-[2px] w-8 bg-black-200 dark:bg-white-400"
       />
       <motion.div
         animate={variant}
         variants={variantType.bottom}
         transition={transitionType}
-        className="h-[2px] w-8 bg-white-100"
+        className="h-[2px] w-8 bg-black-200 dark:bg-white-400"
       />
     </div>
   );

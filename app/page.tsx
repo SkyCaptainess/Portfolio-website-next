@@ -20,6 +20,7 @@ const Page = () => {
         <MotionProvider>
           <RefsProvider>
             <div className="relative z-0">
+              <div className="navbar-gradient"></div>
               <MainNavigation />
               <Hero />
               <AboutMe />
