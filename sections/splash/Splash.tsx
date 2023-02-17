@@ -37,11 +37,11 @@ const Splash = ({ children }: childrenNode) => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="grid place-items-center bg-black-300 w-screen h-screen"
+            className="grid h-screen w-screen place-items-center bg-white-400 dark:bg-black-300"
           >
             <Lottie
               animationData={LoadingAnimation}
-              className="max-w-[300px] max-h-[300px]"
+              className="max-h-[300px] max-w-[300px]"
             />
           </motion.div>
         </AnimatePresence>
