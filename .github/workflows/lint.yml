@@ -20,16 +20,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 19
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 19
           cache: 'yarn'
 
-      - name: Run install
-        uses: Borales/actions-yarn@v4.2.0
-        with:
-          cmd: install
+      - name: Install project dependencies
+        run: yarn
 
       - name: Run linters
         uses: wearerequired/lint-action@v2.3.0

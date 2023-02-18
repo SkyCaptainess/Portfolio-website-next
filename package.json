@@ -10,8 +10,9 @@
     "lint": "next lint",
     "prepare": "husky install",
     "start": "next start",
-    "test": "jest --watch",
-    "test:cov": "jest --coverage"
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@next/font": "13.1.6",

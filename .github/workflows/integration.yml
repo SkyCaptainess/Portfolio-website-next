@@ -26,12 +26,11 @@ jobs:
           node-version: 19
           cache: 'yarn'
 
-      - name: Run install
-        uses: Borales/actions-yarn@v4.2.0
-        with:
-          cmd: install
+      - name: Install project dependencies
+        run: yarn
 
-      - name: Build
-        uses: Borales/actions-yarn@v4.2.0
-        with:
-          cmd: build
+      - name: Test project
+        run: yarn test
+
+      - name: Build project
+        run: yarn build
