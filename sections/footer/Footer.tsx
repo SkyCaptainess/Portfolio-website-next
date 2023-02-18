@@ -9,10 +9,16 @@ const Footer = () => {
 
   const iconColor = darkMode ? '#E9ECEF' : '#343434';
 
-  const footerIcons = Object.values(externalLinks).map(
-    ({ Icon, url }, index) => {
+  const footerIcons = Object.entries(externalLinks).map(
+    ([name, { Icon, url }], index) => {
       return (
-        <a key={index} href={url} rel="noreferrer" target="_blank">
+        <a
+          aria-label={name}
+          key={index}
+          href={url}
+          rel="noreferrer"
+          target="_blank"
+        >
           <Icon size={30} color={iconColor} className="cursor-pointer" />
         </a>
       );
