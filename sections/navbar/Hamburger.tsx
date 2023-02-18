@@ -1,10 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-type HamburgerProps = {
-  isMenuClicked: boolean;
-  setMenuClicked: React.Dispatch<React.SetStateAction<boolean>>;
-};
+import { HamburgerProps } from '@/constants/typeInterface';
 
 const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   const clickHandler = () => {

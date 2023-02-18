@@ -6,7 +6,7 @@ import { Tvariants } from '@/constants/typeInterface';
 import { scrollToRef } from '@/constants/global';
 import { motion } from 'framer-motion';
 
-const NavbarLinks = ({ childAnimation }: Tvariants) => {
+const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const refsArray = Object.values(useRefsContext() ?? {});
 

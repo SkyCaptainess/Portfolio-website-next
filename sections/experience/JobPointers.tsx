@@ -2,7 +2,7 @@ import { experiences } from './experienceDesc';
 import { m } from 'framer-motion';
 import { Tvariants } from '@/constants/typeInterface';
 
-const JobPointers = ({ childAnimation }: Tvariants) => {
+const JobPointers = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
   const createExperienceElement = experiences.map((experience, index) => {
     return (
       <m.div

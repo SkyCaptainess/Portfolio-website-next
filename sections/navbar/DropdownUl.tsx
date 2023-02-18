@@ -2,19 +2,12 @@ import React, { useRef } from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import { AnimatePresence, motion } from 'framer-motion';
-import { setMenuType } from '@/constants/typeInterface';
+import { HamburgerProps } from '@/constants/typeInterface';
 import { scrollToRef } from '@/constants/global';
 import { useOutsideAlerter } from '@/hooks/useOutsideAlerter';
 import { listElements } from '@/constants/global';
 
-type menuType = {
-  isMenuClicked: boolean;
-};
-
-const DropdownUl = ({
-  isMenuClicked,
-  setMenuClicked,
-}: menuType & setMenuType) => {
+const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const refsArray = Object.values(useRefsContext() ?? false);
