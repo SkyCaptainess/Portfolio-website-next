@@ -7,6 +7,16 @@ export default function Head() {
         content="Hi, I'm Nicholas and I love to build simple and beautiful things!"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta
+        name="theme-color"
+        media="(prefers-color-scheme: light)"
+        content="#f8f8f8"
+      />
+      <meta
+        name="theme-color"
+        media="(prefers-color-scheme: dark)"
+        content="#212529"
+      />
       <link rel="icon" href="/favicons/favicon.ico" />
       <link
         rel="icon"
