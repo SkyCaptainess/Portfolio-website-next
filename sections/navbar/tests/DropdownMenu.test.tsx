@@ -8,12 +8,18 @@ test('Dropdown menu appears when Hamburger button is clicked', async () => {
   render(<DropdownMenu />);
 
   const hamburgerBtn = await screen.findByTestId('hamburger-btn');
+  expect(screen.queryByTestId('dropdown-ul')).not.toBeInTheDocument();
+  await user.click(hamburgerBtn);
   await waitFor(() => {
-    user.click(hamburgerBtn);
     expect(screen.getByTestId('dropdown-ul')).toBeInTheDocument();
   });
+  await user.click(hamburgerBtn);
   await waitFor(() => {
-    user.click(hamburgerBtn);
     expect(screen.queryByTestId('dropdown-ul')).not.toBeInTheDocument();
   });
+
+  // await user.click(hamburgerBtn);
+  // await waitFor(() => {
+  //   expect(screen.queryByTestId('dropdown-ul')).not.toBeInTheDocument();
+  // });
 });

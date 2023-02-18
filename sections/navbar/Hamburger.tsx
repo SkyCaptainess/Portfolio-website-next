@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 import { HamburgerProps } from '@/constants/typeInterface';
 
 const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
-  const clickHandler = () => {
-    setMenuClicked((prevState) => !prevState);
+  const transitionType = {
+    type: 'spring',
+    duration: 0.4,
+    bounce: 0.5,
+    ease: `${isMenuClicked ? 'easeOut' : 'easeIn'}`,
   };
-
-  const transitionType = { type: 'spring', duration: 0.4, bounce: 0.5 };
   const variant = isMenuClicked ? 'click' : 'unclick';
   const variantType = {
     top: {
@@ -41,30 +42,30 @@ const Hamburger = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   };
 
   return (
-    <div
+    <ul
+      onClick={() => setMenuClicked((prevState) => !prevState)}
       className="h-full cursor-pointer"
-      onClick={clickHandler}
       data-testid="hamburger-btn"
     >
-      <motion.div
+      <motion.li
         animate={variant}
         variants={variantType.top}
         transition={transitionType}
         className="h-[2px] w-8 bg-black-200 dark:bg-white-400"
       />
-      <motion.div
+      <motion.li
         animate={variant}
         variants={variantType.center}
         transition={transitionType}
         className="my-2 h-[2px] w-8 bg-black-200 dark:bg-white-400"
       />
-      <motion.div
+      <motion.li
         animate={variant}
         variants={variantType.bottom}
         transition={transitionType}
         className="h-[2px] w-8 bg-black-200 dark:bg-white-400"
       />
-    </div>
+    </ul>
   );
 };
 

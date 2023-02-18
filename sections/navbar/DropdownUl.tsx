@@ -1,25 +1,31 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import { AnimatePresence, motion } from 'framer-motion';
 import { HamburgerProps } from '@/constants/typeInterface';
 import { scrollToRef } from '@/constants/global';
-import { useOutsideAlerter } from '@/hooks/useOutsideAlerter';
+// import { useOutsideAlerter } from '@/hooks/useOutsideAlerter';
 import { listElements } from '@/constants/global';
 
 const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
-  const dropdownRef = useRef<HTMLDivElement>(null);
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const refsArray = Object.values(useRefsContext() ?? false);
-  useOutsideAlerter(dropdownRef, () => setMenuClicked(false));
+
+  const transitionType = {
+    type: 'spring',
+    duration: 0.4,
+    bounce: 0.3,
+    ease: `${isMenuClicked ? 'easeOut' : 'easeIn'}`,
+  };
 
   const liElements = listElements.map((element, index) => {
     return (
       <li
         key={index}
-        onClick={() =>
-          scrollToRef(refsArray[index], prefersReducedMotion ?? false)
-        }
+        onClick={() => {
+          scrollToRef(refsArray[index], prefersReducedMotion ?? false);
+          setMenuClicked((prevState) => !prevState);
+        }}
         className={`dropdown-link ${
           index === 0
             ? 'rounded-t-xl'
@@ -37,12 +43,11 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
     <AnimatePresence>
       {isMenuClicked && (
         <motion.div
-          ref={dropdownRef}
-          className="absolute top-12 left-0 z-50 w-full max-w-sm"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           exit={{ x: '-100vw' }}
-          transition={{ type: 'spring', duration: 0.3, bounce: 0.3 }}
+          transition={transitionType}
+          className="absolute top-12 left-0 z-50 w-full max-w-sm"
           data-testid="dropdown-ul"
         >
           <ul className="rounded-xl bg-white-400 shadow-dropdown dark:bg-black-500 dark:shadow-none">
