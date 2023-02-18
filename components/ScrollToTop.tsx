@@ -54,7 +54,7 @@ const ScrollToTop = () => {
               size={50}
               strokeWidth={2}
               color={`${darkMode ? '#FF9738' : '#00D4FF'}`}
-              className="fixed top-[90%] z-50 ml-[90%] cursor-pointer bg-none md:ml-[94%]"
+              className="fixed top-[90%] z-50 ml-[85%] cursor-pointer bg-none md:ml-[94%]"
             />
           </m.div>
         )}
