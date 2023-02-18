@@ -13,6 +13,7 @@ export const listElements = [
   'Experience',
   'Projects',
   'Contact',
+  'Resume',
 ];
 
 export const externalLinks: Tlinks = {

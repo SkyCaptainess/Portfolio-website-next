@@ -60,9 +60,7 @@ const MainNavigation = () => {
           variants={childAnimation}
           className="order-2 flex flex-row items-center gap-x-2 lg:order-1"
         >
-          <h1 className="navbar-text text-xl lg:text-xl 2xl:text-[1.75rem]">
-            NICHOLAS
-          </h1>
+          <h1 className="navbar-text">NICHOLAS</h1>
           <IconMoodSmileBeam
             size={24}
             color={`${darkMode ? '#E9ECEF' : '#343434'}`}

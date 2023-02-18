@@ -20,7 +20,21 @@ const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
         }
         className="navbar-text cursor-pointer hover:underline hover:decoration-white-400 hover:decoration-2 hover:underline-offset-8"
       >
-        {element}
+        {index === listElements.length - 1 ? (
+          <button type="button" className="redirect-button">
+            <a
+              aria-label="resume pdf"
+              href="https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
+              className="h-full w-full text-base tracking-widest text-white-400 no-underline hover:no-underline dark:text-black-300 xl:text-xl"
+            >
+              Resume
+            </a>
+          </button>
+        ) : (
+          element
+        )}
       </motion.li>
     );
   });

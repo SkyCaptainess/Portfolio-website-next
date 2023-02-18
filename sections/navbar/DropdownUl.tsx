@@ -4,7 +4,6 @@ import { useRefsContext } from '@/hooks/useRefsContext';
 import { AnimatePresence, motion } from 'framer-motion';
 import { HamburgerProps } from '@/constants/typeInterface';
 import { scrollToRef } from '@/constants/global';
-// import { useOutsideAlerter } from '@/hooks/useOutsideAlerter';
 import { listElements } from '@/constants/global';
 
 const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
@@ -19,6 +18,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   };
 
   const liElements = listElements.map((element, index) => {
+    let lastElement = listElements.length - 1;
     return (
       <li
         key={index}
@@ -29,12 +29,24 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
         className={`dropdown-link ${
           index === 0
             ? 'rounded-t-xl'
-            : index === 4
-            ? 'rounded-b-xl'
+            : index === lastElement
+            ? 'rounded-b-xl p-0'
             : 'rounded-none'
         }`}
       >
-        {element}
+        {index === lastElement ? (
+          <a
+            aria-label="resume pdf"
+            href="https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing"
+            rel="noreferrer"
+            target="_blank"
+            className="redirect-button block h-full w-full rounded-t-none rounded-b-xl bg-aqua py-2.5 pl-4 font-bold text-white-400 transition-colors duration-300 ease-out hover:bg-dark-aqua hover:no-underline dark:text-black-300"
+          >
+            {element}
+          </a>
+        ) : (
+          element
+        )}
       </li>
     );
   });
