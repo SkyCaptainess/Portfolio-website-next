@@ -1,43 +1,53 @@
-# 💪 Objective
+# [My Portfolio website](https://nicholasyong.dev 'My portfolio page')
 
-It's a great opportunity to showcase my frontend skills, to implement a mobile-first design as well as to explore new frameworks and libraries such as **[tailwindcss](https://tailwindcss.com 'tailwindcss homepage')** and **[Next.js](https://nextjs.org 'Next.js homepage')**. Color themes for the light mode is inspired by [Stripe webpage](https://stripe.com/en-gb-sg 'Stripe homepage') while dark mode is implemented with my knowledge of color theory.
+[![Node Version](https://img.shields.io/badge/Node-19.6.1-brightgreen.svg)](https://github.com/nicholas5538/fp-mini-project/blob/main/package.json#L7)
+![Mac OS](https://img.shields.io/badge/DevelopedOn-MacOS-red.svg)
 
-# 📝 About The Project
+## 💪 Objective
 
-## Website URL: Coming soon
+It's a great opportunity to showcase my frontend skills, and to explore new frameworks and libraries such as **[tailwindcss](https://tailwindcss.com 'tailwindcss homepage')** and **[Next.js](https://beta.nextjs.org/docs 'Next.js homepage')**.
 
-## Figma URL: [Portfolio Design](https://www.figma.com/file/xTLxN3ECV9YntHWuuF6upK/E-portfolio?node-id=0%3A1&t=1U3uRtpLT0PJEf2l-1 'Portfolio figma')
+> Take note: I'm currently using Nextjs 'app' directory which is unstable as of 18 Feb 23, sometimes the [page](https://nicholasyong.dev 'My portfolio page') might not be working or loading.
 
-### Tech used:
+## Getting Started
 
-<img align="left" alt="Next.js" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" style="padding-right:10px color: white;"/>
-<img align="left" alt="React" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="padding-right:10px;"/>
-<img alt="tailwindcss" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+### Repo Setup
 
-### 💻 Configuration
+- Fork this repo.
 
-To run the project locally:
+  > 🚨 You can fork this repo and play around with it. But please give me proper credit by linking back to this [repo](https://github.com/nicholas5538/portfolio, 'nicholas5538 portfolio repo') if you're planning to use it. _Plagiarism is bad_ after all.
 
-```
-npm run dev
+- Install the version of node specified in the `.nvmrc` file of this repo.
 
-OR
+  > 💁 **Tip:** You can use [nvm](https://github.com/nvm-sh/nvm) to easily manage multiple versions of node. Once installed, run `nvm use` in the project directory to use the configured version.
 
+- Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable).
+  > 💁 `npm install --global yarn`
+
+## Developing
+
+Once you have [set up the repo](#repo-setup), you're ready to start developing. Starting the development environment is managed by the following command.
+
+```sh
 yarn dev
 ```
 
-Breakpoints implemented:
+The `dev` command will start the application in your local environment.
 
-1. xs & sm: 0 - 833px
-2. md: 834px - 1023px
-3. lg: 1024px - 1279px
-4. xl: 1280px - 1535px
-5. 2xl: 1536px and above
+### Frequently Used Scripts
 
-### 📔 To-do list
+In addition to the `dev` command, there are other scripts available in the package.json. Some of the most common you might get to use are:
 
-- [ ] Create Navbar
-- [ ] Place toggle button with react-toggle-dark-mode
-- [ ] Place name and logo together into a container
-- [ ] Dropdown menu for mobile
-- [ ] Hamburger menu transition when toggle
+- `yarn test` - Runs unit tests.
+
+  > 💁 **Tip:** use `yarn test:watch` or `yarn test:cov` to explicitly specify the desired mode
+
+- `yarn format` - Check prettier formatting through all the codes
+  > 💁 **Tip:** use `yarn format:fix` to run auto prettier formatting across all the codes
+- `yarn lint` - Runs TS linter through all the codes
+
+## Additional Documentation
+
+- [Next.js 'app' beta docs](https://beta.nextjs.org/docs 'Next.js homepage')
+- [Tailwindcss styling](https://tailwindcss.com/docs/installation)
+- [Framer Motion](https://www.framer.com/motion/)
