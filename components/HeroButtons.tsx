@@ -30,7 +30,8 @@ const HeroButtons = () => {
       {anchorElements}
       <button type="button" className="redirect-button">
         <a
-          href="#"
+          aria-label="resume pdf"
+          href="https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing"
           rel="noreferrer"
           target="_blank"
           className="h-full w-full text-lg tracking-widest text-white-400 no-underline hover:no-underline dark:text-black-300 md:text-2xl"
