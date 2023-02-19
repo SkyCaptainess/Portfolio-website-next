@@ -32,5 +32,11 @@ jobs:
       - name: Test project
         run: yarn test
 
+      - name: Run linters
+        uses: wearerequired/lint-action@v2.3.0
+        with:
+          eslint: true
+          prettier: true
+
       - name: Build project
         run: yarn build
