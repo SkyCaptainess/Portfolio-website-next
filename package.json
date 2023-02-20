@@ -57,7 +57,7 @@
     "husky": "8.0.3"
   },
   "engines": {
-    "node": "16"
+    "node": "18"
   },
   "packageManager": "yarn@3.4.1"
 }

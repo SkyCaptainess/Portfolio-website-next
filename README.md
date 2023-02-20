@@ -1,6 +1,6 @@
 # [My Portfolio website](https://nicholasyong.dev 'My portfolio page')
 
-[![Node Version](https://img.shields.io/badge/Node-19.6.1-brightgreen.svg)](https://github.com/nicholas5538/fp-mini-project/blob/main/package.json#L7)
+[![Node Version](https://img.shields.io/badge/Node-18.14.1-brightgreen.svg)](https://github.com/nicholas5538/fp-mini-project/blob/main/package.json#L7)
 ![Mac OS](https://img.shields.io/badge/DevelopedOn-MacOS-red.svg)
 
 ## 💪 Objective
