@@ -30,7 +30,7 @@ export const experiences: experienceDescription = [
     date: 'Jan 2022 - Sep 2022',
     title: 'Aircraft Engineer Trainee',
     company: 'SIA Engineering Company',
-    companyURL: 'https://www.siaec.com',
+    companyURL: 'https://www.siaec.com.sg',
     pointers: siaecPointers,
   },
 ];

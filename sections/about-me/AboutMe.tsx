@@ -85,7 +85,7 @@ const AboutMe = () => {
           Graduated B.Eng. with Honours in Aircraft Systems Engineering, from{' '}
           <a
             aria-label="SIT"
-            href="https://www.singaporetech.edu.sg"
+            href="https://www.singaporetech.edu.sg/undergraduate-programmes/aircraft-systems-engineering"
             rel="noreferrer"
             target="_blank"
             className="cursor-pointer text-light-blue no-underline hover:underline hover:underline-offset-4"
