@@ -15,11 +15,11 @@ const Custom404 = () => {
           </h2>
           <Lottie animationData={errorAnimation} />
           <div className="card-actions justify-start pl-8 pb-8">
-            <button className="rounded-2xl bg-aqua px-4 py-2 transition-colors duration-200 ease-linear hover:bg-dark-aqua">
+            <button className="rounded-2xl bg-light-orange px-4 py-2 font-bold transition-colors duration-200 ease-linear hover:bg-orange-red">
               <Link
                 aria-label="home"
                 href="/"
-                className="text-lg tracking-widest text-white-300 no-underline hover:no-underline"
+                className="text-lg tracking-widest text-black-400 no-underline hover:no-underline"
               >
                 Send me back!
               </Link>

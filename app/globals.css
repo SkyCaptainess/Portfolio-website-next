@@ -39,7 +39,7 @@
   }
 
   .redirect-button {
-    @apply rounded-2xl bg-aqua px-4 py-2 transition-colors duration-300 ease-out hover:bg-dark-aqua dark:bg-light-orange dark:hover:bg-orange-red;
+    @apply rounded-2xl bg-aqua px-4 py-2 font-bold transition-colors duration-300 ease-out hover:bg-dark-aqua dark:bg-light-orange dark:hover:bg-orange-red;
   }
 
   .navbar-text {
