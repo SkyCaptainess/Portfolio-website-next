@@ -38,11 +38,7 @@ export default function Head() {
       />
       <link rel="manifest" href="/favicons/site.webmanifest" />
       <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
-      <link
-        rel="mask-icon"
-        href="/favicons/safari-pinned-tab.svg"
-        color="black"
-      />
+      <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" />
     </>
   );
 }
