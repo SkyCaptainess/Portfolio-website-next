@@ -11,11 +11,11 @@ import { Tanimation } from '@/constants/typeInterface';
 const Hero = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
   const childAnimation: Tanimation = {
-    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -20 },
+    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : -50 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { type: 'spring', duration: 0.4, bounce: 0.4 },
+      transition: { type: 'spring', duration: 0.9, bounce: 0.4 },
     },
   };
 
@@ -24,9 +24,9 @@ const Hero = () => {
     show: {
       ...childAnimation.show,
       transition: {
-        duration: 0.4,
+        duration: 0.3,
         delayChildren: 0.7,
-        staggerChildren: 0.2,
+        staggerChildren: 0.3,
       },
     },
   };
