@@ -14,7 +14,6 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
     "@svgr/webpack": "6.5.1",
     "@tabler/icons-react": "2.3.0",
     "@types/node": "18.14.2",
@@ -23,7 +22,7 @@
     "daisyui": "2.51.1",
     "framer-motion": "10.0.0",
     "lottie-react": "2.4.0",
-    "next": "13.1.6",
+    "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-toggle-dark-mode": "1.1.1",
