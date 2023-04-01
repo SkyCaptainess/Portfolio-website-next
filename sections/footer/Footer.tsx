@@ -10,11 +10,11 @@ const Footer = () => {
   const iconColor = darkMode ? '#E9ECEF' : '#343434';
 
   const footerIcons = Object.entries(externalLinks).map(
-    ([name, { Icon, url }], index) => {
+    ([name, { Icon, url }]) => {
       return (
         <a
           aria-label={name}
-          key={index}
+          key={name}
           href={url}
           rel="noreferrer"
           target="_blank"

@@ -21,7 +21,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
     let lastElement = listElements.length - 1;
     return (
       <li
-        key={index}
+        key={index.toString()}
         onClick={() => {
           scrollToRef(refsArray[index], prefersReducedMotion ?? false);
           setMenuClicked((prevState) => !prevState);

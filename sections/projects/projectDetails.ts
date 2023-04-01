@@ -2,24 +2,26 @@ import {
   IconBrandBootstrap,
   IconBrandCss3,
   IconBrandDjango,
+  IconBrandFramer,
   IconBrandGithub,
   IconBrandHtml5,
   IconBrandJavascript,
   IconBrandPython,
+  IconBrandReact,
+  IconBrandTailwind,
+  IconBrandTypescript,
+  IconBrandVite,
   IconBrandYoutube,
+  IconCirclePlus,
   IconDatabase,
   IconExternalLink,
   IconNotebook,
-  IconCirclePlus,
-  IconBrandReact,
-  IconBrandTypescript,
-  IconBrandVite,
 } from '@tabler/icons-react';
 import { StaticImageData } from 'next/image';
-import stockImage from '../../public/images/stocks-portfolio.webp';
 import handSanitizerImage from '../../public/images/handsanitizer.webp';
-import unicardImage from '../../public/images/unicurd.webp';
 import pepsiImage from '../../public/images/pepsi-corporate.webp';
+import stockImage from '../../public/images/stocks-portfolio.webp';
+import voucherImage from '../../public/images/voucher_management.webp';
 
 export type Tproject = {
   id: number;
@@ -38,12 +40,39 @@ export type Tproject = {
   }[];
 };
 
-export const stockProjectCard: Tproject = {
+const voucherManagementCard: Tproject = {
   id: 0,
+  image: voucherImage,
+  projectTitle: 'Voucher Management',
+  projectDesc:
+    'A web application that allows user to perform CRUD operations on vouchers, easily access all particulars of the vouchers with a data table, and allow them to use a dummy checkout page to apply the newly created or modified vouchers.',
+  stack: [
+    { Icon: IconBrandReact, tooltipText: 'React' },
+    { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },
+    { Icon: IconBrandVite, tooltipText: 'Vite & Vitest' },
+    { Icon: IconBrandTailwind, tooltipText: 'Tailwind CSS' },
+    { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
+  ],
+  links: [
+    {
+      Icon: IconBrandGithub,
+      tooltipText: 'GitHub',
+      url: 'https://github.com/nicholas5538/fp-capstone',
+    },
+    {
+      Icon: IconExternalLink,
+      tooltipText: 'Website',
+      url: 'https://foodpanda-capstone.vercel.app/',
+    },
+  ],
+};
+
+const stockProjectCard: Tproject = {
+  id: 1,
   image: stockImage,
   projectTitle: 'Stockstracker',
   projectDesc:
-    'It is a web application that allows user to gain a quick insight into the performance of their stock portfolio and investment transactions.',
+    'A web application that allows user to gain a quick insight into the performance of their stock portfolio, store and modify all their transaction histories, and easily access them in a single page.',
   stack: [
     { Icon: IconBrandPython, tooltipText: 'Python' },
     { Icon: IconBrandDjango, tooltipText: 'Django' },
@@ -72,8 +101,8 @@ export const stockProjectCard: Tproject = {
   ],
 };
 
-export const ioTProjectCard: Tproject = {
-  id: 1,
+const ioTProjectCard: Tproject = {
+  id: 2,
   image: handSanitizerImage,
   projectTitle: 'IoT Hand Sanitizer',
   projectDesc:
@@ -97,16 +126,17 @@ export const ioTProjectCard: Tproject = {
   ],
 };
 
-export const pepsiProjectCard: Tproject = {
-  id: 2,
+const pepsiProjectCard: Tproject = {
+  id: 3,
   image: pepsiImage,
   projectTitle: 'Pepsi corporate SPA',
   projectDesc:
     'Setting up a React single-page application from scratch to learn Typescript, React Router, framer motion and vitest unit test framework.',
   stack: [
     { Icon: IconBrandReact, tooltipText: 'React' },
-    { Icon: IconBrandTypescript, tooltipText: 'Typescript' },
+    { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },
     { Icon: IconBrandVite, tooltipText: 'Vite & Vitest' },
+    { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
   ],
   links: [
     {
@@ -117,27 +147,9 @@ export const pepsiProjectCard: Tproject = {
   ],
 };
 
-export const unicurdProjectCard: Tproject = {
-  id: 3,
-  image: unicardImage,
-  projectTitle: 'Unicurd website remake',
-  projectDesc:
-    'It is mini project that revamps the Unicurd website, and to make it responsive with Bootstrap. Unicurd actual website is outdated and unresponsive.',
-  stack: [
-    { Icon: IconBrandHtml5, tooltipText: 'HTML' },
-    { Icon: IconBrandCss3, tooltipText: 'CSS' },
-    { Icon: IconBrandBootstrap, tooltipText: 'Bootstrap' },
-  ],
-  links: [
-    {
-      Icon: IconBrandGithub,
-      tooltipText: 'GitHub',
-      url: 'https://github.com/nicholas5538/learn-bootstrap',
-    },
-    {
-      Icon: IconExternalLink,
-      tooltipText: 'Website',
-      url: 'https://unicurd-bootstrap.netlify.app/',
-    },
-  ],
-};
+export const projectCards: Tproject[] = [
+  voucherManagementCard,
+  stockProjectCard,
+  ioTProjectCard,
+  pepsiProjectCard,
+];

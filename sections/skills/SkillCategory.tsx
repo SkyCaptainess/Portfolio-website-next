@@ -23,11 +23,11 @@ const SkillCategory = ({
         variants={containerAnimation}
         className="mb-2 flex flex-row flex-wrap gap-x-4 lg:mb-4"
       >
-        {icons.map(({ Icon, tooltipText: tooltipText }, index) => {
+        {icons.map(({ Icon, tooltipText: tooltipText }) => {
           return (
             <m.div
               variants={childAnimation}
-              key={index}
+              key={tooltipText}
               className={`tooltip ${tooltipColor} ${
                 icons === goodDesignIcons || icons === averageDesignIcons
                   ? 'tooltip-right'
@@ -35,7 +35,7 @@ const SkillCategory = ({
               }`}
               data-tip={tooltipText}
             >
-              <Icon key={index} size={40} color={iconColor} />
+              <Icon key={tooltipText} size={40} color={iconColor} />
             </m.div>
           );
         })}

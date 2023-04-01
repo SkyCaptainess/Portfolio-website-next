@@ -14,7 +14,7 @@ const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
     return (
       <motion.li
         variants={childAnimation}
-        key={index}
+        key={index.toString()}
         onClick={() =>
           scrollToRef(refsArray[index], prefersReducedMotion ?? false)
         }

@@ -10,6 +10,7 @@ const foodpandaPointers = [
   'Engineered modern applications with a variety of different languages, framework and testing libraries such as React, Typescript, Jest and Cypress.',
   'Collaborated with other engineers to develop and ship new UI features on foodpanda ops portal.',
   'Enhanced APIs periodic tests by reducing test flakiness and implementing reattempts on timeout errors.',
+  'Involved in setting up Drone CI with bash script for the entire team as a CI tool to enhance developers\' experience.',
 ];
 
 const siaecPointers = [

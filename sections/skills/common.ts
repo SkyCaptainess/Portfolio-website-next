@@ -1,21 +1,22 @@
 import {
-  IconBrandPython,
-  IconBrandDjango,
-  IconBrandHtml5,
+  IconBrandAdobe,
+  IconBrandBootstrap,
   IconBrandCss3,
+  IconBrandCypress,
+  IconBrandDjango,
+  IconBrandFigma,
+  IconBrandFramer,
+  IconBrandHtml5,
   IconBrandJavascript,
-  IconBrandTypescript,
+  IconBrandMysql,
+  IconBrandNextjs,
+  IconBrandPython,
   IconBrandReact,
   IconBrandTailwind,
-  IconBrandBootstrap,
-  IconBrandNextjs,
-  IconBrandMysql,
-  IconLetterC,
-  IconBrandCypress,
+  IconBrandTypescript,
   IconBrandVite,
   IconDatabase,
-  IconBrandAdobe,
-  IconBrandFigma,
+  IconLetterC,
 } from '@tabler/icons-react';
 
 export type TIcons = {
@@ -31,7 +32,7 @@ export const goodCodingIcons = [
   { Icon: IconBrandJavascript, tooltipText: 'JavaScript' },
   { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },
   { Icon: IconBrandReact, tooltipText: 'React' },
-  { Icon: IconBrandTailwind, tooltipText: 'Tailwindcss' },
+  { Icon: IconBrandTailwind, tooltipText: 'Tailwind CSS' },
   { Icon: IconBrandBootstrap, tooltipText: 'Bootstrap' },
 ];
 
@@ -46,6 +47,7 @@ export const averageCodingIcons = [
   { Icon: IconLetterC, tooltipText: 'C' },
   { Icon: IconBrandCypress, tooltipText: 'Cypress' },
   { Icon: IconBrandVite, tooltipText: 'Vite & Vitest' },
+  { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
 ];
 
 export const averageDesignIcons = [

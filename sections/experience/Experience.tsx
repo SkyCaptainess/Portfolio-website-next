@@ -42,7 +42,7 @@ const Experience = () => {
     <section className="dark-blue-section">
       <Animation
         animation={containerAnimation}
-        className="dark-blue-container md:mb-56 md:grid-rows-5 md:items-center md:justify-center md:gap-y-0 md:gap-x-10 md:pt-0 lg:mb-[18rem] xl:mb-72 2xl:mb-[22rem] 3xl:mb-72"
+        className="dark-blue-container mb-40 md:mb-72 md:grid-rows-5 md:items-center md:justify-center md:gap-y-0 md:gap-x-10 md:pt-0 lg:mb-[22rem] xl:mb-80 2xl:mb-[26rem] 3xl:mb-[22rem]"
         viewAmount={0.65}
       >
         <m.h2
@@ -60,7 +60,7 @@ const Experience = () => {
           />
         </m.aside>
       </Animation>
-      <div className="dark-blue-gradient xl:h-[130%] 2xl:-left-40 2xl:h-[140%]"></div>
+      <div className="dark-blue-gradient -left-[6rem] xl:h-[130%] 2xl:-left-40 2xl:h-[140%]"></div>
     </section>
   );
 };

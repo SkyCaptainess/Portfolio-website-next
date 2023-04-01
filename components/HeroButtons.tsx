@@ -6,10 +6,10 @@ const HeroButtons = () => {
   const { darkMode } = useThemeContext() ?? false;
 
   const anchorElements = Object.entries(externalLinks).map(
-    ([name, { Icon, url }], index) => {
+    ([name, { Icon, url }]) => {
       return (
         <div
-          key={index}
+          key={name}
           className="tooltip tooltip-bottom tooltip-info ml-2 dark:tooltip-warning md:tooltip-top md:ml-0"
           data-tip={name}
         >

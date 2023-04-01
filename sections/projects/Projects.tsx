@@ -4,12 +4,7 @@ import React from 'react';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import ProjectCard from '@/components/ProjectCard';
-import {
-  stockProjectCard,
-  ioTProjectCard,
-  pepsiProjectCard,
-  unicurdProjectCard,
-} from './projectDetails';
+import { projectCards } from './projectDetails';
 import Animation from '@/components/Animation';
 import { Tanimation } from '@/constants/typeInterface';
 
@@ -30,6 +25,10 @@ const Projects = () => {
     },
   };
 
+  const displayCards = projectCards.map((card) => {
+    return <ProjectCard key={card.id} animation={animation} {...card} />;
+  });
+
   return (
     <section>
       <div className="mx-auto mb-20 w-11/12 max-w-7xl sm:mb-28 2xl:mb-44">
@@ -47,10 +46,7 @@ const Projects = () => {
             Coding projects that I enjoyed working on.
           </h3>
         </Animation>
-        <ProjectCard {...stockProjectCard} animation={animation} />
-        <ProjectCard {...ioTProjectCard} animation={animation} />
-        <ProjectCard {...pepsiProjectCard} animation={animation} />
-        <ProjectCard {...unicurdProjectCard} animation={animation} />
+        {displayCards}
       </div>
     </section>
   );

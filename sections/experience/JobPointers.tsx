@@ -6,7 +6,7 @@ const JobPointers = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
   const createExperienceElement = experiences.map((experience, index) => {
     return (
       <m.div
-        key={index}
+        key={experience.company}
         variants={childAnimation}
         className={`mb-5 md:col-span-2 ${
           index === 0
@@ -35,7 +35,7 @@ const JobPointers = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
         <ul className="list-inside list-disc text-sm text-white-300 opacity-80 transition-colors duration-300 ease-out dark:text-white-100 md:text-lg xl:text-xl">
           {experience.pointers.map((pointer, index) => (
             <li
-              key={index}
+              key={index.toString()}
               className={`${
                 index === experience.pointers.length - 1 ? 'mb-0' : 'mb-2'
               }`}

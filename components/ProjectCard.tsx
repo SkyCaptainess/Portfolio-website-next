@@ -22,7 +22,7 @@ const ProjectCard = ({
   ) =>
     iconList.map((icon, index) => (
       <div
-        key={index}
+        key={icon.tooltipText}
         className={`tooltip tooltip-top tooltip-info dark:tooltip-warning ${
           icon?.url ? 'cursor-pointer' : 'cursor-default'
         }`}
