@@ -4330,7 +4330,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-toggle-dark-mode: 1.1.1
-    seamless-scroll-polyfill: 2.3.3
+    seamless-scroll-polyfill: 2.3.4
     sharp: 0.31.3
     tailwindcss: 3.3.1
     typescript: 5.0.2
@@ -8435,10 +8435,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"seamless-scroll-polyfill@npm:2.3.3":
-  version: 2.3.3
-  resolution: "seamless-scroll-polyfill@npm:2.3.3"
-  checksum: 17c9bb52331fa25ee102f8910b69ed12551711c31cfceab3d7ace8180f022babb0b612aeb2a7a71624fc42cd699b1e4552e97bd153922976e5f9de7fcd581484
+"seamless-scroll-polyfill@npm:2.3.4":
+  version: 2.3.4
+  resolution: "seamless-scroll-polyfill@npm:2.3.4"
+  checksum: 98ab968f1d527f95275733b2349f95f4e23ca5dc5c29b5f6e55f22aa8525e8266cf7428cedff14f342c599c9fe87558568d5e3f97b3cf83a7344b83939d02869
   languageName: node
   linkType: hard
 
