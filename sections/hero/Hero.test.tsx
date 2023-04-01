@@ -24,9 +24,8 @@ it('should render hero section components', () => {
   ).toBeInTheDocument();
   expect(
     screen.getByRole('heading', {
-      name: /currently working as a SWE Trainee @ foodpanda/i,
+      name: /currently looking out for opportunities/i,
     })
   ).toBeInTheDocument();
-  expect(screen.getByRole('link', { name: /foodpanda/i })).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
 });

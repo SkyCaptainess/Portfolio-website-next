@@ -60,7 +60,7 @@ const Hero = () => {
         <span className="bg-transparent bg-gradient-to-b from-aqua to-aqua bg-clip-text font-bold text-transparent transition-bgi duration-300 ease-out dark:bg-orange-gradient dark:text-transparent md:text-black-200">
           Nicholas
         </span>
-        , I love to design and code beautifully simple things
+        , I love to design and code beautifully simple things.
       </motion.h1>
       <motion.h3
         variants={childAnimation}
@@ -74,15 +74,7 @@ const Hero = () => {
         className="md:col-span-2 md:row-start-3 md:row-end-4 xl:gap-y-10"
       >
         <h3 className="mb-4 md:mb-8 md:text-2xl xl:text-3xl">
-          Currently working as a SWE Trainee @{' '}
-          <a
-            aria-label="foodpanda"
-            href="https://www.foodpanda.com"
-            rel="noreferrer"
-            target="_blank"
-          >
-            foodpanda
-          </a>
+          Currently looking out for opportunities.
         </h3>
         <HeroButtons />
       </motion.div>
