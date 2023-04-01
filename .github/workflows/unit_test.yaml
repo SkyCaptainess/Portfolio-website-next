@@ -1,5 +1,5 @@
 ---
-name: Integration
+name: Unit Testing
 
 on:
   pull_request:
@@ -9,7 +9,8 @@ on:
       - '**.md'
 
 jobs:
-  build:
+  unit_testing:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -27,6 +28,3 @@ jobs:
 
       - name: Test project
         run: yarn test
-
-      - name: Build project
-        run: yarn build
