@@ -27,7 +27,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install project dependencies
-        run: yarn
+        run: yarn install --immutable
 
       - name: Test project
         run: yarn test
