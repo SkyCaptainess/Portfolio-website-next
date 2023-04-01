@@ -2,8 +2,6 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
 # yarn
 .pnp.*
@@ -46,6 +44,6 @@ yarn-error.log*
 next-env.d.ts
 
 # firebase
-/.firebase
-/.firebaserc
-firebase.json
+.firebase/
+firebase-debug.log*
+.firebaserc

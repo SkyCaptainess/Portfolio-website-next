@@ -1,17 +1,15 @@
 ---
-name: Integration
-
+name: Deploy to Firebase Hosting
 on:
-  pull_request:
+  push:
     branches:
       - main
     paths-ignore:
       - '**.md'
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -25,8 +23,13 @@ jobs:
       - name: Install project dependencies
         run: yarn install --immutable
 
-      - name: Test project
-        run: yarn test
-
       - name: Build project
         run: yarn build
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NICHOLAS_E_PORTFOLIO }}'
+          channelId: live
+          projectId: nicholas-e-portfolio
