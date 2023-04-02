@@ -10,7 +10,7 @@ import { m } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
 import Animation from '../../components/Animation';
 
-const Lottie = lazy(() => import('lottie-react'));
+const Lottie = lazy(() => import('lottie-light-react'));
 
 const AboutMe = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;

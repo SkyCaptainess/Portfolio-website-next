@@ -9,7 +9,7 @@ import { m } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
 import Animation from '../../components/Animation';
 
-const Lottie = lazy(() => import('lottie-react'));
+const Lottie = lazy(() => import('lottie-light-react'));
 
 const Experience = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
@@ -42,13 +42,13 @@ const Experience = () => {
     <section className="dark-blue-section">
       <Animation
         animation={containerAnimation}
-        className="dark-blue-container mb-40 md:mb-72 md:grid-rows-5 md:items-center md:justify-center md:gap-y-0 md:gap-x-10 md:pt-0 lg:mb-[22rem] xl:mb-80 2xl:mb-[26rem] 3xl:mb-[22rem]"
+        className="dark-blue-container mb-40 md:mb-72 md:grid-rows-5 md:items-center md:justify-center md:gap-x-10 md:gap-y-0 md:pt-0 lg:mb-[22rem] xl:mb-80 2xl:mb-[26rem] 3xl:mb-[22rem]"
         viewAmount={0.65}
       >
         <m.h2
           ref={experienceRef}
           variants={childAnimation}
-          className="mb-5 text-xl font-bold text-blue md:col-span-2 md:row-start-1 md:row-end-1 md:mb-0 md:-mt-3 md:text-3xl xl:text-4xl"
+          className="mb-5 text-xl font-bold text-blue md:col-span-2 md:row-start-1 md:row-end-1 md:-mt-3 md:mb-0 md:text-3xl xl:text-4xl"
         >
           🧑‍💻<span className="span-heading">Experience</span>
         </m.h2>

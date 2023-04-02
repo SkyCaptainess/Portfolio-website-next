@@ -19,7 +19,7 @@ it('should render components in the Experience section', async () => {
     name: '🧑‍💻 Experience',
   });
   const dateHeading = await screen.findByRole('heading', {
-    name: 'Oct 2022 - Present',
+    name: 'Oct 2022 - Mar 2023',
   });
   const titleHeading = await screen.findByRole('heading', {
     name: 'Software Engineer Trainee',

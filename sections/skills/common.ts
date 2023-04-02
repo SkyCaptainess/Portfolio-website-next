@@ -44,10 +44,10 @@ export const averageCodingIcons = [
   { Icon: IconBrandNextjs, tooltipText: 'Nextjs' },
   { Icon: IconBrandMysql, tooltipText: 'MySQL' },
   { Icon: IconDatabase, tooltipText: 'PostgreSQL' },
-  { Icon: IconLetterC, tooltipText: 'C' },
+  { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
   { Icon: IconBrandCypress, tooltipText: 'Cypress' },
   { Icon: IconBrandVite, tooltipText: 'Vite & Vitest' },
-  { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
+  { Icon: IconLetterC, tooltipText: 'C' },
 ];
 
 export const averageDesignIcons = [

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import errorAnimation from '../public/animations/404.json';
 import '../app/globals.css';
 
-const Lottie = lazy(() => import('lottie-react'));
+const Lottie = lazy(() => import('lottie-light-react'));
 
 const Custom404 = () => {
   return (
@@ -14,7 +14,7 @@ const Custom404 = () => {
             Uh oh, looks like you&apos;re lost.
           </h2>
           <Lottie animationData={errorAnimation} />
-          <div className="card-actions justify-start pl-8 pb-8">
+          <div className="card-actions justify-start pb-8 pl-8">
             <button className="rounded-2xl bg-light-orange px-4 py-2 font-bold transition-colors duration-200 ease-linear hover:bg-orange-red">
               <Link
                 aria-label="home"

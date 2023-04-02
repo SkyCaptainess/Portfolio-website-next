@@ -21,7 +21,7 @@ const siaecPointers = [
 
 export const experiences: experienceDescription = [
   {
-    date: 'Oct 2022 - Present',
+    date: 'Oct 2022 - Mar 2023',
     title: 'Software Engineer Trainee',
     company: 'foodpanda',
     companyURL: 'https://www.foodpanda.com',

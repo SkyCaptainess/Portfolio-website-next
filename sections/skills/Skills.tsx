@@ -17,7 +17,7 @@ import Animation from '../../components/Animation';
 import { m } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
 
-const Lottie = lazy(() => import('lottie-react'));
+const Lottie = lazy(() => import('lottie-light-react'));
 
 const Skills = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
@@ -100,7 +100,7 @@ const Skills = () => {
         </m.div>
         <m.aside
           variants={lottieAnimation}
-          className="hidden h-56 w-56 md:absolute md:right-28 md:bottom-20 md:block dark:md:right-10 lg:right-5 lg:bottom-40 lg:h-[22rem] lg:w-[22rem] dark:lg:h-[17rem] dark:lg:w-[17rem] xl:h-[28rem] xl:w-[28rem] dark:xl:h-[23rem] dark:xl:w-[23rem]"
+          className="hidden h-56 w-56 md:absolute md:bottom-20 md:right-28 md:block dark:md:right-10 lg:bottom-40 lg:right-5 lg:h-[22rem] lg:w-[22rem] dark:lg:h-[17rem] dark:lg:w-[17rem] xl:h-[28rem] xl:w-[28rem] dark:xl:h-[23rem] dark:xl:w-[23rem]"
         >
           <Lottie
             animationData={animationData}

@@ -6,7 +6,7 @@ import LoadingAnimation from '../../public/animations/loading.json';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
 
-const Lottie = lazy(() => import('lottie-react'));
+const Lottie = lazy(() => import('lottie-light-react'));
 
 const Splash = ({ children }: childrenNode) => {
   const [loading, setLoading] = useState(true);
