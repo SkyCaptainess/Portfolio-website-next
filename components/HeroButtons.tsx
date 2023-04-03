@@ -18,6 +18,7 @@ const HeroButtons = () => {
               size={40}
               color={`${darkMode ? '#DEE2E6' : '#343434'}`}
               className="cursor-pointer"
+              data-testid={name}
             />
           </a>
         </div>

@@ -14,6 +14,9 @@ beforeAll(() => {
 it('should render hero section components', () => {
   render(<Hero />);
 
+  const link = screen.getByTestId('Linkedin');
+  expect(link).toHaveAttribute('stroke', '#343434');
+
   expect(
     screen.getByRole('img', { name: /profile picture/i })
   ).toBeInTheDocument();
