@@ -39,12 +39,13 @@ const Hero = () => {
       viewport={{ once: true, amount: 0.65 }}
       className="mx-auto mb-28 grid w-11/12 max-w-7xl grid-cols-1 pt-32 md:grid-cols-3 md:grid-rows-3 md:items-center md:justify-evenly md:gap-x-8 md:pt-60 lg:mb-60 xl:grid-cols-4"
     >
-      <Image
-        src={profilePic}
-        alt="Profile Picture"
-        priority
-        className="profilePic "
-      />
+      <motion.aside variants={childAnimation} className='profilePic'>
+        <Image
+          src={profilePic}
+          alt="Profile Picture"
+          priority
+        />
+      </motion.aside>
       <motion.h1
         variants={childAnimation}
         className="mb-4 md:col-span-2 md:row-start-1 md:row-end-2 md:mb-0 md:text-4xl xl:text-5xl"
