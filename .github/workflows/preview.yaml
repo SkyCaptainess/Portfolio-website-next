@@ -42,6 +42,7 @@ jobs:
           flags: unittests
           name: codecov-portfolio
           verbose: true
+
   deploy-preview:
     needs: test
     runs-on: ubuntu-latest

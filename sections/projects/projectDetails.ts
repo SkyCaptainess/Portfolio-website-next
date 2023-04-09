@@ -62,7 +62,7 @@ const voucherManagementCard: Tproject = {
     {
       Icon: IconExternalLink,
       tooltipText: 'Website',
-      url: 'https://foodpanda-capstone.vercel.app/',
+      url: 'https://fp-capstone-voucher-78842.web.app',
     },
   ],
 };

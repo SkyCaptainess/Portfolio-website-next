@@ -1,3 +1,5 @@
+'use client';
+
 import React, { lazy } from 'react';
 import Link from 'next/link';
 import errorAnimation from '../public/animations/404.json';
