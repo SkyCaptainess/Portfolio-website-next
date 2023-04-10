@@ -3,9 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
-    fontLoaders: [
-      { loader: 'next/font/google', options: { subsets: ['latin'] } },
-    ],
   },
   webpack(config) {
     config.module.rules.push({

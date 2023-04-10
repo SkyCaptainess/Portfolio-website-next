@@ -1,5 +1,5 @@
 ---
-name: Deploy to Preview Channel
+name: Test and Deploy to Preview
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -38,6 +38,7 @@ jobs:
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3.1.1
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
           flags: unittests
           name: codecov-portfolio
