@@ -1,11 +1,18 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type Dispatch,
+  type SetStateAction,
+} from 'react';
 import { childrenNode } from '@/constants/typeInterface';
 
 type TthemeContext = {
   darkMode: boolean;
-  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+  setDarkMode: Dispatch<SetStateAction<boolean>>;
   toggleThemeHandler: () => void;
 };
 

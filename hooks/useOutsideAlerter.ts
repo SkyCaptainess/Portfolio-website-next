@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect, type RefObject } from 'react';
 
 export const useOutsideAlerter = (
-  ref: React.RefObject<HTMLDivElement>,
+  ref: RefObject<HTMLDivElement>,
   handleClick: () => void
 ) => {
   useEffect(() => {

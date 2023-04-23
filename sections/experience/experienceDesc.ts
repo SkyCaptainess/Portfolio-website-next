@@ -1,16 +1,16 @@
-type experienceDescription = {
-  date: string;
-  title: string;
-  company: string;
-  companyURL: string;
-  pointers: string[];
+type experienceDescription<T> = {
+  date: T;
+  title: T;
+  company: T;
+  companyURL: T;
+  pointers: T[];
 }[];
 
 const foodpandaPointers = [
   'Engineered modern applications with a variety of different languages, framework and testing libraries such as React, Typescript, Jest and Cypress.',
   'Collaborated with other engineers to develop and ship new UI features on foodpanda ops portal.',
   'Enhanced APIs periodic tests by reducing test flakiness and implementing reattempts on timeout errors.',
-  'Involved in setting up Drone CI with bash script for the entire team as a CI tool to enhance developers\' experience.',
+  "Involved in setting up Drone CI with bash script for the entire team as a CI tool to enhance developers' experience.",
 ];
 
 const siaecPointers = [
@@ -19,7 +19,7 @@ const siaecPointers = [
   'Exposed and familiarized to OEM manuals such as AMM and SRM in AirNav.',
 ];
 
-export const experiences: experienceDescription = [
+export const experiences: experienceDescription<string> = [
   {
     date: 'Oct 2022 - Mar 2023',
     title: 'Software Engineer Trainee',

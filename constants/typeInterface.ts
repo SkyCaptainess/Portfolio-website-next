@@ -1,13 +1,14 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import { Variants } from 'framer-motion';
+import { ReactNode, type Dispatch, type SetStateAction } from 'react';
 
 export type childrenNode = {
-  children: JSX.Element | JSX.Element[] | React.ReactNode;
+  children: JSX.Element | JSX.Element[] | ReactNode;
 };
 
 export type HamburgerProps = {
   isMenuClicked: boolean;
-  setMenuClicked: React.Dispatch<React.SetStateAction<boolean>>;
+  setMenuClicked: Dispatch<SetStateAction<boolean>>;
 };
 
 export type Tlinks = {

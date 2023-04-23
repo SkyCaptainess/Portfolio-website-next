@@ -1,14 +1,14 @@
 'use client';
 
-import { createContext, useContext, useRef } from 'react';
+import { createContext, useContext, useRef, type RefObject } from 'react';
 import { childrenNode } from '@/constants/typeInterface';
 
 type TrefElements = {
-  aboutMeRef: React.RefObject<HTMLHeadingElement>;
-  skillsRef: React.RefObject<HTMLHeadingElement>;
-  experienceRef: React.RefObject<HTMLHeadingElement>;
-  projectsRef: React.RefObject<HTMLHeadingElement>;
-  contactRef: React.RefObject<HTMLHeadingElement>;
+  aboutMeRef: RefObject<HTMLHeadingElement>;
+  skillsRef: RefObject<HTMLHeadingElement>;
+  experienceRef: RefObject<HTMLHeadingElement>;
+  projectsRef: RefObject<HTMLHeadingElement>;
+  contactRef: RefObject<HTMLHeadingElement>;
 };
 
 const RefsContext = createContext(null as unknown as TrefElements);
