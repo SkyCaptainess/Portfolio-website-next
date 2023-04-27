@@ -45,11 +45,11 @@ const voucherManagementCard: Tproject = {
   image: voucherImage,
   projectTitle: 'Voucher Management',
   projectDesc:
-    'A web application that allows user to perform CRUD operations on vouchers, easily access all particulars of the vouchers with a data table, and allow them to use a dummy checkout page to apply the newly created or modified vouchers.',
+    'This is a web-based program that enables users to carry out CRUD operations on vouchers. It also provides a data table for convenient access to all information related to the vouchers. Additionally, the program includes a dummy checkout page where users can utilize any newly created or modified vouchers.',
   stack: [
     { Icon: IconBrandReact, tooltipText: 'React' },
     { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },
-    { Icon: IconBrandVite, tooltipText: 'Vite & Vitest' },
+    { Icon: IconBrandVite, tooltipText: 'Vite' },
     { Icon: IconBrandTailwind, tooltipText: 'Tailwind CSS' },
     { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
   ],
@@ -72,7 +72,7 @@ const stockProjectCard: Tproject = {
   image: stockImage,
   projectTitle: 'Stockstracker',
   projectDesc:
-    'A web application that allows user to gain a quick insight into the performance of their stock portfolio, store and modify all their transaction histories, and easily access them in a single page.',
+    'This is a web-based program that enables users to quickly analyze the performance of their stock portfolio. It also allows users to save and make changes to their transaction history, which can be easily accessed on a single page.',
   stack: [
     { Icon: IconBrandPython, tooltipText: 'Python' },
     { Icon: IconBrandDjango, tooltipText: 'Django' },
@@ -106,7 +106,7 @@ const ioTProjectCard: Tproject = {
   image: handSanitizerImage,
   projectTitle: 'IoT Hand Sanitizer',
   projectDesc:
-    'A hand sanitizier product implementated with data analytic tools and basic machine learning techniques to predict data such as the amount of dispense count required to empty the sanitizer.',
+    'A hand sanitizer product that incorporates data analytics and simple machine learning techniques to forecast certain data points, such as the number of times the sanitizer dispenser needs to be used before it runs out.',
   stack: [
     { Icon: IconBrandPython, tooltipText: 'Python' },
     { Icon: IconNotebook, tooltipText: 'Jupyter Notebook' },
@@ -131,7 +131,7 @@ const pepsiProjectCard: Tproject = {
   image: pepsiImage,
   projectTitle: 'Pepsi corporate SPA',
   projectDesc:
-    'Setting up a React single-page application from scratch to learn Typescript, React Router, framer motion and vitest unit test framework.',
+    'Creating a new React-based single-page application from the beginning, in order to gain familiarity with various tools, including Typescript, React Router, framer motion, and the vitest unit testing framework.',
   stack: [
     { Icon: IconBrandReact, tooltipText: 'React' },
     { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },

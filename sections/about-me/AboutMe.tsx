@@ -1,6 +1,7 @@
 'use client';
 
 import React, { lazy } from 'react';
+import Link from 'next/link';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import { useThemeContext } from '@/hooks/useThemeContext';
@@ -83,7 +84,7 @@ const AboutMe = () => {
           className="about-me-text m-0 font-semibold text-white-300"
         >
           Graduated B.Eng. with Honours in Aircraft Systems Engineering, from{' '}
-          <a
+          <Link
             aria-label="SIT"
             href="https://www.singaporetech.edu.sg/undergraduate-programmes/aircraft-systems-engineering"
             rel="noreferrer"
@@ -91,7 +92,7 @@ const AboutMe = () => {
             className="cursor-pointer text-light-blue no-underline hover:underline hover:underline-offset-4"
           >
             SIT
-          </a>
+          </Link>
           .
         </m.h4>
         <m.aside variants={lottieAnimation} className="about-me-animation">

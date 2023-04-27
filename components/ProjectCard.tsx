@@ -1,6 +1,7 @@
 import React from 'react';
 import { useThemeContext } from '@/hooks/useThemeContext';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Tproject } from '@/sections/projects/projectDetails';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
@@ -31,14 +32,14 @@ const ProjectCard = ({
         {iconList === stack ? (
           <icon.Icon key={icon.tooltipText} size={35} color={iconColor} />
         ) : (
-          <a
+          <Link
             aria-label={icon.tooltipText}
-            href={icon.url}
+            href={icon.url as string}
             rel="noreferrer"
             target="_blank"
           >
             <icon.Icon key={icon.tooltipText} size={35} color={iconColor} />
-          </a>
+          </Link>
         )}
       </div>
     ));

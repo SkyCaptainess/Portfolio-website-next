@@ -1,5 +1,6 @@
 import { experiences } from './experienceDesc';
 import { m } from 'framer-motion';
+import Link from 'next/link';
 import { Tvariants } from '@/constants/typeInterface';
 
 const JobPointers = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
@@ -22,7 +23,7 @@ const JobPointers = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
         </h4>
         <h4 className="mb-2 font-semibold text-white-400 transition-colors duration-300 ease-out dark:text-white-300 md:text-lg lg:text-xl xl:text-2xl">
           @&nbsp;
-          <a
+          <Link
             aria-label={experience.company}
             href={experience.companyURL}
             rel="noreferrer"
@@ -30,7 +31,7 @@ const JobPointers = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
             className="text-blue"
           >
             {experience.company}
-          </a>
+          </Link>
         </h4>
         <ul className="list-inside list-disc text-sm text-white-300 opacity-80 transition-colors duration-300 ease-out dark:text-white-100 md:text-lg xl:text-xl">
           {experience.pointers.map((pointer, index) => (

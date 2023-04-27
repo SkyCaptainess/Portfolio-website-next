@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { useThemeContext } from '@/hooks/useThemeContext';
 import { externalLinks } from '@/constants/global';
 
@@ -12,7 +13,7 @@ const Footer = () => {
   const footerIcons = Object.entries(externalLinks).map(
     ([name, { Icon, url }]) => {
       return (
-        <a
+        <Link
           aria-label={name}
           key={name}
           href={url}
@@ -20,7 +21,7 @@ const Footer = () => {
           target="_blank"
         >
           <Icon size={30} color={iconColor} className="cursor-pointer" />
-        </a>
+        </Link>
       );
     }
   );

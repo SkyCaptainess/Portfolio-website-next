@@ -83,7 +83,7 @@
   }
 
   .project-image-container {
-    @apply absolute top-0 left-0 -z-10 h-full max-h-[670px] w-full max-w-[670px] opacity-10 md:top-1/4 md:h-1/2 md:w-1/2 md:border-2 md:border-black-200 md:opacity-60 dark:md:opacity-30 lg:top-[12.5%] lg:h-3/4 lg:w-1/2;
+    @apply absolute top-0 left-0 -z-10 h-full max-h-[670px] w-full max-w-[670px] opacity-[8%] md:top-1/4 md:h-1/2 md:w-1/2 md:border-2 md:border-black-200 md:opacity-60 dark:md:opacity-30 lg:top-[12.5%] lg:h-3/4 lg:w-1/2;
   }
 
   .footer-container {
