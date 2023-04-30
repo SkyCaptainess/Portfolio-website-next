@@ -15,5 +15,9 @@ updates:
       day: monday
       time: '10:00'
       timezone: Asia/Singapore
+    commit-message:
+      prefix: 'Yarn prod'
+      prefix-development: 'Yarn dev'
+      include: 'scope'
     pull-request-branch-name:
       separator: '-'
