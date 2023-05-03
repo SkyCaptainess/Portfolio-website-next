@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="footer-container">
+      <div className="mx-auto flex h-full w-11/12 max-w-7xl flex-col flex-nowrap items-start justify-between gap-y-2 py-4 md:flex-row md:items-center md:gap-y-0 lg:py-8">
         <h4 className="text-base font-medium text-black-200 dark:text-white-300 md:order-first md:text-lg xl:text-xl ">
           Designed & Built by Nicholas Yong
         </h4>

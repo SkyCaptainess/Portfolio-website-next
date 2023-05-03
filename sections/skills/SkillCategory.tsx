@@ -1,8 +1,10 @@
 import React from 'react';
-import { useThemeContext } from '@/hooks/useThemeContext';
+import { clsx } from 'clsx';
 import { averageDesignIcons, goodDesignIcons, TIcons } from './common';
-import { Tvariants } from '@/constants/typeInterface';
 import { m } from 'framer-motion';
+import { Tvariants } from '@/constants/typeInterface';
+import { useThemeContext } from '@/hooks/useThemeContext';
+import * as Tooltip from '@radix-ui/react-tooltip';
 
 const SkillCategory = ({
   heading,
@@ -11,7 +13,8 @@ const SkillCategory = ({
   childAnimation,
 }: TIcons & Tvariants) => {
   const { darkMode } = useThemeContext() ?? false;
-  const tooltipColor = darkMode ? 'tooltip-warning' : 'tooltip-info';
+  const tooltipSide =
+    icons === goodDesignIcons || icons === averageDesignIcons ? 'right' : 'top';
   const iconColor = darkMode ? '#DEE2E6' : '#343434';
 
   return (
@@ -25,17 +28,28 @@ const SkillCategory = ({
       >
         {icons.map(({ Icon, tooltipText: tooltipText }) => {
           return (
-            <m.div
-              variants={childAnimation}
-              key={tooltipText}
-              className={`tooltip ${tooltipColor} ${
-                icons === goodDesignIcons || icons === averageDesignIcons
-                  ? 'tooltip-right'
-                  : 'tooltip-top'
-              }`}
-              data-tip={tooltipText}
-            >
-              <Icon key={tooltipText} size={40} color={iconColor} />
+            <m.div variants={childAnimation} key={tooltipText}>
+              <Tooltip.Root>
+                <Tooltip.Trigger asChild>
+                  <Icon key={tooltipText} size={40} color={iconColor} />
+                </Tooltip.Trigger>
+                <Tooltip.Portal>
+                  <Tooltip.Content
+                    side={tooltipSide}
+                    className={clsx(
+                      'animate-slideDownAndFade tooltip-content',
+                      {
+                        'animate-slideLeftAndFade':
+                          icons === goodDesignIcons ||
+                          icons === averageDesignIcons,
+                      }
+                    )}
+                  >
+                    {tooltipText}
+                    <Tooltip.Arrow className="tooltip-arrow" />
+                  </Tooltip.Content>
+                </Tooltip.Portal>
+              </Tooltip.Root>
             </m.div>
           );
         })}

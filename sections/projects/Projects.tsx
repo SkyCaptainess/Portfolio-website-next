@@ -7,6 +7,7 @@ import ProjectCard from '@/components/ProjectCard';
 import { projectCards } from './projectDetails';
 import Animation from '@/components/Animation';
 import { Tanimation } from '@/constants/typeInterface';
+import * as Tooltip from '@radix-ui/react-tooltip';
 
 const Projects = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
@@ -46,7 +47,7 @@ const Projects = () => {
             Coding projects that I enjoyed working on.
           </h3>
         </Animation>
-        {displayCards}
+        <Tooltip.Provider delayDuration={400}>{displayCards}</Tooltip.Provider>
       </div>
     </section>
   );

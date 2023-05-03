@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
+import { clsx } from 'clsx';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import profilePic from '../../public/images/profile-light.webp';
 import HeroButtons from '../../components/HeroButtons';
 import { useMotionContext } from '@/hooks/useMotionContext';
-import { motion } from 'framer-motion';
 import { Tanimation } from '@/constants/typeInterface';
 
 const Hero = () => {
@@ -39,12 +40,16 @@ const Hero = () => {
       viewport={{ once: true, amount: 0.65 }}
       className="mx-auto mb-28 grid w-11/12 max-w-7xl grid-cols-1 pt-32 md:grid-cols-3 md:grid-rows-3 md:items-center md:justify-evenly md:gap-x-8 md:pt-60 lg:mb-60 xl:grid-cols-4"
     >
-      <motion.aside variants={childAnimation} className='profilePic'>
-        <Image
-          src={profilePic}
-          alt="Profile Picture"
-          priority
-        />
+      <motion.aside
+        variants={childAnimation}
+        className={clsx(
+          'mx-auto mb-8 h-72 w-48 object-scale-down object-center',
+          'shadow-dropdown dark:shadow-none md:order-last md:col-span-1',
+          'md:row-start-1 md:row-end-4 md:mb-0 md:mr-0 md:h-5/6 md:w-full',
+          'md:object-cover lg:self-center xl:col-span-2 xl:w-9/12 2xl:z-10'
+        )}
+      >
+        <Image src={profilePic} alt="Profile Picture" priority />
       </motion.aside>
       <motion.h1
         variants={childAnimation}

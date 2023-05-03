@@ -56,6 +56,8 @@ module.exports = {
           'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px',
         project:
           'rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset',
+        tooltip:
+          ' hsl(206 22% 7% / 35%) 0 10px 38px -10px, hsl(206 22% 7% / 20%) 0 10px 20px -15px',
       },
       backgroundImage: {
         'orange-gradient': 'linear-gradient(to right, #f46b45, #eea849)',
@@ -69,16 +71,30 @@ module.exports = {
           '20%': { transform: 'rotate(-6deg)' },
           '40%': { transform: 'rotate(-4deg)' },
         },
+        slideDownAndFade: {
+          '0%': { opacity: 0, transform: 'translateX(-2px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        slideLeftAndFade: {
+          '0%': { opacity: 0, transform: 'translateX(2px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
       },
       screens: {
         'ipad-mini': '650px',
       },
-      transformOrigin: {
-        wave: '70% 70%',
-      },
       transitionProperty: {
         bgi: 'background-image',
         top: 'top',
+      },
+      transformOrigin: {
+        wave: '70% 70%',
+      },
+      transitionTimingFunction: {
+        tooltip: 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
+      willChange: {
+        tooltip: 'transform, opacity',
       },
     },
   },

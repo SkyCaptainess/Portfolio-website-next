@@ -1,13 +1,14 @@
 'use client';
 
 import React, { lazy } from 'react';
+import { clsx } from 'clsx';
+import Animation from '../../components/Animation';
+import { m } from 'framer-motion';
+import ExperienceLottie from '../../public/animations/experience.json';
+import JobPointers from './JobPointers';
+import { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
-import JobPointers from './JobPointers';
-import ExperienceLottie from '../../public/animations/experience.json';
-import { m } from 'framer-motion';
-import { Tanimation } from '@/constants/typeInterface';
-import Animation from '../../components/Animation';
 
 const Lottie = lazy(() => import('lottie-light-react'));
 
@@ -42,7 +43,11 @@ const Experience = () => {
     <section className="dark-blue-section">
       <Animation
         animation={containerAnimation}
-        className="dark-blue-container mb-40 md:mb-72 md:grid-rows-5 md:items-center md:justify-center md:gap-x-10 md:gap-y-0 md:pt-0 lg:mb-[22rem] xl:mb-80 2xl:mb-[26rem] 3xl:mb-[22rem]"
+        className={clsx(
+          'dark-blue-container mb-40 md:mb-72 md:grid-rows-5',
+          'md:items-center md:justify-center md:gap-x-10 md:gap-y-0',
+          'md:pt-0 lg:mb-[22rem] xl:mb-80 2xl:mb-[26rem] 3xl:mb-[22rem]'
+        )}
         viewAmount={0.65}
       >
         <m.h2
@@ -53,7 +58,14 @@ const Experience = () => {
           🧑‍💻<span className="span-heading">Experience</span>
         </m.h2>
         <JobPointers childAnimation={childAnimation} />
-        <m.aside variants={lottieAnimation} className="experience-animation">
+        <m.aside
+          variants={lottieAnimation}
+          className={clsx(
+            'hidden h-44 w-44 lg:col-start-3 lg:col-end-4 lg:row-start-1',
+            'lg:row-end-5 lg:block lg:h-[14rem] lg:w-[14rem]',
+            'lg:place-self-center xl:h-[18rem] xl:w-[18rem]'
+          )}
+        >
           <Lottie
             animationData={ExperienceLottie}
             loop={prefersReducedMotion ? 1 : true}

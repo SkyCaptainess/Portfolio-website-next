@@ -1,10 +1,11 @@
 import React from 'react';
-import { useMotionContext } from '@/hooks/useMotionContext';
-import { useRefsContext } from '@/hooks/useRefsContext';
+import { clsx } from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { HamburgerProps } from '@/constants/typeInterface';
 import { scrollToRef } from '@/constants/global';
 import { listElements } from '@/constants/global';
+import { useMotionContext } from '@/hooks/useMotionContext';
+import { useRefsContext } from '@/hooks/useRefsContext';
 
 const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
@@ -26,13 +27,15 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
           scrollToRef(refsArray[index], prefersReducedMotion ?? false);
           setMenuClicked((prevState) => !prevState);
         }}
-        className={`dropdown-link ${
-          index === 0
-            ? 'rounded-t-xl'
-            : index === lastElement
-            ? 'rounded-b-xl p-0'
-            : 'rounded-none'
-        }`}
+        className={clsx(
+          'cursor-pointer py-2.5 pl-4 font-mont font-semibold tracking-widest',
+          'text-black-200 transition duration-200 hover:bg-white-300 hover:text-aqua',
+          'rounded-none dark:text-white-200 dark:hover:bg-black-400 dark:hover:text-orange',
+          {
+            'rounded-t-xl': index === 0,
+            'rounded-b-xl py-0 pl-0': index === lastElement,
+          }
+        )}
       >
         {index === lastElement ? (
           <a
@@ -40,7 +43,12 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
             href="https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing"
             rel="noreferrer"
             target="_blank"
-            className="redirect-button block h-full w-full rounded-t-none rounded-b-xl bg-aqua py-2.5 pl-4 font-bold text-white-400 transition-colors duration-300 ease-out hover:bg-dark-aqua hover:no-underline dark:text-black-300"
+            className={clsx(
+              'redirect-button block h-full w-full rounded-t-none',
+              'rounded-b-xl bg-aqua py-2.5 pl-4 font-bold text-white-400',
+              'transition-colors duration-300 ease-out hover:bg-dark-aqua',
+              'hover:no-underline dark:text-black-300'
+            )}
           >
             {element}
           </a>
@@ -59,7 +67,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
           animate={{ x: 0 }}
           exit={{ x: '-100vw' }}
           transition={transitionType}
-          className="absolute top-12 left-0 z-50 w-full max-w-sm"
+          className="absolute left-0 top-12 z-50 w-full max-w-sm"
           data-testid="dropdown-ul"
         >
           <ul className="rounded-xl bg-white-400 shadow-dropdown dark:bg-black-500 dark:shadow-none">
