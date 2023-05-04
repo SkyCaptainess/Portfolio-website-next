@@ -10,44 +10,45 @@ module.exports = {
     '!./node_modules',
   ],
   theme: {
-    fontFamily: {
-      mont: ['var(--font-mont)'],
-    },
-    colors: {
-      black: {
-        100: '#3F3F46',
-        200: '#343434',
-        300: '#212529',
-        400: '#343A40',
-        500: '#495057',
-      },
-      white: {
-        100: '#CED4DA',
-        200: '#F8F9FA',
-        300: '#E9ECEF',
-        400: '#F8F8F8',
-        500: '#DEE2E6',
-      },
-      aqua: '#008DAA',
-      'dark-aqua': '#00697f',
-      'light-blue': '#A9F0FF',
-      'dark-blue': '#0C2E4E',
-      blue: '#00D4FF',
-      'blue-gradient-1': '#000046',
-      'blue-gradient-2': '#1CB5E0',
-      orange: '#FFB26B',
-      'light-orange': '#FFB26B',
-      'orange-red': '#FF7B54',
-    },
-    screens: {
-      sm: '500px',
-      md: '768px',
-      lg: '992px',
-      xl: '1200px',
-      '2xl': '1536px',
-      '3xl': '2000px',
-    },
     extend: {
+      fontFamily: {
+        mont: ['var(--font-mont)'],
+      },
+      colors: {
+        black: {
+          100: '#3F3F46',
+          200: '#343434',
+          300: '#212529',
+          400: '#343A40',
+          500: '#495057',
+        },
+        white: {
+          100: '#CED4DA',
+          200: '#F8F9FA',
+          300: '#E9ECEF',
+          400: '#F8F8F8',
+          500: '#DEE2E6',
+        },
+        aqua: '#008DAA',
+        'dark-aqua': '#00697f',
+        'light-blue': '#A9F0FF',
+        'dark-blue': '#0C2E4E',
+        blue: '#00D4FF',
+        'blue-gradient-1': '#000046',
+        'blue-gradient-2': '#1CB5E0',
+        orange: '#FFB26B',
+        'light-orange': '#FFB26B',
+        'orange-red': '#FF7B54',
+      },
+      screens: {
+        sm: '500px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
+        '2xl': '1536px',
+        '3xl': '2000px',
+        'ipad-mini': '650px',
+      },
       animation: {
         wave: 'wave 2.1s 0.6s infinite',
       },
@@ -80,9 +81,6 @@ module.exports = {
           '100%': { opacity: 1, transform: 'translateX(0)' },
         },
       },
-      screens: {
-        'ipad-mini': '650px',
-      },
       transitionProperty: {
         bgi: 'background-image',
         top: 'top',
@@ -98,8 +96,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('daisyui')],
-  daisyui: {
-    themes: false,
-  },
+  plugins: [],
 };
