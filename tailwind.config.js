@@ -53,6 +53,7 @@ module.exports = {
         wave: 'wave 2.1s 0.6s infinite',
         slideDownAndFade: 'slideDownAndFade 0.3s linear 1',
         slideLeftAndFade: 'slideLeftAndFade 0.3s linear 1',
+        slideRightAndFade: 'slideRightAndFade 0.3s linear 1',
       },
       boxShadow: {
         dropdown:
@@ -75,11 +76,15 @@ module.exports = {
           '40%': { transform: 'rotate(-4deg)' },
         },
         slideDownAndFade: {
-          '0%': { opacity: 0, transform: 'translateX(-2px)' },
-          '100%': { opacity: 1, transform: 'translateX(0)' },
+          '0%': { opacity: 0, transform: 'translateY(-2px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
         },
         slideLeftAndFade: {
           '0%': { opacity: 0, transform: 'translateX(2px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        slideRightAndFade: {
+          '0%': { opacity: 0, transform: 'translateX(-2px)' },
           '100%': { opacity: 1, transform: 'translateX(0)' },
         },
       },
