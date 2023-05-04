@@ -69,12 +69,4 @@
   .white-sub-heading {
     @apply mb-2 transition-colors duration-300 ease-out dark:text-white-300 md:text-2xl xl:mb-4 xl:text-3xl;
   }
-
-  .tooltip-content {
-    @apply select-none rounded bg-aqua px-1.5 py-2.5 text-base text-white-400 shadow-tooltip transition duration-[400ms] ease-tooltip will-change-tooltip dark:bg-orange dark:text-black-300 md:px-2.5;
-  }
-
-  .tooltip-arrow {
-    @apply fill-aqua dark:fill-orange;
-  }
 }

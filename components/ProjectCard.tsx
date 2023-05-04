@@ -3,10 +3,10 @@ import { clsx } from 'clsx';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import Tooltip from '@/components/Tooltip';
 import { Tanimation } from '@/constants/typeInterface';
 import { useThemeContext } from '@/hooks/useThemeContext';
 import { Tproject } from '@/sections/projects/projectDetails';
-import * as Tooltip from '@radix-ui/react-tooltip';
 
 const ProjectCard = ({
   id,
@@ -28,28 +28,20 @@ const ProjectCard = ({
     iconList: Tproject['stack'] | Tproject['links']
   ) =>
     iconList.map((icon) => (
-      <Tooltip.Root key={icon.tooltipText}>
-        <Tooltip.Trigger asChild>
-          {iconList === stack ? (
+      <Tooltip key={icon.tooltipText} side="top" tooltipText={icon.tooltipText}>
+        {iconList === stack ? (
+          <icon.Icon key={icon.tooltipText} size={35} color={iconColor} />
+        ) : (
+          <Link
+            aria-label={icon.tooltipText}
+            href={icon.url as string}
+            rel="noreferrer"
+            target="_blank"
+          >
             <icon.Icon key={icon.tooltipText} size={35} color={iconColor} />
-          ) : (
-            <Link
-              aria-label={icon.tooltipText}
-              href={icon.url as string}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <icon.Icon key={icon.tooltipText} size={35} color={iconColor} />
-            </Link>
-          )}
-        </Tooltip.Trigger>
-        <Tooltip.Portal>
-          <Tooltip.Content className="animate-slideDownAndFade tooltip-content">
-            {icon.tooltipText}
-            <Tooltip.Arrow className="tooltip-arrow" />
-          </Tooltip.Content>
-        </Tooltip.Portal>
-      </Tooltip.Root>
+          </Link>
+        )}
+      </Tooltip>
     ));
 
   return (
@@ -113,6 +105,7 @@ const ProjectCard = ({
             <Image
               src={image}
               alt={`Image of ${projectTitle}`}
+              placeholder="blur"
               className="h-full w-full object-cover object-center"
             />
           </aside>

@@ -49,7 +49,12 @@ const Hero = () => {
           'md:object-cover lg:self-center xl:col-span-2 xl:w-9/12 2xl:z-10'
         )}
       >
-        <Image src={profilePic} alt="Profile Picture" priority />
+        <Image
+          src={profilePic}
+          alt="Profile Picture"
+          placeholder="blur"
+          priority
+        />
       </motion.aside>
       <motion.h1
         variants={childAnimation}

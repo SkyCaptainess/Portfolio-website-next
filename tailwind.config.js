@@ -51,6 +51,8 @@ module.exports = {
       },
       animation: {
         wave: 'wave 2.1s 0.6s infinite',
+        slideDownAndFade: 'slideDownAndFade 0.3s linear 1',
+        slideLeftAndFade: 'slideLeftAndFade 0.3s linear 1',
       },
       boxShadow: {
         dropdown:
