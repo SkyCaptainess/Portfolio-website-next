@@ -1,15 +1,16 @@
 'use client';
 
 import React from 'react';
+import { clsx } from 'clsx';
+import DropdownMenu from './DropdownMenu';
+import { motion } from 'framer-motion';
+import NavbarLinks from './NavbarLinks';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useThemeContext } from '@/hooks/useThemeContext';
 import useScrollDirection from '@/hooks/useScrollDirection';
-import DropdownMenu from './DropdownMenu';
-import NavbarLinks from './NavbarLinks';
 import { IconMoodSmileBeam } from '@tabler/icons-react';
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import { motion } from 'framer-motion';
-import { Tanimation } from '@/constants/typeInterface';
 
 const MainNavigation = () => {
   const { darkMode, setDarkMode, toggleThemeHandler } =
@@ -49,11 +50,13 @@ const MainNavigation = () => {
       variants={containerAnimation}
       initial="hidden"
       animate="show"
-      className={`fixed z-50 grid h-16 w-screen place-items-center bg-white-400 shadow-xl transition-top duration-300 dark:bg-midnight-city ${
-        scrollDirection === 'down'
-          ? '-top-[30rem] ease-in lg:-top-16'
-          : 'top-0 ease-out'
-      }`}
+      className={clsx(
+        'fixed z-50 grid h-16 w-screen place-items-center bg-white-400 shadow-xl transition-top duration-300 dark:bg-midnight-city',
+        {
+          '-top-[30rem] ease-in lg:-top-16': scrollDirection === 'down',
+          '-top-0 ease-out': scrollDirection !== 'down',
+        }
+      )}
     >
       <nav className="relative mx-auto my-auto flex w-11/12 max-w-7xl flex-row items-center justify-between">
         <motion.div

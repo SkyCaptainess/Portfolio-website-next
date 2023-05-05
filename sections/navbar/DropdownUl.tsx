@@ -1,6 +1,7 @@
 import React from 'react';
 import { clsx } from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 import { HamburgerProps } from '@/constants/typeInterface';
 import { scrollToRef } from '@/constants/global';
 import { listElements } from '@/constants/global';
@@ -19,7 +20,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
   };
 
   const liElements = listElements.map((element, index) => {
-    let lastElement = listElements.length - 1;
+    const lastElement = listElements.length - 1;
     return (
       <li
         key={index.toString()}
@@ -28,17 +29,18 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
           setMenuClicked((prevState) => !prevState);
         }}
         className={clsx(
-          'cursor-pointer py-2.5 pl-4 font-mont font-semibold tracking-widest',
+          'cursor-pointer font-mont font-semibold tracking-widest',
           'text-black-200 transition duration-200 hover:bg-white-300 hover:text-aqua',
           'rounded-none dark:text-white-200 dark:hover:bg-black-400 dark:hover:text-orange',
           {
             'rounded-t-xl': index === 0,
+            'py-2.5 pl-4 ': index !== lastElement,
             'rounded-b-xl py-0 pl-0': index === lastElement,
           }
         )}
       >
         {index === lastElement ? (
-          <a
+          <Link
             aria-label="resume pdf"
             href="https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing"
             rel="noreferrer"
@@ -51,7 +53,7 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
             )}
           >
             {element}
-          </a>
+          </Link>
         ) : (
           element
         )}

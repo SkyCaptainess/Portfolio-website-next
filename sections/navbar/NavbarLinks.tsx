@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
 import { listElements } from '@/constants/global';
@@ -22,7 +23,7 @@ const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
       >
         {index === listElements.length - 1 ? (
           <button type="button" className="redirect-button">
-            <a
+            <Link
               aria-label="resume pdf"
               href="https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing"
               rel="noreferrer"
@@ -30,7 +31,7 @@ const NavbarLinks = ({ childAnimation }: Pick<Tvariants, 'childAnimation'>) => {
               className="h-full w-full text-base tracking-widest text-white-400 no-underline hover:no-underline dark:text-black-300 xl:text-xl"
             >
               Resume
-            </a>
+            </Link>
           </button>
         ) : (
           element
