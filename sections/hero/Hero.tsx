@@ -43,10 +43,10 @@ const Hero = () => {
       <motion.aside
         variants={childAnimation}
         className={clsx(
-          'mx-auto mb-8 h-72 w-48 object-scale-down object-center',
+          'z-10 mx-auto mb-8 h-72 w-48 object-scale-down object-center',
           'shadow-dropdown dark:shadow-none md:order-last md:col-span-1',
-          'md:row-start-1 md:row-end-4 md:mb-0 md:mr-0 md:h-5/6 md:w-full',
-          'md:object-cover lg:self-center xl:col-span-2 xl:w-9/12 2xl:z-10'
+          'md:row-start-1 md:row-end-4 md:mb-0 md:mr-0 md:h-min md:w-full',
+          'md:object-cover lg:self-center xl:col-span-2 xl:w-9/12'
         )}
       >
         <Image
@@ -61,9 +61,10 @@ const Hero = () => {
         className="mb-4 md:col-span-2 md:row-start-1 md:row-end-2 md:mb-0 md:text-4xl xl:text-5xl"
       >
         <span
-          className={`inline-block text-4xl xl:text-5xl ${
-            prefersReducedMotion ? 'animate-none' : 'origin-wave animate-wave'
-          }`}
+          className={clsx('inline-block text-4xl xl:text-5xl', {
+            'animate-none': prefersReducedMotion,
+            'origin-wave animate-wave': !prefersReducedMotion,
+          })}
         >
           👋
         </span>

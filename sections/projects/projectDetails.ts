@@ -45,7 +45,7 @@ const voucherManagementCard: Tproject = {
   image: voucherImage,
   projectTitle: 'Voucher Management',
   projectDesc:
-    'This is a web-based program that enables users to carry out CRUD operations on vouchers. It also provides a data table for convenient access to all information related to the vouchers. Additionally, the program includes a dummy checkout page where users can utilize any newly created or modified vouchers.',
+    'This is a web-based program that enables users to carry out CRUD operations on vouchers. It also provides a data table for convenient access to all information related to the vouchers.',
   stack: [
     { Icon: IconBrandReact, tooltipText: 'React' },
     { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },
