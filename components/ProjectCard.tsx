@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Tooltip from '@/components/Tooltip';
 import { Tanimation } from '@/constants/typeInterface';
-import { useThemeContext } from '@/hooks/useThemeContext';
 import { Tproject } from '@/sections/projects/projectDetails';
 
 const ProjectCard = ({
@@ -17,8 +16,6 @@ const ProjectCard = ({
   links,
   animation,
 }: Tproject & { animation: Tanimation }) => {
-  const { darkMode } = useThemeContext() ?? false;
-  const iconColor = darkMode ? '#DEE2E6' : '#343434';
   const checkId = id % 2 === 0;
   const colPlacement = checkId
     ? 'md:col-start-1 md:col-end-7'
@@ -30,7 +27,11 @@ const ProjectCard = ({
     iconList.map((icon) => (
       <Tooltip key={icon.tooltipText} side="top" tooltipText={icon.tooltipText}>
         {iconList === stack ? (
-          <icon.Icon key={icon.tooltipText} size={35} color={iconColor} />
+          <icon.Icon
+            key={icon.tooltipText}
+            size={35}
+            className="stroke-black-200 dark:stroke-white-500"
+          />
         ) : (
           <Link
             aria-label={icon.tooltipText}
@@ -38,7 +39,11 @@ const ProjectCard = ({
             rel="noreferrer"
             target="_blank"
           >
-            <icon.Icon key={icon.tooltipText} size={35} color={iconColor} />
+            <icon.Icon
+              key={icon.tooltipText}
+              size={35}
+              className="stroke-black-200 dark:stroke-white-500"
+            />
           </Link>
         )}
       </Tooltip>

@@ -1,15 +1,8 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import { useThemeContext } from '@/hooks/useThemeContext';
 import { externalLinks } from '@/constants/global';
 
 const Footer = () => {
-  const { darkMode } = useThemeContext() ?? false;
-
-  const iconColor = darkMode ? '#E9ECEF' : '#343434';
-
   const footerIcons = Object.entries(externalLinks).map(
     ([name, { Icon, url }]) => {
       return (
@@ -20,7 +13,10 @@ const Footer = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <Icon size={30} color={iconColor} className="cursor-pointer" />
+          <Icon
+            size={30}
+            className="cursor-pointer stroke-black-200 dark:stroke-white-500"
+          />
         </Link>
       );
     }

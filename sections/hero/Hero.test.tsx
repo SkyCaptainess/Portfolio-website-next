@@ -2,20 +2,18 @@ import { render, screen } from '@testing-library/react';
 import Hero from './Hero';
 
 beforeAll(() => {
-  const mockIntersectionObserver = jest.fn().mockReturnValue({
+  window.IntersectionObserver = jest.fn().mockReturnValue({
     observe: () => null,
     unobserve: () => null,
     disconnect: () => null,
   });
-
-  window.IntersectionObserver = mockIntersectionObserver;
 });
 
 it('should render hero section components', () => {
   render(<Hero />);
 
   const link = screen.getByTestId('Linkedin');
-  expect(link).toHaveAttribute('stroke', '#343434');
+  expect(link).toHaveAttribute('stroke', 'currentColor');
 
   expect(
     screen.getByRole('img', { name: /profile picture/i })

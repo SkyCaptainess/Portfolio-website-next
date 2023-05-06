@@ -66,8 +66,7 @@ const MainNavigation = () => {
           <h1 className="navbar-text">NICHOLAS</h1>
           <IconMoodSmileBeam
             size={24}
-            color={`${darkMode ? '#E9ECEF' : '#343434'}`}
-            className="hidden sm:block"
+            className="hidden stroke-black-200 dark:stroke-white-400 sm:block"
           />
         </motion.div>
         <div className="order-first lg:order-2">

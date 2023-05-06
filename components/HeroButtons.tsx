@@ -2,12 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { externalLinks } from '@/constants/global';
 import Tooltip from '@/components/Tooltip';
-import { useThemeContext } from '@/hooks/useThemeContext';
 import { Provider } from '@radix-ui/react-tooltip';
 
 const HeroButtons = () => {
-  const { darkMode } = useThemeContext() ?? false;
-
   const anchorElements = Object.entries(externalLinks).map(
     ([name, { Icon, url }]) => {
       return (
@@ -15,8 +12,7 @@ const HeroButtons = () => {
           <Link aria-label={name} href={url} rel="noreferrer" target="_blank">
             <Icon
               size={40}
-              color={`${darkMode ? '#DEE2E6' : '#343434'}`}
-              className="cursor-pointer"
+              className="cursor-pointer stroke-black-200 dark:stroke-white-500"
               data-testid={name}
             />
           </Link>

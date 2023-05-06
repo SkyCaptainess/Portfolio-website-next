@@ -11,7 +11,7 @@ const Lottie = lazy(() => import('lottie-light-react'));
 const Splash = ({ children }: childrenNode) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    let changeLoadingState = setTimeout(() => setLoading(false), 4000);
+    let changeLoadingState = setTimeout(() => setLoading(false), 3000);
 
     return () => clearTimeout(changeLoadingState);
   }, []);
