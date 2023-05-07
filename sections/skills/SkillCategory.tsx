@@ -20,7 +20,7 @@ const SkillCategory = ({
       </h3>
       <m.div
         variants={containerAnimation}
-        className="mb-2 flex flex-row flex-wrap gap-x-4 lg:mb-4"
+        className="mb-2 flex flex-row flex-wrap gap-x-4 gap-y-4 ipad-mini:gap-y-0 lg:mb-4"
       >
         {icons.map(({ Icon, tooltipText: tooltipText }) => {
           return (
