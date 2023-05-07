@@ -3,7 +3,6 @@ import { averageDesignIcons, goodDesignIcons, TIcons } from './common';
 import { m } from 'framer-motion';
 import Tooltip from '@/components/Tooltip';
 import { Tvariants } from '@/constants/typeInterface';
-import { useThemeContext } from '@/hooks/useThemeContext';
 
 const SkillCategory = ({
   heading,
@@ -11,10 +10,8 @@ const SkillCategory = ({
   containerAnimation,
   childAnimation,
 }: TIcons & Tvariants) => {
-  const { darkMode } = useThemeContext() ?? false;
   const tooltipSide =
     icons === goodDesignIcons || icons === averageDesignIcons ? 'right' : 'top';
-  const iconColor = darkMode ? '#DEE2E6' : '#343434';
 
   return (
     <>
@@ -29,7 +26,9 @@ const SkillCategory = ({
           return (
             <m.div variants={childAnimation} key={tooltipText}>
               <Tooltip side={tooltipSide} tooltipText={tooltipText}>
-                <Icon key={tooltipText} size={40} color={iconColor} />
+                <i>
+                  <Icon size={30} className="icon" />
+                </i>
               </Tooltip>
             </m.div>
           );

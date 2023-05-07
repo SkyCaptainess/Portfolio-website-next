@@ -24,25 +24,22 @@ const ProjectCard = ({
   const createProjectIcons = (
     iconList: Tproject['stack'] | Tproject['links']
   ) =>
-    iconList.map((icon) => (
-      <Tooltip key={icon.tooltipText} side="top" tooltipText={icon.tooltipText}>
+    iconList.map(({ Icon, tooltipText, url }) => (
+      <Tooltip key={tooltipText} side="top" tooltipText={tooltipText}>
         {iconList === stack ? (
-          <icon.Icon
-            key={icon.tooltipText}
-            size={35}
-            className="stroke-black-200 dark:stroke-white-500"
-          />
+          <i>
+            <Icon size={30} className="text-black-200 dark:text-white-500" />
+          </i>
         ) : (
           <Link
-            aria-label={icon.tooltipText}
-            href={icon.url as string}
+            aria-label={tooltipText}
+            href={url as string}
             rel="noreferrer"
             target="_blank"
           >
-            <icon.Icon
-              key={icon.tooltipText}
-              size={35}
-              className="stroke-black-200 dark:stroke-white-500"
+            <Icon
+              size={30}
+              className="cursor-pointer text-black-200 dark:text-white-500"
             />
           </Link>
         )}
@@ -60,10 +57,10 @@ const ProjectCard = ({
       >
         <li
           className={clsx(
-            'grid grid-rows-1 rounded-lg px-5 py-4 shadow-project',
-            'transition-transform duration-300 ease-out hover:-translate-y-2',
-            'md:grid-cols-12 md:grid-rows-5 md:items-center md:justify-items-center',
-            'md:rounded-none md:shadow-none md:transition-none md:hover:translate-y-0'
+            'grid grid-rows-1 rounded-lg px-5 py-4 shadow-project transition-transform',
+            'duration-300 ease-out hover:-translate-y-2 md:grid-cols-12 md:grid-rows-5 ',
+            'md:items-center md:justify-items-center md:rounded-none md:shadow-none',
+            'md:transition-none md:hover:translate-y-0'
           )}
         >
           <h3

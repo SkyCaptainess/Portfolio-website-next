@@ -1,22 +1,23 @@
 import {
-  IconBrandBootstrap,
-  IconBrandCss3,
-  IconBrandDjango,
-  IconBrandFramer,
-  IconBrandGithub,
-  IconBrandHtml5,
-  IconBrandJavascript,
-  IconBrandPython,
-  IconBrandReact,
-  IconBrandTailwind,
-  IconBrandTypescript,
-  IconBrandVite,
-  IconBrandYoutube,
-  IconCirclePlus,
-  IconDatabase,
-  IconExternalLink,
-  IconNotebook,
-} from '@tabler/icons-react';
+  SiArduino,
+  SiBootstrap,
+  SiCss3,
+  SiDjango,
+  SiFramer,
+  SiGithub,
+  SiHtml5,
+  SiJavascript,
+  SiJupyter,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
+  SiYoutube,
+} from 'react-icons/si';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+
 import { StaticImageData } from 'next/image';
 import handSanitizerImage from '../../public/images/handsanitizer.webp';
 import pepsiImage from '../../public/images/pepsi-corporate.webp';
@@ -29,12 +30,12 @@ export type Tproject = {
   projectTitle: string;
   projectDesc: string;
   stack: {
-    Icon: typeof IconBrandBootstrap;
+    Icon: typeof SiBootstrap;
     tooltipText: string;
     url?: string;
   }[];
   links: {
-    Icon: typeof IconBrandBootstrap;
+    Icon: typeof SiBootstrap;
     tooltipText: 'YouTube' | 'GitHub' | 'Website';
     url: string;
   }[];
@@ -47,20 +48,20 @@ const voucherManagementCard: Tproject = {
   projectDesc:
     'This is a web-based program that enables users to carry out CRUD operations on vouchers. It also provides a data table for convenient access to all information related to the vouchers.',
   stack: [
-    { Icon: IconBrandReact, tooltipText: 'React' },
-    { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },
-    { Icon: IconBrandVite, tooltipText: 'Vite' },
-    { Icon: IconBrandTailwind, tooltipText: 'Tailwind CSS' },
-    { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
+    { Icon: SiReact, tooltipText: 'React' },
+    { Icon: SiTypescript, tooltipText: 'TypeScript' },
+    { Icon: SiVite, tooltipText: 'Vite' },
+    { Icon: SiTailwindcss, tooltipText: 'Tailwind CSS' },
+    { Icon: SiFramer, tooltipText: 'Framer Motion' },
   ],
   links: [
     {
-      Icon: IconBrandGithub,
+      Icon: SiGithub,
       tooltipText: 'GitHub',
       url: 'https://github.com/nicholas5538/fp-capstone',
     },
     {
-      Icon: IconExternalLink,
+      Icon: FaExternalLinkAlt,
       tooltipText: 'Website',
       url: 'https://fp-capstone-voucher-78842.web.app',
     },
@@ -74,27 +75,27 @@ const stockProjectCard: Tproject = {
   projectDesc:
     'This is a web-based program that enables users to quickly analyze the performance of their stock portfolio. It also allows users to save and make changes to their transaction history, which can be easily accessed on a single page.',
   stack: [
-    { Icon: IconBrandPython, tooltipText: 'Python' },
-    { Icon: IconBrandDjango, tooltipText: 'Django' },
-    { Icon: IconBrandHtml5, tooltipText: 'HTML' },
-    { Icon: IconBrandCss3, tooltipText: 'CSS' },
-    { Icon: IconBrandJavascript, tooltipText: 'JavaScript' },
-    { Icon: IconBrandBootstrap, tooltipText: 'Bootstrap' },
-    { Icon: IconDatabase, tooltipText: 'PostgreSQL' },
+    { Icon: SiPython, tooltipText: 'Python' },
+    { Icon: SiDjango, tooltipText: 'Django' },
+    { Icon: SiHtml5, tooltipText: 'HTML' },
+    { Icon: SiCss3, tooltipText: 'CSS' },
+    { Icon: SiJavascript, tooltipText: 'JavaScript' },
+    { Icon: SiBootstrap, tooltipText: 'Bootstrap' },
+    { Icon: SiPostgresql, tooltipText: 'PostgreSQL' },
   ],
   links: [
     {
-      Icon: IconBrandGithub,
+      Icon: SiGithub,
       tooltipText: 'GitHub',
       url: 'https://github.com/nicholas5538/StocksTracker',
     },
     {
-      Icon: IconBrandYoutube,
+      Icon: SiYoutube,
       tooltipText: 'YouTube',
       url: 'https://youtu.be/T_cgG668pf4',
     },
     {
-      Icon: IconExternalLink,
+      Icon: FaExternalLinkAlt,
       tooltipText: 'Website',
       url: 'https://stockstracker.up.railway.app/user/login/',
     },
@@ -108,18 +109,18 @@ const ioTProjectCard: Tproject = {
   projectDesc:
     'A hand sanitizer product that incorporates data analytics and simple machine learning techniques to forecast certain data points, such as the number of times the sanitizer dispenser needs to be used before it runs out.',
   stack: [
-    { Icon: IconBrandPython, tooltipText: 'Python' },
-    { Icon: IconNotebook, tooltipText: 'Jupyter Notebook' },
-    { Icon: IconCirclePlus, tooltipText: 'Arduino' },
+    { Icon: SiPython, tooltipText: 'Python' },
+    { Icon: SiJupyter, tooltipText: 'Jupyter Notebook' },
+    { Icon: SiArduino, tooltipText: 'Arduino' },
   ],
   links: [
     {
-      Icon: IconBrandGithub,
+      Icon: SiGithub,
       tooltipText: 'GitHub',
       url: 'https://github.com/nicholas5538/sanitizer-IoT',
     },
     {
-      Icon: IconBrandYoutube,
+      Icon: SiYoutube,
       tooltipText: 'YouTube',
       url: 'https://www.youtube.com/watch?v=G4GZ-QFubOY',
     },
@@ -133,14 +134,14 @@ const pepsiProjectCard: Tproject = {
   projectDesc:
     'Creating a new React-based single-page application from the beginning, in order to gain familiarity with various tools, including Typescript, React Router, framer motion, and the vitest unit testing framework.',
   stack: [
-    { Icon: IconBrandReact, tooltipText: 'React' },
-    { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },
-    { Icon: IconBrandVite, tooltipText: 'Vite & Vitest' },
-    { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
+    { Icon: SiReact, tooltipText: 'React' },
+    { Icon: SiTypescript, tooltipText: 'TypeScript' },
+    { Icon: SiVite, tooltipText: 'Vite & Vitest' },
+    { Icon: SiFramer, tooltipText: 'Framer Motion' },
   ],
   links: [
     {
-      Icon: IconBrandGithub,
+      Icon: SiGithub,
       tooltipText: 'GitHub',
       url: 'https://github.com/nicholas5538/fp-mini-project',
     },

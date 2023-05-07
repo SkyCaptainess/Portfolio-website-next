@@ -5,12 +5,12 @@ import { clsx } from 'clsx';
 import DropdownMenu from './DropdownMenu';
 import { motion } from 'framer-motion';
 import NavbarLinks from './NavbarLinks';
+import { IoHappyOutline } from 'react-icons/io5';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { Tanimation } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useThemeContext } from '@/hooks/useThemeContext';
 import useScrollDirection from '@/hooks/useScrollDirection';
-import { IconMoodSmileBeam } from '@tabler/icons-react';
 
 const MainNavigation = () => {
   const { darkMode, setDarkMode, toggleThemeHandler } =
@@ -64,9 +64,9 @@ const MainNavigation = () => {
           className="order-2 flex flex-row items-center gap-x-2 lg:order-1"
         >
           <h1 className="navbar-text">NICHOLAS</h1>
-          <IconMoodSmileBeam
+          <IoHappyOutline
             size={24}
-            className="hidden stroke-black-200 dark:stroke-white-400 sm:block"
+            className="hidden text-black-200 dark:text-white-400 sm:block"
           />
         </motion.div>
         <div className="order-first lg:order-2">

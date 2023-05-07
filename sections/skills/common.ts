@@ -1,23 +1,23 @@
 import {
-  IconBrandAdobe,
-  IconBrandBootstrap,
-  IconBrandCss3,
-  IconBrandCypress,
-  IconBrandDjango,
-  IconBrandFigma,
-  IconBrandFramer,
-  IconBrandHtml5,
-  IconBrandJavascript,
-  IconBrandMysql,
-  IconBrandNextjs,
-  IconBrandPython,
-  IconBrandReact,
-  IconBrandTailwind,
-  IconBrandTypescript,
-  IconBrandVite,
-  IconDatabase,
-  IconLetterC,
-} from '@tabler/icons-react';
+  SiAdobe,
+  SiBootstrap,
+  SiC,
+  SiCss3,
+  SiCypress,
+  SiDjango,
+  SiFigma,
+  SiFramer,
+  SiHtml5,
+  SiJavascript,
+  SiMysql,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
+} from 'react-icons/si';
 
 export type TIcons = {
   heading: string;
@@ -25,31 +25,29 @@ export type TIcons = {
 };
 
 export const goodCodingIcons = [
-  { Icon: IconBrandPython, tooltipText: 'Python' },
-  { Icon: IconBrandDjango, tooltipText: 'Django' },
-  { Icon: IconBrandHtml5, tooltipText: 'HTML' },
-  { Icon: IconBrandCss3, tooltipText: 'CSS' },
-  { Icon: IconBrandJavascript, tooltipText: 'JavaScript' },
-  { Icon: IconBrandTypescript, tooltipText: 'TypeScript' },
-  { Icon: IconBrandReact, tooltipText: 'React' },
-  { Icon: IconBrandTailwind, tooltipText: 'Tailwind CSS' },
-  { Icon: IconBrandBootstrap, tooltipText: 'Bootstrap' },
+  { Icon: SiPython, tooltipText: 'Python' },
+  { Icon: SiDjango, tooltipText: 'Django' },
+  { Icon: SiHtml5, tooltipText: 'HTML' },
+  { Icon: SiCss3, tooltipText: 'CSS' },
+  { Icon: SiJavascript, tooltipText: 'JavaScript' },
+  { Icon: SiTypescript, tooltipText: 'TypeScript' },
+  { Icon: SiReact, tooltipText: 'React' },
+  { Icon: SiTailwindcss, tooltipText: 'Tailwind CSS' },
+  { Icon: SiBootstrap, tooltipText: 'Bootstrap' },
 ];
 
 export const goodDesignIcons = [
-  { Icon: IconBrandAdobe, tooltipText: 'Photoshop & Lightroom' },
+  { Icon: SiAdobe, tooltipText: 'Photoshop & Lightroom' },
 ];
 
 export const averageCodingIcons = [
-  { Icon: IconBrandNextjs, tooltipText: 'Nextjs' },
-  { Icon: IconBrandMysql, tooltipText: 'MySQL' },
-  { Icon: IconDatabase, tooltipText: 'PostgreSQL' },
-  { Icon: IconBrandFramer, tooltipText: 'Framer Motion' },
-  { Icon: IconBrandCypress, tooltipText: 'Cypress' },
-  { Icon: IconBrandVite, tooltipText: 'Vite & Vitest' },
-  { Icon: IconLetterC, tooltipText: 'C' },
+  { Icon: SiNextdotjs, tooltipText: 'Nextjs' },
+  { Icon: SiMysql, tooltipText: 'MySQL' },
+  { Icon: SiPostgresql, tooltipText: 'PostgreSQL' },
+  { Icon: SiFramer, tooltipText: 'Framer Motion' },
+  { Icon: SiCypress, tooltipText: 'Cypress' },
+  { Icon: SiVite, tooltipText: 'Vite & Vitest' },
+  { Icon: SiC, tooltipText: 'C' },
 ];
 
-export const averageDesignIcons = [
-  { Icon: IconBrandFigma, tooltipText: 'Figma' },
-];
+export const averageDesignIcons = [{ Icon: SiFigma, tooltipText: 'Figma' }];

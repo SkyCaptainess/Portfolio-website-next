@@ -13,10 +13,7 @@ const Footer = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <Icon
-            size={30}
-            className="cursor-pointer stroke-black-200 dark:stroke-white-500"
-          />
+          <Icon size={30} className="icon cursor-pointer" />
         </Link>
       );
     }

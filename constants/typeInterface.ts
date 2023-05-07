@@ -1,4 +1,4 @@
-import { IconBrandGithub } from '@tabler/icons-react';
+import { type IconType } from 'react-icons';
 import { Variants } from 'framer-motion';
 import { ReactNode, type Dispatch, type SetStateAction } from 'react';
 
@@ -13,7 +13,7 @@ export type HamburgerProps = {
 
 export type Tlinks = {
   [key: string]: {
-    Icon: typeof IconBrandGithub;
+    Icon: IconType;
     url: string;
   };
 };

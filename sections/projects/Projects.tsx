@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useMotionContext } from '@/hooks/useMotionContext';
-import { useRefsContext } from '@/hooks/useRefsContext';
-import ProjectCard from '@/components/ProjectCard';
 import { projectCards } from './projectDetails';
 import Animation from '@/components/Animation';
+import ProjectCard from '@/components/ProjectCard';
+import { useMotionContext } from '@/hooks/useMotionContext';
+import { useRefsContext } from '@/hooks/useRefsContext';
 import { Tanimation } from '@/constants/typeInterface';
 import { Provider } from '@radix-ui/react-tooltip';
 

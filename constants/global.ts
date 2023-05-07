@@ -1,9 +1,5 @@
 import { RefObject } from 'react';
-import {
-  IconBrandLinkedin,
-  IconBrandGithub,
-  IconBrandInstagram,
-} from '@tabler/icons-react';
+import { SiLinkedin, SiGithub, SiInstagram } from 'react-icons/si';
 import { Tlinks } from './typeInterface';
 import { scrollIntoView } from 'seamless-scroll-polyfill';
 
@@ -18,12 +14,12 @@ export const listElements = [
 
 export const externalLinks: Tlinks = {
   Linkedin: {
-    Icon: IconBrandLinkedin,
+    Icon: SiLinkedin,
     url: 'https://www.linkedin.com/in/nicholas-yjy/',
   },
-  GitHub: { Icon: IconBrandGithub, url: 'https://github.com/nicholas5538' },
+  GitHub: { Icon: SiGithub, url: 'https://github.com/nicholas5538' },
   Instagram: {
-    Icon: IconBrandInstagram,
+    Icon: SiInstagram,
     url: 'https://www.instagram.com/frivolousnicholas',
   },
 };

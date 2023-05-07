@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { externalLinks } from '@/constants/global';
 import Tooltip from '@/components/Tooltip';
+import { externalLinks } from '@/constants/global';
 import { Provider } from '@radix-ui/react-tooltip';
 
 const HeroButtons = () => {
@@ -11,8 +11,8 @@ const HeroButtons = () => {
         <Tooltip key={name} side="top" tooltipText={name}>
           <Link aria-label={name} href={url} rel="noreferrer" target="_blank">
             <Icon
-              size={40}
-              className="cursor-pointer stroke-black-200 dark:stroke-white-500"
+              className="icon cursor-pointer"
+              size={30}
               data-testid={name}
             />
           </Link>

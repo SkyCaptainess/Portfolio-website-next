@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useMotionContext } from '@/hooks/useMotionContext';
-import { IconCircleArrowUp } from '@tabler/icons-react';
 import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion';
-import { Tanimation } from '@/constants/typeInterface';
+import { SlArrowUpCircle } from 'react-icons/sl';
 import { scrollTo } from 'seamless-scroll-polyfill';
 import Tooltip from '@/components/Tooltip';
+import { Tanimation } from '@/constants/typeInterface';
+import { useMotionContext } from '@/hooks/useMotionContext';
 import { Provider } from '@radix-ui/react-tooltip';
 
 const ScrollToTop = () => {
@@ -52,11 +52,12 @@ const ScrollToTop = () => {
           >
             <Provider delayDuration={400}>
               <Tooltip side="left" tooltipText="Click to scroll to the top">
-                <IconCircleArrowUp
-                  size={50}
-                  strokeWidth={2}
-                  className="fixed top-[90%] z-50 ml-[85%] cursor-pointer bg-none text-blue-gradient-2 dark:text-orange md:ml-[94%]"
-                />
+                <i className="fixed top-[90%] z-50 ml-[85%] cursor-pointer md:ml-[94%]">
+                  <SlArrowUpCircle
+                    size={40}
+                    className="text-blue-gradient-2 dark:text-orange"
+                  />
+                </i>
               </Tooltip>
             </Provider>
           </m.div>

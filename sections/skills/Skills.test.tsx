@@ -29,16 +29,11 @@ it('should render the components', async () => {
     name: 'design',
   });
 
-  await waitFor(() => {
-    expect(skillsHeading).toBeInTheDocument();
-  });
-  await waitFor(() => {
-    expect(subHeading).toBeInTheDocument();
-  });
-  await waitFor(() => {
-    expect(codingHeading[0]).toBeInTheDocument();
-  });
-  await waitFor(() => {
-    expect(designHeading[0]).toBeInTheDocument();
-  });
+  const lottieAnimation = await screen.findByRole('complementary');
+
+  await waitFor(() => expect(skillsHeading).toBeInTheDocument());
+  await waitFor(() => expect(subHeading).toBeInTheDocument());
+  await waitFor(() => expect(codingHeading[0]).toBeInTheDocument());
+  await waitFor(() => expect(designHeading[0]).toBeInTheDocument());
+  await waitFor(() => expect(lottieAnimation).toBeInTheDocument());
 });
