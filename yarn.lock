@@ -4608,7 +4608,7 @@ __metadata:
     eslint-config-next: 13.4.1
     eslint-plugin-jest: 27.2.1
     eslint-plugin-testing-library: 5.10.3
-    eslint-plugin-yml: 1.5.0
+    eslint-plugin-yml: 1.6.0
     framer-motion: 10.12.8
     husky: 8.0.3
     jest: 29.5.0
@@ -5034,17 +5034,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-yml@npm:1.5.0":
-  version: 1.5.0
-  resolution: "eslint-plugin-yml@npm:1.5.0"
+"eslint-plugin-yml@npm:1.6.0":
+  version: 1.6.0
+  resolution: "eslint-plugin-yml@npm:1.6.0"
   dependencies:
     debug: ^4.3.2
     lodash: ^4.17.21
     natural-compare: ^1.4.0
-    yaml-eslint-parser: ^1.1.0
+    yaml-eslint-parser: ^1.2.1
   peerDependencies:
     eslint: ">=6.0.0"
-  checksum: f8f61165b765c0b8db7867b5b51156c9341a0a9133398f59d9e91fe5f6d59c397c7b20ca3d640451d220812baf01957c9e12af7fdb2bc40d4382ab4a0461849f
+  checksum: ad12cc008f414eb9694a280800aa2a9e033adbd170e95c479d27b5f30b1ff450e3fb51acce7486f6da58b277f76c1f7f8ed349952c1c1c1b163d8c496e7e901a
   languageName: node
   linkType: hard
 
@@ -9866,14 +9866,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml-eslint-parser@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "yaml-eslint-parser@npm:1.1.0"
+"yaml-eslint-parser@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "yaml-eslint-parser@npm:1.2.1"
   dependencies:
     eslint-visitor-keys: ^3.0.0
     lodash: ^4.17.21
     yaml: ^2.0.0
-  checksum: ee9c164ef3cff040566ec774bb35bd5bc351427225f80b92525e7e028a5c0d906bf370003d1357323d04ebcfe91c27a40ab45d27326b01dcfdfff74bfefbb5ae
+  checksum: 498238b2c87374a0aa2c562a7d48d4abb11028572f7396421f351954f6f5735356b30191c5fc15b4cff8b44e12dfc1fc881aff266c96e3e0fce34e718b23ed62
   languageName: node
   linkType: hard
 
