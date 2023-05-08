@@ -80,7 +80,7 @@ const ProjectCard = ({
             <h4 className="mb-2 select-none font-semibold text-black-200 dark:text-white-500 md:text-center md:text-lg lg:text-xl xl:text-2xl">
               Tech Stack
             </h4>
-            <div className="flex flex-row flex-wrap gap-x-4 md:justify-center">
+            <div className="flex flex-row flex-wrap gap-x-4 gap-y-4 sm:gap-y-0 md:justify-center">
               {createProjectIcons(stack)}
             </div>
           </div>
