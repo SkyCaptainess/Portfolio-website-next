@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import Animation from '@/components/Animation';
+import Button from '@/components/button';
+import { Tanimation, Tbutton } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
 import { useRefsContext } from '@/hooks/useRefsContext';
-import Animation from '@/components/Animation';
-import { Tanimation } from '@/constants/typeInterface';
 
 const Contact = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
@@ -22,6 +22,16 @@ const Contact = () => {
         bounce: 0.4,
       },
     },
+  };
+
+  const ButtonProps: Tbutton<string> = {
+    buttonClass: 'w-1/2 max-w-[160px]',
+    label: 'email',
+    link: 'mailto:nicholas5538@gmail.com',
+    linkClass: 'text-base md:text-lg xl:text-xl',
+    rel: 'noreferrer noopener',
+    target: '_blank',
+    text: 'Say Hello!',
   };
 
   return (
@@ -45,15 +55,7 @@ const Contact = () => {
           a question or just want to say hi, I&apos;ll try my best to get back
           to you!
         </h4>
-        <button type="button" className="redirect-button w-1/2 max-w-[160px]">
-          <Link
-            aria-label="email"
-            href="mailto:nicholas5538@gmail.com"
-            className="h-full w-full text-base tracking-widest text-white-400 no-underline hover:no-underline dark:text-black-300 md:text-lg xl:text-xl"
-          >
-            Say Hello!
-          </Link>
-        </button>
+        <Button {...ButtonProps} />
       </Animation>
       <div className="dark-blue-gradient h-[145%] ipad-mini:h-[160%] lg:h-[170%] xl:h-[180%] 3xl:h-[200%]"></div>
     </section>

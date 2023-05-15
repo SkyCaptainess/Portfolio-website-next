@@ -39,3 +39,13 @@ export type Tanimation = {
     };
   };
 };
+
+export type Tbutton<T> = {
+  buttonClass?: T;
+  label: T;
+  link: T;
+  linkClass: T;
+  rel: T;
+  target: T;
+  text: T;
+};

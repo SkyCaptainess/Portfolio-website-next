@@ -3,13 +3,11 @@ import { render, screen, waitFor } from '@testing-library/react';
 import Contact from './Contact';
 
 beforeAll(() => {
-  const mockIntersectionObserver = jest.fn().mockReturnValue({
+  window.IntersectionObserver = jest.fn().mockReturnValue({
     observe: () => null,
     unobserve: () => null,
     disconnect: () => null,
   });
-
-  window.IntersectionObserver = mockIntersectionObserver;
 });
 
 it('should render the components', async () => {

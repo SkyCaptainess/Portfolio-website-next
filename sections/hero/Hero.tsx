@@ -4,10 +4,14 @@ import React from 'react';
 import { clsx } from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import profilePic from '../../public/images/profile-light.webp';
-import HeroButtons from '../../components/HeroButtons';
+import Button from '@/components/button';
+import Tooltip from '@/components/Tooltip';
+import { externalLinks } from '@/constants/global';
+import { Tanimation, Tbutton } from '@/constants/typeInterface';
 import { useMotionContext } from '@/hooks/useMotionContext';
-import { Tanimation } from '@/constants/typeInterface';
+import { Provider } from '@radix-ui/react-tooltip';
 
 const Hero = () => {
   const { prefersReducedMotion } = useMotionContext() ?? false;
@@ -30,6 +34,31 @@ const Hero = () => {
         staggerChildren: 0.3,
       },
     },
+  };
+
+  const anchorElements = Object.entries(externalLinks).map(
+    ([name, { Icon, url }]) => {
+      return (
+        <Tooltip key={name} side="top" tooltipText={name}>
+          <Link aria-label={name} href={url} rel="noreferrer" target="_blank">
+            <Icon
+              className="icon cursor-pointer"
+              size={30}
+              data-testid={name}
+            />
+          </Link>
+        </Tooltip>
+      );
+    }
+  );
+
+  const ButtonProps: Tbutton<string> = {
+    label: 'Resume PDF',
+    link: 'https://drive.google.com/file/d/1kRKuXcY7BFh2te6BMJLDYogwU3V29dba/view?usp=sharing',
+    linkClass: 'md:text-2xl',
+    rel: 'noreferrer noopener',
+    target: '_blank',
+    text: 'Resume',
   };
 
   return (
@@ -88,7 +117,10 @@ const Hero = () => {
         <h3 className="mb-4 md:mb-8 md:text-2xl xl:text-3xl">
           Currently looking out for opportunities.
         </h3>
-        <HeroButtons />
+        <div className="flex flex-row items-center justify-start gap-x-6">
+          <Provider delayDuration={400}>{anchorElements}</Provider>
+          <Button {...ButtonProps} />
+        </div>
       </motion.div>
     </motion.div>
   );

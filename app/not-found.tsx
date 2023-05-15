@@ -1,10 +1,10 @@
 import React, { lazy, Suspense } from 'react';
-import { clsx } from 'clsx';
 import Image from 'next/image';
-import Link from 'next/link';
 import errorPic from '../public/images/error.webp';
 import Skeleton from '@/components/Skeleton';
+import { Tbutton } from '@/constants/typeInterface';
 
+const Button = lazy(() => import('@/components/button'));
 const Card = lazy(() =>
   import('@/components/card').then((module) => ({ default: module.Card }))
 );
@@ -24,6 +24,16 @@ const CardTitle = lazy(() =>
 );
 
 const NotFound = () => {
+  const ButtonProps: Tbutton<string> = {
+    buttonClass: 'bg-light-orange text-lg hover:bg-orange-red',
+    label: 'Home page',
+    link: '/',
+    linkClass: 'text-black-400',
+    rel: 'next',
+    target: '_self',
+    text: 'Send Me Back!',
+  };
+
   return (
     <div className="grid h-screen w-screen place-items-center bg-black-300">
       <Suspense fallback={<Skeleton className="w-11/12 max-w-sm" />}>
@@ -41,18 +51,7 @@ const NotFound = () => {
             />
           </CardContent>
           <CardFooter>
-            <Link
-              aria-label="home"
-              href="/"
-              replace
-              className={clsx(
-                'rounded-2xl bg-light-orange px-4 py-2 text-lg font-bold',
-                'tracking-widest text-black-400 no-underline transition-colors duration-200',
-                'ease-linear hover:bg-orange-red hover:no-underline'
-              )}
-            >
-              Send me back!
-            </Link>
+            <Button {...ButtonProps} />
           </CardFooter>
         </Card>
       </Suspense>

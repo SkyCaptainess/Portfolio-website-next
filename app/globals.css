@@ -38,10 +38,6 @@
     @apply relative z-0 bg-dark-blue;
   }
 
-  .redirect-button {
-    @apply rounded-2xl bg-aqua px-4 py-2 font-bold transition-colors duration-300 ease-out hover:bg-dark-aqua dark:bg-light-orange dark:hover:bg-orange-red;
-  }
-
   .navbar-text {
     @apply font-mont text-base font-bold tracking-widest text-black-200 dark:text-white-400 xl:text-xl;
   }
