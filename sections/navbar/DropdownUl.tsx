@@ -46,10 +46,10 @@ const DropdownUl = ({ isMenuClicked, setMenuClicked }: HamburgerProps) => {
             rel="noreferrer"
             target="_blank"
             className={clsx(
-              'redirect-button block h-full w-full rounded-t-none',
-              'rounded-b-xl bg-aqua py-2.5 pl-4 font-bold text-white-400',
-              'transition-colors duration-300 ease-out hover:bg-dark-aqua',
-              'hover:no-underline dark:text-black-300'
+              'redirect-button block h-full w-full rounded-b-xl rounded-t-none bg-aqua',
+              'py-2.5 pl-4 font-bold text-white-400 transition-colors duration-300 ease-out',
+              'hover:bg-dark-aqua hover:no-underline ',
+              'dark:bg-light-orange dark:text-black-300 dark:hover:bg-orange-red'
             )}
           >
             {element}
