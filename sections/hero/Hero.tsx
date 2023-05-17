@@ -72,10 +72,9 @@ const Hero = () => {
       <motion.aside
         variants={childAnimation}
         className={clsx(
-          'z-10 mx-auto mb-8 h-72 w-48 object-scale-down object-center',
-          'shadow-dropdown dark:shadow-none md:order-last md:col-span-1',
-          'md:row-start-1 md:row-end-4 md:mb-0 md:mr-0 md:h-min md:w-full',
-          'md:object-cover lg:self-center xl:col-span-2 xl:w-9/12'
+          'z-10 mx-auto mb-8 h-72 w-48 overflow-hidden rounded-3xl shadow-dropdown dark:shadow-none',
+          'md:order-last md:col-span-1 md:mb-0 md:mr-0 md:h-min md:w-full',
+          'md:row-start-1 md:row-end-4 xl:col-span-2 xl:w-9/12'
         )}
       >
         <Image
@@ -83,6 +82,7 @@ const Hero = () => {
           alt="Profile Picture"
           placeholder="blur"
           priority
+          className="z-20 transition-transform duration-300 ease-in-out hover:scale-110"
         />
       </motion.aside>
       <motion.h1
@@ -103,20 +103,20 @@ const Hero = () => {
         </span>
         , I love to design and code beautifully simple things.
       </motion.h1>
-      <motion.h3
+      <motion.h2
         variants={childAnimation}
         className="mb-4 md:col-span-2 md:row-start-2 md:row-end-2 md:mb-0 md:text-2xl xl:text-3xl"
       >
         Nothing excites me more than learning something new and starting a new
         adventure.
-      </motion.h3>
+      </motion.h2>
       <motion.div
         variants={childAnimation}
         className="md:col-span-2 md:row-start-3 md:row-end-4 xl:gap-y-10"
       >
-        <h3 className="mb-4 md:mb-8 md:text-2xl xl:text-3xl">
+        <h2 className="mb-4 md:mb-8 md:text-2xl xl:text-3xl">
           Currently looking out for opportunities.
-        </h3>
+        </h2>
         <div className="flex flex-row items-center justify-start gap-x-6">
           <Provider delayDuration={400}>{anchorElements}</Provider>
           <Button {...ButtonProps} />

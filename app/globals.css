@@ -16,7 +16,7 @@
     @apply font-mont text-2xl font-semibold text-black-200 transition-colors duration-300 ease-out dark:text-white-300;
   }
 
-  h3 {
+  h2 {
     @apply font-mont text-lg font-medium text-black-200 transition-colors duration-300 ease-out dark:text-white-100;
   }
 

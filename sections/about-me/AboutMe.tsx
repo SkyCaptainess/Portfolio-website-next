@@ -65,21 +65,21 @@ const AboutMe = () => {
             Never too late to learn
           </h2>
         </m.div>
-        <m.h4 variants={childAnimation} className="about-me-text">
+        <m.h3 variants={childAnimation} className="about-me-text">
           I always thought my dream was to be a licensed aircraft engineer, it
           seemed like an appropriate dream given my education path, but I always
           felt mundane.
-        </m.h4>
-        <m.h4 variants={childAnimation} className="about-me-text">
+        </m.h3>
+        <m.h3 variants={childAnimation} className="about-me-text">
           It all changed when I had my first and only programming module in
           university, the fascination it produced when I wrote my 1st Hello
           World program on Python.
-        </m.h4>
-        <m.h4 variants={childAnimation} className="about-me-text">
+        </m.h3>
+        <m.h3 variants={childAnimation} className="about-me-text">
           Since then, I have taken a liking in web development which comprises
           of problem-solving skills and creativity.
-        </m.h4>
-        <m.h4
+        </m.h3>
+        <m.h3
           variants={childAnimation}
           className="about-me-text m-0 font-semibold text-white-300"
         >
@@ -94,7 +94,7 @@ const AboutMe = () => {
             SIT
           </Link>
           .
-        </m.h4>
+        </m.h3>
         <m.aside variants={lottieAnimation} className="about-me-animation">
           <Lottie
             animationData={animationData}
