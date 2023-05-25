@@ -99,7 +99,7 @@ const Hero = () => {
         </span>
         &nbsp;&nbsp;Hi there! I&apos;m{' '}
         <span className="bg-transparent bg-gradient-to-b from-aqua to-aqua bg-clip-text font-bold text-transparent transition-bgi duration-300 ease-out dark:bg-orange-gradient dark:text-transparent md:text-black-200">
-          Nicholas
+          'Your Name'
         </span>
         , I love to design and code beautifully simple things.
       </motion.h1>

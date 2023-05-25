@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 it('Navbar is rendered with applicable elements', async () => {
   render(<MainNavigation />);
   expect(
-    await screen.findByRole('heading', { name: /nicholas/i })
+    await screen.findByRole('heading', { name: /andrew/i })
   ).toBeInTheDocument();
   expect(screen.getAllByRole('listitem')[0]).toBeInTheDocument();
 });

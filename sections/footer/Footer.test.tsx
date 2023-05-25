@@ -6,7 +6,7 @@ it('should render the components', async () => {
   render(<Footer />);
 
   const footerText = await screen.findByRole('heading', {
-    name: /designed & built by nicholas yong/i,
+    name: /designed & built by your name/i,
   });
   const footerIcons = await screen.findAllByRole('link');
 

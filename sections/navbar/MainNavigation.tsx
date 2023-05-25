@@ -63,7 +63,7 @@ const MainNavigation = () => {
           variants={childAnimation}
           className="order-2 flex flex-row items-center gap-x-2 lg:order-1"
         >
-          <h1 className="navbar-text">NICHOLAS</h1>
+          <h1 className="navbar-text">Your Name</h1>
           <IoHappyOutline
             size={24}
             className="hidden text-black-200 dark:text-white-400 sm:block"

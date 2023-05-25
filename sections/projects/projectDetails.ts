@@ -58,7 +58,7 @@ const voucherManagementCard: Tproject = {
     {
       Icon: SiGithub,
       tooltipText: 'GitHub',
-      url: 'https://github.com/nicholas5538/fp-capstone',
+      url: 'https://github.com/skycaptainess/fp-capstone',
     },
     {
       Icon: FaExternalLinkAlt,
@@ -87,7 +87,7 @@ const stockProjectCard: Tproject = {
     {
       Icon: SiGithub,
       tooltipText: 'GitHub',
-      url: 'https://github.com/nicholas5538/StocksTracker',
+      url: 'https://github.com/skycaptainess/StocksTracker',
     },
     {
       Icon: SiYoutube,
@@ -117,7 +117,7 @@ const ioTProjectCard: Tproject = {
     {
       Icon: SiGithub,
       tooltipText: 'GitHub',
-      url: 'https://github.com/nicholas5538/sanitizer-IoT',
+      url: 'https://github.com/skycaptainess/sanitizer-IoT',
     },
     {
       Icon: SiYoutube,
@@ -143,7 +143,7 @@ const pepsiProjectCard: Tproject = {
     {
       Icon: SiGithub,
       tooltipText: 'GitHub',
-      url: 'https://github.com/nicholas5538/fp-mini-project',
+      url: 'https://github.com/skycaptainess/fp-mini-project',
     },
   ],
 };

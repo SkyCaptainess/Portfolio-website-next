@@ -27,7 +27,7 @@ const Contact = () => {
   const ButtonProps: Tbutton<string> = {
     buttonClass: 'w-1/2 max-w-[160px]',
     label: 'email',
-    link: 'mailto:nicholas5538@gmail.com',
+    link: 'mailto:andychris9474@gmail.com',
     linkClass: 'text-base md:text-lg xl:text-xl',
     rel: 'noreferrer noopener',
     target: '_blank',
