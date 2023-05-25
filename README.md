@@ -1,4 +1,4 @@
-# [My Portfolio website](https://nicholasyong.dev 'My portfolio page')
+# [Personal Portfolio website](https://nicholasyong.dev 'My portfolio page')
 
 ![Next.JS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 
